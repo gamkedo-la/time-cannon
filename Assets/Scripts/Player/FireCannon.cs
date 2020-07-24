@@ -5,11 +5,14 @@ using UnityEngine.UI;
 
 public class FireCannon : MonoBehaviour
 {
+    public Animator animator;
+    public GameObject muzzleFlash;
     public ParticleSystem emitter;
     public Text cannonReadout;
     public Text crosshair;
     private float lastAimedRange = 50.0f;
     private float maxAimRange = 500.0f; // avoids dot vanishing
+    private float muzzleFlashDuration = 0.3f;
 
     private void AddArrayIntoListIfUnique(List<RaycastHit> toList, RaycastHit[] fromArray)
     {
@@ -37,9 +40,9 @@ public class FireCannon : MonoBehaviour
         RaycastHit[] laserUp = Physics.RaycastAll(transform.position+transform.up * thicknessRange, transform.forward);
         RaycastHit[] laserDown = Physics.RaycastAll(transform.position-transform.up * thicknessRange, transform.forward);
         float roundedPerc = 0.707f;
-        RaycastHit[] laserUL = Physics.RaycastAll(transform.position + transform.up * thicknessRange * roundedPerc 
+        RaycastHit[] laserUL = Physics.RaycastAll(transform.position + transform.up * thicknessRange * roundedPerc
                                                                      - transform.right * thicknessRange * roundedPerc, transform.forward);
-        RaycastHit[] laserUR = Physics.RaycastAll(transform.position + transform.up * thicknessRange * roundedPerc 
+        RaycastHit[] laserUR = Physics.RaycastAll(transform.position + transform.up * thicknessRange * roundedPerc
                                                                      + transform.right * thicknessRange * roundedPerc, transform.forward);
         RaycastHit[] laserDL = Physics.RaycastAll(transform.position - transform.up * thicknessRange * roundedPerc
                                                                      - transform.right * thicknessRange * roundedPerc, transform.forward);
@@ -72,6 +75,10 @@ public class FireCannon : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 emitter.Emit(1000);
+                animator.SetTrigger( "Fire" );
+                muzzleFlash.SetActive( true );
+                Invoke( nameof( DisableMuzzleFlash ), muzzleFlashDuration );
+
                 Debug.Log("DIRECT HIT:" + rhInfo.collider.gameObject.name);
                 if(ecrScript)
                 {
@@ -110,5 +117,10 @@ public class FireCannon : MonoBehaviour
         {
             cannonReadout.text = "X";
         }
+    }
+
+    private void DisableMuzzleFlash()
+    {
+        muzzleFlash.SetActive( false );
     }
 }
