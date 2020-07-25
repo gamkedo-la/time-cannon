@@ -4,5 +4,15 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
-  m_configObjects: {}
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/ModernCityScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/WW1HillsScene.unity
+    guid: 9641a9eb8e64c48a4a937bf1fbc74e43
+  m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 2c76f0cb3fec64c2790d30cdf565dc16,
+      type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: dd5bd0721b3524d08855ace2100eb918,
+      type: 2}
