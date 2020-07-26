@@ -72,7 +72,7 @@ public class FireCannon : MonoBehaviour
             crosshair.color = Color.red;
 
             ExplodeChainReact ecrScript = rhInfo.collider.gameObject.GetComponent<ExplodeChainReact>();
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) || Input.GetAxis("TriggerAxis") > 0.2f)
             {
                 emitter.Emit(1000);
                 animator.SetTrigger( "Fire" );

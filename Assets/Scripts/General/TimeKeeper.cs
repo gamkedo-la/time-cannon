@@ -19,6 +19,7 @@ public class TimeKeeper : MonoBehaviour
     void Update()
     {
         fakeTimePace += Input.GetAxis("Horizontal") * 1.3f * Time.deltaTime;
+        fakeTimePace += Input.GetAxis("TimeAxis") * -0.8f * Time.deltaTime;
         fakeTimePace = Mathf.Clamp(TimeKeeper.instance.fakeTimePace, -2.0f, 2.0f);
 
         float tempDampen = 1.0f;
