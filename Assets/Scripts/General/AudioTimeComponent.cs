@@ -13,6 +13,10 @@ public class AudioTimeComponent : MonoBehaviour
 	private void Update() {
 		foreach (AudioSource source in sources) {
 			source.pitch = TimeKeeper.instance.fakeTimePace;
+
+			if (Input.GetKey(KeyCode.Space)) {
+				source.pitch *= 0.4f;
+			}
 		}
 	}
 }
