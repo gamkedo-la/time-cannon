@@ -9178,8 +9178,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mixer: {fileID: 24100000, guid: 097f799e5997b614985808d5fcbc2a7d, type: 2}
-  minTempoMult: 0.8
-  maxTempoMult: 1.2
+  tempoMultRange: 0.2
+  sources:
+  - {fileID: 1387717746}
 --- !u!82 &1387717746
 AudioSource:
   m_ObjectHideFlags: 0
