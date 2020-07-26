@@ -6,12 +6,13 @@ using UnityEngine.Audio;
 public class MusicTimeKeeper : MonoBehaviour
 {
 	public AudioMixer mixer;
+	public AudioMixerGroup group;
 	public float tempoMultRange = 0.2f;
-	public List<AudioSource> sources;
 
 	private bool hasSources = false;
 	private float minTempoMult;
 	private float maxTempoMult;
+	private List<AudioSource> sources;
 	private List<AudioSource> deadSources = new List<AudioSource>(0);
 
 	private void Start() {
@@ -21,6 +22,8 @@ public class MusicTimeKeeper : MonoBehaviour
 
 		minTempoMult = 1 - tempoMultRange;
 		maxTempoMult = 1 + tempoMultRange;
+
+		group = mixer.FindMatchingGroups("Music")[0];
 	}
 
 	private void Update() {
