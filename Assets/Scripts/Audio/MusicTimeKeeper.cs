@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
-public class MusicTimeKeeper : MonoBehaviour
-{
+public class MusicTimeKeeper : MonoBehaviour {
 	public AudioMixer mixer;
 	public AudioMixerGroup group;
 	public float tempoMultRange = 0.2f;
@@ -12,13 +11,10 @@ public class MusicTimeKeeper : MonoBehaviour
 	private bool hasSources = false;
 	private float minTempoMult;
 	private float maxTempoMult;
-	private List<AudioSource> sources;
+	private List<AudioSource> sources = new List<AudioSource>(0);
 	private List<AudioSource> deadSources = new List<AudioSource>(0);
 
 	private void Start() {
-		if (sources.Count >= 1) {
-			hasSources = true;
-		}
 
 		minTempoMult = 1 - tempoMultRange;
 		maxTempoMult = 1 + tempoMultRange;
@@ -26,6 +22,7 @@ public class MusicTimeKeeper : MonoBehaviour
 		group = mixer.FindMatchingGroups("Music")[0];
 	}
 
+#if !UNITY_WEBGL
 	private void Update() {
 		float speedDampen = 1;
 		float pitchDampen = 1;
@@ -44,10 +41,10 @@ public class MusicTimeKeeper : MonoBehaviour
 				}
 				source.pitch = Lerp(0f, minTempoMult, 2f, maxTempoMult, Mathf.Abs(TimeKeeper.instance.fakeTimePace)) * speedDampen;
 			}
-		} else {
+		} /* else {
 			mixer.SetFloat("MusicSpeedMult", Lerp(0f, minTempoMult, 2f, maxTempoMult, Mathf.Abs(TimeKeeper.instance.fakeTimePace)) * speedDampen);
-		}
-		mixer.SetFloat("MusicPitchMult", Lerp(0f, maxTempoMult, 2f, minTempoMult, Mathf.Abs(TimeKeeper.instance.fakeTimePace)) * pitchDampen);
+		}*/
+		mixer.SetFloat("MusicPitchMult", Lerp(0f, maxTempoMult+0.5f, 2f, minTempoMult+0.5f, Mathf.Abs(TimeKeeper.instance.fakeTimePace)) * pitchDampen);
 
 		if (deadSources.Count >= 1) {
 			foreach (AudioSource source in deadSources) {
@@ -57,6 +54,7 @@ public class MusicTimeKeeper : MonoBehaviour
 			if (sources.Count == 0) hasSources = false;
 		}
 	}
+#endif
 
 	public void AddSource(AudioSource newSource) {
 		sources.Add(newSource);
