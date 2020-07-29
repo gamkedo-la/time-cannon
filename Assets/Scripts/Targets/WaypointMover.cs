@@ -5,6 +5,7 @@ using UnityEngine;
 public class WaypointMover : MonoBehaviour
 {
     public Waypoint target;
+    public float speedScale = 1f; // scales all waypoint speeds
 
     private float progressAmt = 0.0f;
 
@@ -16,7 +17,7 @@ public class WaypointMover : MonoBehaviour
 
     void Update()
     {
-        progressAmt += TimeKeeper.instance.fakeTimeDelta * target.speedMultiplierAfterHere;
+        progressAmt += TimeKeeper.instance.fakeTimeDelta * target.speedMultiplierAfterHere * speedScale;
         if (progressAmt <= 0.0f)
         {
             progressAmt += 1.0f;
