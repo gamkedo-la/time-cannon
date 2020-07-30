@@ -90,7 +90,7 @@ public class ExplodeChainReact : MonoBehaviour
 
         GameObject pointGO = GameObject.Instantiate(pointPopper, transform.position, transform.rotation);
         PointScaleFadeDie psfdScript = pointGO.GetComponent<PointScaleFadeDie>();
-        psfdScript.SetText(chainDepth + "00", chainDepth);
+        psfdScript.SetText(chainDepth * 100, chainDepth);
         ScoreKeeper.instance.AddScore(100 * chainDepth);
 
         GameObject.Instantiate(blastVFX, transform.position, transform.rotation);

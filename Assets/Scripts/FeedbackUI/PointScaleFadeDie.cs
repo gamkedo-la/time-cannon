@@ -1,26 +1,26 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class PointScaleFadeDie : MonoBehaviour
 {
-    private float scaleMax = 1.4f;
-    private float scaleNow = 1.0f;
-    private float scaleRate = 0.1f;
+    [SerializeField] private Gradient color;
+    private float scaleMax = 3f;
     private float initialScale = 1.0f;
     private float randLateralDrift = 0.0f;
-    private Text myLabel;
+    private TextMeshProUGUI myLabel = null;
 
     void Awake()
     {
         initialScale = transform.localScale.x;
-        myLabel = GetComponentInChildren<Text>();
+        myLabel = GetComponentInChildren<TextMeshProUGUI>();
     }
 
-    public void SetText(string whichWords,float scaleAdjustment)
+    public void SetText(int points,float scaleAdjustment)
     {
-        myLabel.text = whichWords;
+        myLabel.text = points.ToString();
+
+        float maxPoints = 1500;
+        myLabel.color = color.Evaluate(points / maxPoints);
 
         if(scaleAdjustment>1.0f)
         {
@@ -30,31 +30,21 @@ public class PointScaleFadeDie : MonoBehaviour
         }
 
         initialScale *= scaleAdjustment;
-        scaleNow *= scaleAdjustment;
         scaleMax *= scaleAdjustment;
         randLateralDrift = Random.Range(-4.0f, 4.0f);
+
+        transform.localScale = Vector3.one * initialScale;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        transform.position += Vector3.up * Time.deltaTime * scaleMax * 0.5f +
-                                transform.right * Time.deltaTime * randLateralDrift;
-        scaleNow += Time.deltaTime * scaleRate;
-        transform.localScale = Vector3.one * scaleNow * initialScale;
+        transform.position += Vector3.up * Time.deltaTime * scaleMax * 6f +
+                                transform.right * Time.deltaTime * randLateralDrift * 5f;
+        scaleMax -= Time.deltaTime * 5f;
+    }
 
-        Color fadeCol = myLabel.color;
-
-        // holding fade firmer before falloff by squaring complement
-        fadeCol.a = 1.0f-(scaleMax - scaleNow)/(scaleMax-1.0f);
-        fadeCol.a *= fadeCol.a;
-        fadeCol.a = 1.0f-fadeCol.a;
-
-        myLabel.color = fadeCol;
-
-        if (scaleNow > scaleMax)
-        {
-            Destroy(gameObject);
-        }
+    public void Done()
+    {
+        Destroy(gameObject);
     }
 }
