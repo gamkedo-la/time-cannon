@@ -3,7 +3,17 @@ guid: b33d908461d594945bed22f89347234e
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: palette
+    second: {fileID: 2100000, guid: b681d3cdd1490de45bdae1058394b061, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: skyscraper-basicMat
+    second: {fileID: 2100000, guid: b681d3cdd1490de45bdae1058394b061, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
