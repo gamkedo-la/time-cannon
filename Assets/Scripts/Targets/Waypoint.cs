@@ -44,9 +44,15 @@ public class Waypoint : MonoBehaviour
         return Quaternion.Slerp(transform.rotation, next.transform.rotation, atT);
     }
 
-    public void OnDrawGizmos()
+	[HideInInspector]
+	public bool drawLineGizmo = true;
+	[HideInInspector]
+	public bool drawMeshGizmo = false;
+	public void OnDrawGizmos()
     {
-        if (next != null)
+		next.SetPrev(this);
+
+		if (next != null && drawLineGizmo)
         {
             Gizmos.color = Color.red;
             Vector3 prevPt = transform.position;
@@ -57,5 +63,7 @@ public class Waypoint : MonoBehaviour
                 prevPt = nextPt;
             }
         }
+
+		gameObject.GetComponent<MeshRenderer>().enabled = drawMeshGizmo;
     }
 }

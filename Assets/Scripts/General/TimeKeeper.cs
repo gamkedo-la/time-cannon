@@ -9,6 +9,7 @@ public class TimeKeeper : MonoBehaviour
     public float fakeTime = 0.0f;
     public float fakeTimePace = 1.0f;
     public float fakeTimeDelta = 0.0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,4 +31,8 @@ public class TimeKeeper : MonoBehaviour
         fakeTimeDelta = fakeTimePace * Time.deltaTime * tempDampen;
         fakeTime += fakeTimeDelta;
     }
+
+	private void OnDrawGizmos() {
+		if (instance == null) instance = this;
+	}
 }
