@@ -381,10 +381,9 @@ MonoBehaviour:
   drawMeshGizmo: 1
   drawFauxLocation: 0
   gizmoSize: 2
-  fauxTime: 0
-  oldFauxTime: 0
-  fauxProgressAmt: 0
-  fauxTimeScaled: 0
+  fauxTime: 1000
+  oldFauxTime: 1000
+  fauxTimeScaled: 0.000023841858
 --- !u!64 &51203841
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -766,10 +765,9 @@ MonoBehaviour:
   drawMeshGizmo: 1
   drawFauxLocation: 0
   gizmoSize: 2
-  fauxTime: 0
-  oldFauxTime: 0
-  fauxProgressAmt: 0
-  fauxTimeScaled: 0
+  fauxTime: 1000
+  oldFauxTime: 1000
+  fauxTimeScaled: 0.000023841858
 --- !u!64 &118278580
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2581,9 +2579,8 @@ MonoBehaviour:
   drawMeshGizmo: 1
   drawFauxLocation: 0
   gizmoSize: 2
-  fauxTime: 0
-  oldFauxTime: 0
-  fauxProgressAmt: 0
+  fauxTime: 1000
+  oldFauxTime: 1000
   fauxTimeScaled: 0
 --- !u!114 &435625781
 MonoBehaviour:
@@ -2762,10 +2759,9 @@ MonoBehaviour:
   drawMeshGizmo: 1
   drawFauxLocation: 0
   gizmoSize: 2
-  fauxTime: 0
-  oldFauxTime: 0
-  fauxProgressAmt: 0
-  fauxTimeScaled: 0
+  fauxTime: 1000
+  oldFauxTime: 1000
+  fauxTimeScaled: 0.00021362305
 --- !u!64 &443392886
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3130,9 +3126,8 @@ MonoBehaviour:
   drawMeshGizmo: 1
   drawFauxLocation: 0
   gizmoSize: 2
-  fauxTime: 0
-  oldFauxTime: 0
-  fauxProgressAmt: 0
+  fauxTime: 1000
+  oldFauxTime: 1000
   fauxTimeScaled: 0
 --- !u!114 &460962083
 MonoBehaviour:
@@ -3572,10 +3567,9 @@ MonoBehaviour:
   drawMeshGizmo: 1
   drawFauxLocation: 0
   gizmoSize: 2
-  fauxTime: 0
-  oldFauxTime: 0
-  fauxProgressAmt: 0
-  fauxTimeScaled: 0
+  fauxTime: 1000
+  oldFauxTime: 1000
+  fauxTimeScaled: 0.000023841858
 --- !u!64 &526286406
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5018,10 +5012,9 @@ MonoBehaviour:
   drawMeshGizmo: 1
   drawFauxLocation: 0
   gizmoSize: 2
-  fauxTime: 0
-  oldFauxTime: 0
-  fauxProgressAmt: 0
-  fauxTimeScaled: 0
+  fauxTime: 1000
+  oldFauxTime: 1000
+  fauxTimeScaled: 0.000023841858
 --- !u!64 &792476587
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6789,9 +6782,8 @@ MonoBehaviour:
   drawMeshGizmo: 1
   drawFauxLocation: 0
   gizmoSize: 2
-  fauxTime: 0
-  oldFauxTime: 0
-  fauxProgressAmt: 0
+  fauxTime: 1000
+  oldFauxTime: 1000
   fauxTimeScaled: 0
 --- !u!114 &971348272
 MonoBehaviour:
@@ -7851,10 +7843,9 @@ MonoBehaviour:
   drawMeshGizmo: 1
   drawFauxLocation: 0
   gizmoSize: 2
-  fauxTime: 0
-  oldFauxTime: 0
-  fauxProgressAmt: 0
-  fauxTimeScaled: 0
+  fauxTime: 1000
+  oldFauxTime: 1000
+  fauxTimeScaled: 0.000023841858
 --- !u!114 &1072095181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8140,10 +8131,9 @@ MonoBehaviour:
   drawMeshGizmo: 1
   drawFauxLocation: 0
   gizmoSize: 2
-  fauxTime: 0
-  oldFauxTime: 0
-  fauxProgressAmt: 0
-  fauxTimeScaled: 0
+  fauxTime: 1000
+  oldFauxTime: 1000
+  fauxTimeScaled: 0.000023841858
 --- !u!114 &1110020758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8321,10 +8311,9 @@ MonoBehaviour:
   drawMeshGizmo: 1
   drawFauxLocation: 0
   gizmoSize: 2
-  fauxTime: 0
-  oldFauxTime: 0
-  fauxProgressAmt: 0
-  fauxTimeScaled: 0
+  fauxTime: 1000
+  oldFauxTime: 1000
+  fauxTimeScaled: 0.000023841858
 --- !u!64 &1117961279
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9508,10 +9497,9 @@ MonoBehaviour:
   drawMeshGizmo: 1
   drawFauxLocation: 0
   gizmoSize: 2
-  fauxTime: 0
-  oldFauxTime: 0
-  fauxProgressAmt: 0
-  fauxTimeScaled: 0
+  fauxTime: 1000
+  oldFauxTime: 1000
+  fauxTimeScaled: 0.000023841858
 --- !u!64 &1386345490
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9815,10 +9803,9 @@ MonoBehaviour:
   drawMeshGizmo: 1
   drawFauxLocation: 0
   gizmoSize: 2
-  fauxTime: 0
-  oldFauxTime: 0
-  fauxProgressAmt: 0
-  fauxTimeScaled: 0
+  fauxTime: 1000
+  oldFauxTime: 1000
+  fauxTimeScaled: 0.000023841858
 --- !u!64 &1392167013
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10020,10 +10007,9 @@ MonoBehaviour:
   drawMeshGizmo: 1
   drawFauxLocation: 0
   gizmoSize: 2
-  fauxTime: 0
-  oldFauxTime: 0
-  fauxProgressAmt: 0
-  fauxTimeScaled: 0
+  fauxTime: 1000
+  oldFauxTime: 1000
+  fauxTimeScaled: 0.4
 --- !u!64 &1410182847
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10545,10 +10531,9 @@ MonoBehaviour:
   drawMeshGizmo: 1
   drawFauxLocation: 0
   gizmoSize: 2
-  fauxTime: 0
-  oldFauxTime: 0
-  fauxProgressAmt: 0
-  fauxTimeScaled: 0
+  fauxTime: 1000
+  oldFauxTime: 1000
+  fauxTimeScaled: 0.000023841858
 --- !u!114 &1483464746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11155,10 +11140,9 @@ MonoBehaviour:
   drawMeshGizmo: 1
   drawFauxLocation: 0
   gizmoSize: 2
-  fauxTime: 0
-  oldFauxTime: 0
-  fauxProgressAmt: 0
-  fauxTimeScaled: 0
+  fauxTime: 1000
+  oldFauxTime: 1000
+  fauxTimeScaled: 0.80020905
 --- !u!64 &1573310895
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11218,7 +11202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22cde5585372ccf4ca327eccdda0aeeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fauxTime: 0
+  fauxTime: 1000
   PointsDrawLineGizmo: 1
   PointsDrawMeshGizmo: 1
   MoversDrawLingGizmo: 1
@@ -11452,9 +11436,8 @@ MonoBehaviour:
   drawMeshGizmo: 1
   drawFauxLocation: 0
   gizmoSize: 2
-  fauxTime: 0
-  oldFauxTime: 0
-  fauxProgressAmt: 0
+  fauxTime: 1000
+  oldFauxTime: 1000
   fauxTimeScaled: 0
 --- !u!64 &1612973878
 MeshCollider:
@@ -11702,9 +11685,8 @@ MonoBehaviour:
   drawMeshGizmo: 1
   drawFauxLocation: 0
   gizmoSize: 2
-  fauxTime: 0
-  oldFauxTime: 0
-  fauxProgressAmt: 0
+  fauxTime: 1000
+  oldFauxTime: 1000
   fauxTimeScaled: 0
 --- !u!114 &1631998661
 MonoBehaviour:
@@ -12067,10 +12049,9 @@ MonoBehaviour:
   drawMeshGizmo: 1
   drawFauxLocation: 0
   gizmoSize: 2
-  fauxTime: 0
-  oldFauxTime: 0
-  fauxProgressAmt: 0
-  fauxTimeScaled: 0
+  fauxTime: 1000
+  oldFauxTime: 1000
+  fauxTimeScaled: 0.000023841858
 --- !u!114 &1715077081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12327,10 +12308,9 @@ MonoBehaviour:
   drawMeshGizmo: 1
   drawFauxLocation: 0
   gizmoSize: 2
-  fauxTime: 0
-  oldFauxTime: 0
-  fauxProgressAmt: 0
-  fauxTimeScaled: 0
+  fauxTime: 1000
+  oldFauxTime: 1000
+  fauxTimeScaled: 0.000023841858
 --- !u!114 &1754630648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12494,10 +12474,9 @@ MonoBehaviour:
   drawMeshGizmo: 1
   drawFauxLocation: 0
   gizmoSize: 2
-  fauxTime: 0
-  oldFauxTime: 0
-  fauxProgressAmt: 0
-  fauxTimeScaled: 0
+  fauxTime: 1000
+  oldFauxTime: 1000
+  fauxTimeScaled: 0.000023841858
 --- !u!114 &1772097390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13193,10 +13172,9 @@ MonoBehaviour:
   drawMeshGizmo: 1
   drawFauxLocation: 0
   gizmoSize: 2
-  fauxTime: 0
-  oldFauxTime: 0
-  fauxProgressAmt: 0
-  fauxTimeScaled: 0
+  fauxTime: 1000
+  oldFauxTime: 1000
+  fauxTimeScaled: 0.000023841858
 --- !u!64 &1832089250
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -13906,10 +13884,9 @@ MonoBehaviour:
   drawMeshGizmo: 1
   drawFauxLocation: 0
   gizmoSize: 2
-  fauxTime: 0
-  oldFauxTime: 0
-  fauxProgressAmt: 0
-  fauxTimeScaled: 0
+  fauxTime: 1000
+  oldFauxTime: 1000
+  fauxTimeScaled: 0.000023841858
 --- !u!64 &1912229756
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -14059,10 +14036,9 @@ MonoBehaviour:
   drawMeshGizmo: 1
   drawFauxLocation: 0
   gizmoSize: 2
-  fauxTime: 0
-  oldFauxTime: 0
-  fauxProgressAmt: 0
-  fauxTimeScaled: 0
+  fauxTime: 1000
+  oldFauxTime: 1000
+  fauxTimeScaled: 0.000023841858
 --- !u!114 &1915955859
 MonoBehaviour:
   m_ObjectHideFlags: 0

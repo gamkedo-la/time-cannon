@@ -52,10 +52,8 @@ public class WaypointMover : MonoBehaviour
 	public bool drawFauxLocation = false;
 	[HideInInspector]
 	public float gizmoSize = 2.0f;
-	[HideInInspector]
 	public float fauxTime = 0.0f;
 	public float oldFauxTime = 0.0f;
-	public float fauxProgressAmt = 0.0f;
 	public float fauxTimeScaled = 0.0f;
 	private Waypoint tempTarget;
 	public void OnDrawGizmos()
@@ -81,6 +79,49 @@ public class WaypointMover : MonoBehaviour
 		foreach (MeshCollider collider in colliders)
 		{
 			collider.enabled = drawMeshGizmo;
+		}
+
+		if (fauxTime != oldFauxTime || fauxTimeScaled > 1f || fauxTimeScaled < 0f )
+		{
+			float fauxDiff = fauxTime - oldFauxTime;
+
+			if (fauxDiff >= 1f)
+			{
+				fauxTimeScaled += 1f * tempTarget.speedMultiplierAfterHere * speedScale;
+				oldFauxTime += 1f;
+			}
+			else if (fauxDiff <= -1f)
+			{
+				fauxTimeScaled -= 1f * tempTarget.speedMultiplierAfterHere * speedScale;
+				oldFauxTime -= 1f;
+			}
+			else if (fauxDiff > 0f)
+			{
+				fauxTimeScaled += fauxDiff * tempTarget.speedMultiplierAfterHere * speedScale;
+				oldFauxTime += fauxDiff;
+			}
+			else if (fauxDiff < 0f)
+			{
+				fauxTimeScaled -= fauxDiff * tempTarget.speedMultiplierAfterHere * speedScale;
+				oldFauxTime -= fauxDiff;
+			}
+
+			if (fauxTimeScaled <= 0f)
+			{
+				fauxTimeScaled += 1f;
+				tempTarget = tempTarget.GetPrev();
+			}
+			else if (fauxTimeScaled >= 1f)
+			{
+				fauxTimeScaled -= 1f;
+				tempTarget = tempTarget.next;
+			}
+			if (fauxTime == 0f)
+			{
+				oldFauxTime = 0f;
+				fauxTimeScaled = 0f;
+				tempTarget = target;
+			}
 		}
 
 		if (target != null && drawFauxLocation)
