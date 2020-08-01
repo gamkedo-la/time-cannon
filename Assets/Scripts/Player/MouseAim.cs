@@ -30,7 +30,7 @@ public class MouseAim : MonoBehaviour
         turnAng = Mathf.Clamp(turnAng,-turnLimit, turnLimit);
         tiltAng = Mathf.Clamp(tiltAng, -tiltLimit, tiltLimit);
 
-        transform.rotation = Quaternion.AngleAxis(turnAng, Vector3.up) *
+        transform.localRotation = Quaternion.AngleAxis(turnAng, Vector3.up) *
                             Quaternion.AngleAxis(tiltAng, Vector3.right);
     }
 

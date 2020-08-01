@@ -20887,6 +20887,7 @@ MonoBehaviour:
   emitter: {fileID: 1672550579}
   cannonReadout: {fileID: 579675948}
   crosshair: {fileID: 495406884278780598}
+  ShootingPoints: {fileID: 0}
 --- !u!95 &1731246911
 Animator:
   serializedVersion: 3
@@ -21049,6 +21050,7 @@ MonoBehaviour:
   emitter: {fileID: 427930953}
   cannonReadout: {fileID: 1830353411}
   crosshair: {fileID: 495406884278780598}
+  ShootingPoints: {fileID: 0}
 --- !u!95 &1804362747
 Animator:
   serializedVersion: 3
@@ -21509,7 +21511,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &495406883534218703
 Transform:
   m_ObjectHideFlags: 0

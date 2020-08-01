@@ -13,6 +13,7 @@ public class FireCannon : MonoBehaviour
     private float lastAimedRange = 50.0f;
     private float maxAimRange = 500.0f; // avoids dot vanishing
     private float muzzleFlashDuration = 0.3f;
+    public GameObject ShootingPoints;
 
     private void AddArrayIntoListIfUnique(List<RaycastHit> toList, RaycastHit[] fromArray)
     {
@@ -72,17 +73,26 @@ public class FireCannon : MonoBehaviour
             crosshair.color = Color.red;
 
             ExplodeChainReact ecrScript = rhInfo.collider.gameObject.GetComponent<ExplodeChainReact>();
+            bool isItShootingPoint = rhInfo.collider.gameObject.transform.IsChildOf(ShootingPoints.transform);
             if (Input.GetMouseButtonDown(0) || Input.GetAxis("TriggerAxis") > 0.2f)
             {
-                emitter.Emit(1000);
-                animator.SetTrigger( "Fire" );
-                muzzleFlash.SetActive( true );
-                Invoke( nameof( DisableMuzzleFlash ), muzzleFlashDuration );
-
-                Debug.Log("DIRECT HIT:" + rhInfo.collider.gameObject.name);
-                if(ecrScript)
+                if (isItShootingPoint)
                 {
-                    ecrScript.Explode(1);
+                    transform.root.position = rhInfo.collider.transform.position;
+                    transform.root.rotation = rhInfo.collider.transform.rotation;
+                }
+                else
+                {
+                    emitter.Emit(1000);
+                    animator.SetTrigger("Fire");
+                    muzzleFlash.SetActive(true);
+                    Invoke(nameof(DisableMuzzleFlash), muzzleFlashDuration);
+
+                    Debug.Log("DIRECT HIT:" + rhInfo.collider.gameObject.name);
+                    if (ecrScript)
+                    {
+                        ecrScript.Explode(1);
+                    }
                 }
             }
             else
@@ -90,6 +100,10 @@ public class FireCannon : MonoBehaviour
                 if (ecrScript)
                 {
                     hitsInRange += ecrScript.HitsInRange();
+                }
+                else if (isItShootingPoint)
+                {
+                    crosshair.color = Color.green;
                 }
                 else
                 {
