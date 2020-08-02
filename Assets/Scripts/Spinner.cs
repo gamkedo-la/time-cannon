@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Spinner : MonoBehaviour
 {
+    public float spinRate = 1200.0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +15,6 @@ public class Spinner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(0, 0, 5, Space.Self);
+        transform.rotation = Quaternion.AngleAxis(TimeKeeper.instance.fakeTime * spinRate, Vector3.forward);
     }
 }
