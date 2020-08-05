@@ -21885,7 +21885,9 @@ MonoBehaviour:
     Click to fire (must have valid target lined
     up)
 
-    Layers of chain reactions earn more points'
+    Layers of chain reactions earn more points
+
+    K to Restart Game'
 --- !u!1 &495406884695331280
 GameObject:
   m_ObjectHideFlags: 0
@@ -22161,6 +22163,11 @@ PrefabInstance:
         type: 3}
       propertyPath: near clip plane
       value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 6353673030737499026, guid: c116b7497ab8ca34c9188965d4295e27,
+        type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 567
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c116b7497ab8ca34c9188965d4295e27, type: 3}
