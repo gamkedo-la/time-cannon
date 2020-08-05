@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class TargetInspectorController : MonoBehaviour
 {
 	private bool initialized = false;
 	private Waypoint[] points;
 	private WaypointMover[] movers;
 
-	public float fauxTime = 0.0f;
+	public double fauxTime = 0.0f;
 
 	public bool PointsDrawLineGizmo = true;
 	public bool PointsDrawMeshGizmo = false;
@@ -35,7 +36,7 @@ public class TargetInspectorController : MonoBehaviour
 			mover.drawMeshGizmo = MoversDrawMeshGizmo;
 			mover.drawFauxLocation = MoversDrawFauxLocation;
 			mover.gizmoSize = MoverGizmoSize;
-			mover.fauxTime = fauxTime;
+			mover.fauxTime = fauxTime*0.1;
 		}
 	}
 }

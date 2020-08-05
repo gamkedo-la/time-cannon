@@ -52,9 +52,9 @@ public class WaypointMover : MonoBehaviour
 	public bool drawFauxLocation = false;
 	[HideInInspector]
 	public float gizmoSize = 2.0f;
-	public float fauxTime = 0.0f;
-	public float oldFauxTime = 0.0f;
-	public float fauxTimeScaled = 0.0f;
+	public double fauxTime = 0.0f;
+	public double oldFauxTime = 0.0f;
+	public double fauxTimeScaled = 0.0f;
 	private Waypoint tempTarget;
 	public void OnDrawGizmos()
 	{
@@ -81,45 +81,52 @@ public class WaypointMover : MonoBehaviour
 			collider.enabled = drawMeshGizmo;
 		}
 
-		if (fauxTime != oldFauxTime || fauxTimeScaled > 1f || fauxTimeScaled < 0f )
+		for (int i = 10; i > 0; i--)
 		{
-			float fauxDiff = fauxTime - oldFauxTime;
+			if (fauxTime != oldFauxTime && fauxTimeScaled <= 1 && fauxTimeScaled >= 0)
+			{
+				double fauxDiff = fauxTime - oldFauxTime;
 
-			if (fauxDiff >= 1f)
-			{
-				fauxTimeScaled += 1f * tempTarget.speedMultiplierAfterHere * speedScale;
-				oldFauxTime += 1f;
-			}
-			else if (fauxDiff <= -1f)
-			{
-				fauxTimeScaled -= 1f * tempTarget.speedMultiplierAfterHere * speedScale;
-				oldFauxTime -= 1f;
-			}
-			else if (fauxDiff > 0f)
-			{
-				fauxTimeScaled += fauxDiff * tempTarget.speedMultiplierAfterHere * speedScale;
-				oldFauxTime += fauxDiff;
-			}
-			else if (fauxDiff < 0f)
-			{
-				fauxTimeScaled -= fauxDiff * tempTarget.speedMultiplierAfterHere * speedScale;
-				oldFauxTime -= fauxDiff;
+				if (fauxDiff >= 1)
+				{
+					fauxTimeScaled += 1 * tempTarget.speedMultiplierAfterHere * speedScale;
+					oldFauxTime += 1;
+				}
+				else if (fauxDiff <= -1)
+				{
+					fauxTimeScaled -= 1 * tempTarget.speedMultiplierAfterHere * speedScale;
+					oldFauxTime -= 1;
+				}
+				else if (fauxDiff > 0)
+				{
+					fauxTimeScaled += fauxDiff * tempTarget.speedMultiplierAfterHere * speedScale;
+					oldFauxTime += fauxDiff;
+				}
+				else if (fauxDiff < 0)
+				{
+					fauxTimeScaled -= fauxDiff * tempTarget.speedMultiplierAfterHere * speedScale;
+					oldFauxTime -= fauxDiff;
+				}
 			}
 
-			if (fauxTimeScaled <= 0f)
+			if (fauxTimeScaled > 1 || fauxTimeScaled < 0)
 			{
-				fauxTimeScaled += 1f;
-				tempTarget = tempTarget.GetPrev();
+				if (fauxTimeScaled <= 0)
+				{
+					fauxTimeScaled += 1;
+					tempTarget = tempTarget.GetPrev();
+				}
+				else if (fauxTimeScaled >= 1)
+				{
+					fauxTimeScaled -= 1;
+					tempTarget = tempTarget.next;
+				}
 			}
-			else if (fauxTimeScaled >= 1f)
+
+			if (fauxTime == 0)
 			{
-				fauxTimeScaled -= 1f;
-				tempTarget = tempTarget.next;
-			}
-			if (fauxTime == 0f)
-			{
-				oldFauxTime = 0f;
-				fauxTimeScaled = 0f;
+				oldFauxTime = 0;
+				fauxTimeScaled = 0;
 				tempTarget = target;
 			}
 		}
@@ -127,7 +134,7 @@ public class WaypointMover : MonoBehaviour
 		if (target != null && drawFauxLocation)
 		{
 			Gizmos.color = Color.green;
-			Gizmos.DrawSphere(tempTarget.InterpPt(fauxTimeScaled), gizmoSize);
+			Gizmos.DrawSphere(tempTarget.InterpPt((float)fauxTimeScaled), gizmoSize);
 		}
 	}
 }
