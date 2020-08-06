@@ -19,7 +19,7 @@ public class ExplodeChainReact : MonoBehaviour
 
     private void Start()
     {
-        blastVFX = Resources.Load("Explosion"+ blastRadius + "m") as GameObject;
+        blastVFX = Resources.Load("Explosion5m") as GameObject;
         if(blastVFX == null)
         {
             Debug.LogError("Blast Radius needs to match an existing Resources/Explosion_m prefab");
