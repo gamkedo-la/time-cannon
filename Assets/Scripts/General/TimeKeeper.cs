@@ -32,7 +32,7 @@ public class TimeKeeper : MonoBehaviour
         fakeTime += fakeTimeDelta;
     }
 
-	private void OnDrawGizmos() {
+    private void OnDrawGizmos() {
 		if (instance == null) instance = this;
 	}
 }
