@@ -81,7 +81,7 @@ public class WaypointMover : MonoBehaviour
 			collider.enabled = drawMeshGizmo;
 		}
 
-		for (int i = 10; i > 0; i--)
+		for (int i = 100; i > 0; i--)
 		{
 			if (fauxTime != oldFauxTime && fauxTimeScaled <= 1 && fauxTimeScaled >= 0)
 			{
