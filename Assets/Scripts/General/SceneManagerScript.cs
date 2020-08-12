@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -6,6 +7,13 @@ using UnityEngine.SceneManagement;
 public class SceneManagerScript : MonoBehaviour
 {
     public static SceneManagerScript Instance { get; private set; } = null;
+
+    [SerializeField] private FloatSO timePassed;
+    [SerializeField] private IntSO totalNumberOfHits;
+    [SerializeField] private IntListSO numberOfHitsList;
+    [SerializeField] private IntListSO scoreFromEachShot;
+
+    //[SerializeField] private GameObject RoundSummaryUIVR; //TODO
     private void Awake()
     {
         if (Instance == null)
@@ -19,15 +27,17 @@ public class SceneManagerScript : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
     }
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            RestartScene();
-        }   
-    }
     public void RestartScene()
     {
-        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
+        this.ResetUIValues();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    private void ResetUIValues()
+    {
+        timePassed.value = 0.0f;
+        totalNumberOfHits.value = 0;
+        numberOfHitsList.value.Clear();
+        scoreFromEachShot.value.Clear();
     }
 }

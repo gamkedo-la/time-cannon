@@ -363,6 +363,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blastRadius: 10
   alreadyCountedInChainForAimThisFrame: 0
+  ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
+  NumberOfTargetsList: {fileID: 11400000, guid: 6cbfb9320404555408bf2458a4954588,
+    type: 2}
+  TotalNumberOfTargetHits: {fileID: 11400000, guid: ea33fceecb8fae6458630a3df5d05b5a,
+    type: 2}
 --- !u!114 &51203840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -449,6 +454,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blastRadius: 5
   alreadyCountedInChainForAimThisFrame: 0
+  ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
+  NumberOfTargetsList: {fileID: 11400000, guid: 6cbfb9320404555408bf2458a4954588,
+    type: 2}
+  TotalNumberOfTargetHits: {fileID: 11400000, guid: ea33fceecb8fae6458630a3df5d05b5a,
+    type: 2}
 --- !u!135 &53386393
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -738,6 +748,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blastRadius: 10
   alreadyCountedInChainForAimThisFrame: 0
+  ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
+  NumberOfTargetsList: {fileID: 11400000, guid: 6cbfb9320404555408bf2458a4954588,
+    type: 2}
+  TotalNumberOfTargetHits: {fileID: 11400000, guid: ea33fceecb8fae6458630a3df5d05b5a,
+    type: 2}
 --- !u!114 &118278579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -854,6 +869,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blastRadius: 5
   alreadyCountedInChainForAimThisFrame: 0
+  ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
+  NumberOfTargetsList: {fileID: 11400000, guid: 6cbfb9320404555408bf2458a4954588,
+    type: 2}
+  TotalNumberOfTargetHits: {fileID: 11400000, guid: ea33fceecb8fae6458630a3df5d05b5a,
+    type: 2}
 --- !u!135 &124670150
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2186,6 +2206,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blastRadius: 10
   alreadyCountedInChainForAimThisFrame: 0
+  ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
+  NumberOfTargetsList: {fileID: 11400000, guid: 6cbfb9320404555408bf2458a4954588,
+    type: 2}
+  TotalNumberOfTargetHits: {fileID: 11400000, guid: ea33fceecb8fae6458630a3df5d05b5a,
+    type: 2}
 --- !u!64 &435625782
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2331,6 +2356,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blastRadius: 10
   alreadyCountedInChainForAimThisFrame: 0
+  ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
+  NumberOfTargetsList: {fileID: 11400000, guid: 6cbfb9320404555408bf2458a4954588,
+    type: 2}
+  TotalNumberOfTargetHits: {fileID: 11400000, guid: ea33fceecb8fae6458630a3df5d05b5a,
+    type: 2}
 --- !u!114 &443392885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2640,6 +2670,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blastRadius: 10
   alreadyCountedInChainForAimThisFrame: 0
+  ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
+  NumberOfTargetsList: {fileID: 11400000, guid: 6cbfb9320404555408bf2458a4954588,
+    type: 2}
+  TotalNumberOfTargetHits: {fileID: 11400000, guid: ea33fceecb8fae6458630a3df5d05b5a,
+    type: 2}
 --- !u!64 &460962084
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2911,6 +2946,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blastRadius: 5
   alreadyCountedInChainForAimThisFrame: 0
+  ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
+  NumberOfTargetsList: {fileID: 11400000, guid: 6cbfb9320404555408bf2458a4954588,
+    type: 2}
+  TotalNumberOfTargetHits: {fileID: 11400000, guid: ea33fceecb8fae6458630a3df5d05b5a,
+    type: 2}
 --- !u!135 &492945889
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3160,6 +3200,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blastRadius: 10
   alreadyCountedInChainForAimThisFrame: 0
+  ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
+  NumberOfTargetsList: {fileID: 11400000, guid: 6cbfb9320404555408bf2458a4954588,
+    type: 2}
+  TotalNumberOfTargetHits: {fileID: 11400000, guid: ea33fceecb8fae6458630a3df5d05b5a,
+    type: 2}
 --- !u!114 &526286405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3567,6 +3612,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blastRadius: 5
   alreadyCountedInChainForAimThisFrame: 0
+  ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
+  NumberOfTargetsList: {fileID: 11400000, guid: 6cbfb9320404555408bf2458a4954588,
+    type: 2}
+  TotalNumberOfTargetHits: {fileID: 11400000, guid: ea33fceecb8fae6458630a3df5d05b5a,
+    type: 2}
 --- !u!135 &586477721
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4406,6 +4456,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blastRadius: 10
   alreadyCountedInChainForAimThisFrame: 0
+  ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
+  NumberOfTargetsList: {fileID: 11400000, guid: 6cbfb9320404555408bf2458a4954588,
+    type: 2}
+  TotalNumberOfTargetHits: {fileID: 11400000, guid: ea33fceecb8fae6458630a3df5d05b5a,
+    type: 2}
 --- !u!114 &792476586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4649,6 +4704,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blastRadius: 5
   alreadyCountedInChainForAimThisFrame: 0
+  ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
+  NumberOfTargetsList: {fileID: 11400000, guid: 6cbfb9320404555408bf2458a4954588,
+    type: 2}
+  TotalNumberOfTargetHits: {fileID: 11400000, guid: ea33fceecb8fae6458630a3df5d05b5a,
+    type: 2}
 --- !u!135 &795330307
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4774,6 +4834,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blastRadius: 5
   alreadyCountedInChainForAimThisFrame: 0
+  ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
+  NumberOfTargetsList: {fileID: 11400000, guid: 6cbfb9320404555408bf2458a4954588,
+    type: 2}
+  TotalNumberOfTargetHits: {fileID: 11400000, guid: ea33fceecb8fae6458630a3df5d05b5a,
+    type: 2}
 --- !u!135 &805815714
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4834,6 +4899,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 805815710}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &828537790 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 495406883431530575, guid: bc4f48e812a1248de8809047f43f5d52,
+    type: 3}
+  m_PrefabInstance: {fileID: 495406884255841265}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &831267550
 GameObject:
   m_ObjectHideFlags: 0
@@ -4899,6 +4970,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blastRadius: 5
   alreadyCountedInChainForAimThisFrame: 0
+  ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
+  NumberOfTargetsList: {fileID: 11400000, guid: 6cbfb9320404555408bf2458a4954588,
+    type: 2}
+  TotalNumberOfTargetHits: {fileID: 11400000, guid: ea33fceecb8fae6458630a3df5d05b5a,
+    type: 2}
 --- !u!135 &831267554
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5058,6 +5134,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blastRadius: 5
   alreadyCountedInChainForAimThisFrame: 0
+  ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
+  NumberOfTargetsList: {fileID: 11400000, guid: 6cbfb9320404555408bf2458a4954588,
+    type: 2}
+  TotalNumberOfTargetHits: {fileID: 11400000, guid: ea33fceecb8fae6458630a3df5d05b5a,
+    type: 2}
 --- !u!135 &845450241
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5265,6 +5346,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blastRadius: 5
   alreadyCountedInChainForAimThisFrame: 0
+  ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
+  NumberOfTargetsList: {fileID: 11400000, guid: 6cbfb9320404555408bf2458a4954588,
+    type: 2}
+  TotalNumberOfTargetHits: {fileID: 11400000, guid: ea33fceecb8fae6458630a3df5d05b5a,
+    type: 2}
 --- !u!135 &852404882
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5730,6 +5816,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blastRadius: 5
   alreadyCountedInChainForAimThisFrame: 0
+  ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
+  NumberOfTargetsList: {fileID: 11400000, guid: 6cbfb9320404555408bf2458a4954588,
+    type: 2}
+  TotalNumberOfTargetHits: {fileID: 11400000, guid: ea33fceecb8fae6458630a3df5d05b5a,
+    type: 2}
 --- !u!135 &909854801
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6298,6 +6389,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blastRadius: 10
   alreadyCountedInChainForAimThisFrame: 0
+  ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
+  NumberOfTargetsList: {fileID: 11400000, guid: 6cbfb9320404555408bf2458a4954588,
+    type: 2}
+  TotalNumberOfTargetHits: {fileID: 11400000, guid: ea33fceecb8fae6458630a3df5d05b5a,
+    type: 2}
 --- !u!64 &971348273
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6614,6 +6710,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blastRadius: 5
   alreadyCountedInChainForAimThisFrame: 0
+  ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
+  NumberOfTargetsList: {fileID: 11400000, guid: 6cbfb9320404555408bf2458a4954588,
+    type: 2}
+  TotalNumberOfTargetHits: {fileID: 11400000, guid: ea33fceecb8fae6458630a3df5d05b5a,
+    type: 2}
 --- !u!135 &1001261072
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6739,6 +6840,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blastRadius: 5
   alreadyCountedInChainForAimThisFrame: 0
+  ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
+  NumberOfTargetsList: {fileID: 11400000, guid: 6cbfb9320404555408bf2458a4954588,
+    type: 2}
+  TotalNumberOfTargetHits: {fileID: 11400000, guid: ea33fceecb8fae6458630a3df5d05b5a,
+    type: 2}
 --- !u!135 &1003328931
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6918,6 +7024,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blastRadius: 5
   alreadyCountedInChainForAimThisFrame: 0
+  ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
+  NumberOfTargetsList: {fileID: 11400000, guid: 6cbfb9320404555408bf2458a4954588,
+    type: 2}
+  TotalNumberOfTargetHits: {fileID: 11400000, guid: ea33fceecb8fae6458630a3df5d05b5a,
+    type: 2}
 --- !u!135 &1038335597
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -7359,6 +7470,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blastRadius: 10
   alreadyCountedInChainForAimThisFrame: 0
+  ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
+  NumberOfTargetsList: {fileID: 11400000, guid: 6cbfb9320404555408bf2458a4954588,
+    type: 2}
+  TotalNumberOfTargetHits: {fileID: 11400000, guid: ea33fceecb8fae6458630a3df5d05b5a,
+    type: 2}
 --- !u!64 &1072095182
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7647,6 +7763,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blastRadius: 10
   alreadyCountedInChainForAimThisFrame: 0
+  ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
+  NumberOfTargetsList: {fileID: 11400000, guid: 6cbfb9320404555408bf2458a4954588,
+    type: 2}
+  TotalNumberOfTargetHits: {fileID: 11400000, guid: ea33fceecb8fae6458630a3df5d05b5a,
+    type: 2}
 --- !u!64 &1110020759
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7792,6 +7913,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blastRadius: 10
   alreadyCountedInChainForAimThisFrame: 0
+  ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
+  NumberOfTargetsList: {fileID: 11400000, guid: 6cbfb9320404555408bf2458a4954588,
+    type: 2}
+  TotalNumberOfTargetHits: {fileID: 11400000, guid: ea33fceecb8fae6458630a3df5d05b5a,
+    type: 2}
 --- !u!114 &1117961278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7936,6 +8062,12 @@ Transform:
   m_Father: {fileID: 379033407}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1169089914 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 495406883564876840, guid: bc4f48e812a1248de8809047f43f5d52,
+    type: 3}
+  m_PrefabInstance: {fileID: 495406884255841265}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1177720086
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8125,6 +8257,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6104198873608807328, guid: c20c4bd71527ee341a790aa9f5c74362,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1169089914}
+    - target: {fileID: 6104198873608807328, guid: c20c4bd71527ee341a790aa9f5c74362,
+        type: 3}
+      propertyPath: RoundSummaryUIWebGL
+      value: 
+      objectReference: {fileID: 828537790}
     - target: {fileID: 8534341339176296137, guid: c20c4bd71527ee341a790aa9f5c74362,
         type: 3}
       propertyPath: m_Name
@@ -8318,6 +8460,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blastRadius: 5
   alreadyCountedInChainForAimThisFrame: 0
+  ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
+  NumberOfTargetsList: {fileID: 11400000, guid: 6cbfb9320404555408bf2458a4954588,
+    type: 2}
+  TotalNumberOfTargetHits: {fileID: 11400000, guid: ea33fceecb8fae6458630a3df5d05b5a,
+    type: 2}
 --- !u!135 &1325858330
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -8582,6 +8729,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blastRadius: 10
   alreadyCountedInChainForAimThisFrame: 0
+  ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
+  NumberOfTargetsList: {fileID: 11400000, guid: 6cbfb9320404555408bf2458a4954588,
+    type: 2}
+  TotalNumberOfTargetHits: {fileID: 11400000, guid: ea33fceecb8fae6458630a3df5d05b5a,
+    type: 2}
 --- !u!114 &1386345489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8888,6 +9040,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blastRadius: 10
   alreadyCountedInChainForAimThisFrame: 0
+  ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
+  NumberOfTargetsList: {fileID: 11400000, guid: 6cbfb9320404555408bf2458a4954588,
+    type: 2}
+  TotalNumberOfTargetHits: {fileID: 11400000, guid: ea33fceecb8fae6458630a3df5d05b5a,
+    type: 2}
 --- !u!114 &1392167012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9176,6 +9333,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blastRadius: 10
   alreadyCountedInChainForAimThisFrame: 0
+  ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
+  NumberOfTargetsList: {fileID: 11400000, guid: 6cbfb9320404555408bf2458a4954588,
+    type: 2}
+  TotalNumberOfTargetHits: {fileID: 11400000, guid: ea33fceecb8fae6458630a3df5d05b5a,
+    type: 2}
 --- !u!114 &1410182846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9292,6 +9454,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blastRadius: 5
   alreadyCountedInChainForAimThisFrame: 0
+  ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
+  NumberOfTargetsList: {fileID: 11400000, guid: 6cbfb9320404555408bf2458a4954588,
+    type: 2}
+  TotalNumberOfTargetHits: {fileID: 11400000, guid: ea33fceecb8fae6458630a3df5d05b5a,
+    type: 2}
 --- !u!135 &1426154041
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -9461,6 +9628,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blastRadius: 5
   alreadyCountedInChainForAimThisFrame: 0
+  ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
+  NumberOfTargetsList: {fileID: 11400000, guid: 6cbfb9320404555408bf2458a4954588,
+    type: 2}
+  TotalNumberOfTargetHits: {fileID: 11400000, guid: ea33fceecb8fae6458630a3df5d05b5a,
+    type: 2}
 --- !u!114 &1442233119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9735,6 +9907,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blastRadius: 10
   alreadyCountedInChainForAimThisFrame: 0
+  ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
+  NumberOfTargetsList: {fileID: 11400000, guid: 6cbfb9320404555408bf2458a4954588,
+    type: 2}
+  TotalNumberOfTargetHits: {fileID: 11400000, guid: ea33fceecb8fae6458630a3df5d05b5a,
+    type: 2}
 --- !u!64 &1483464747
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10125,6 +10302,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blastRadius: 5
   alreadyCountedInChainForAimThisFrame: 0
+  ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
+  NumberOfTargetsList: {fileID: 11400000, guid: 6cbfb9320404555408bf2458a4954588,
+    type: 2}
+  TotalNumberOfTargetHits: {fileID: 11400000, guid: ea33fceecb8fae6458630a3df5d05b5a,
+    type: 2}
 --- !u!135 &1529484227
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -10394,6 +10576,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blastRadius: 10
   alreadyCountedInChainForAimThisFrame: 0
+  ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
+  NumberOfTargetsList: {fileID: 11400000, guid: 6cbfb9320404555408bf2458a4954588,
+    type: 2}
+  TotalNumberOfTargetHits: {fileID: 11400000, guid: ea33fceecb8fae6458630a3df5d05b5a,
+    type: 2}
 --- !u!114 &1573310894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10690,6 +10877,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blastRadius: 10
   alreadyCountedInChainForAimThisFrame: 0
+  ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
+  NumberOfTargetsList: {fileID: 11400000, guid: 6cbfb9320404555408bf2458a4954588,
+    type: 2}
+  TotalNumberOfTargetHits: {fileID: 11400000, guid: ea33fceecb8fae6458630a3df5d05b5a,
+    type: 2}
 --- !u!114 &1612973877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10788,6 +10980,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blastRadius: 10
   alreadyCountedInChainForAimThisFrame: 0
+  ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
+  NumberOfTargetsList: {fileID: 11400000, guid: 6cbfb9320404555408bf2458a4954588,
+    type: 2}
+  TotalNumberOfTargetHits: {fileID: 11400000, guid: ea33fceecb8fae6458630a3df5d05b5a,
+    type: 2}
 --- !u!64 &1631998662
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11245,6 +11442,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blastRadius: 10
   alreadyCountedInChainForAimThisFrame: 0
+  ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
+  NumberOfTargetsList: {fileID: 11400000, guid: 6cbfb9320404555408bf2458a4954588,
+    type: 2}
+  TotalNumberOfTargetHits: {fileID: 11400000, guid: ea33fceecb8fae6458630a3df5d05b5a,
+    type: 2}
 --- !u!64 &1715077082
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11445,6 +11647,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blastRadius: 10
   alreadyCountedInChainForAimThisFrame: 0
+  ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
+  NumberOfTargetsList: {fileID: 11400000, guid: 6cbfb9320404555408bf2458a4954588,
+    type: 2}
+  TotalNumberOfTargetHits: {fileID: 11400000, guid: ea33fceecb8fae6458630a3df5d05b5a,
+    type: 2}
 --- !u!64 &1754630649
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11611,6 +11818,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blastRadius: 10
   alreadyCountedInChainForAimThisFrame: 0
+  ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
+  NumberOfTargetsList: {fileID: 11400000, guid: 6cbfb9320404555408bf2458a4954588,
+    type: 2}
+  TotalNumberOfTargetHits: {fileID: 11400000, guid: ea33fceecb8fae6458630a3df5d05b5a,
+    type: 2}
 --- !u!64 &1772097391
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11995,6 +12207,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blastRadius: 10
   alreadyCountedInChainForAimThisFrame: 0
+  ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
+  NumberOfTargetsList: {fileID: 11400000, guid: 6cbfb9320404555408bf2458a4954588,
+    type: 2}
+  TotalNumberOfTargetHits: {fileID: 11400000, guid: ea33fceecb8fae6458630a3df5d05b5a,
+    type: 2}
 --- !u!114 &1832089249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12439,6 +12656,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blastRadius: 5
   alreadyCountedInChainForAimThisFrame: 0
+  ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
+  NumberOfTargetsList: {fileID: 11400000, guid: 6cbfb9320404555408bf2458a4954588,
+    type: 2}
+  TotalNumberOfTargetHits: {fileID: 11400000, guid: ea33fceecb8fae6458630a3df5d05b5a,
+    type: 2}
 --- !u!135 &1870732751
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -12707,6 +12929,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blastRadius: 10
   alreadyCountedInChainForAimThisFrame: 0
+  ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
+  NumberOfTargetsList: {fileID: 11400000, guid: 6cbfb9320404555408bf2458a4954588,
+    type: 2}
+  TotalNumberOfTargetHits: {fileID: 11400000, guid: ea33fceecb8fae6458630a3df5d05b5a,
+    type: 2}
 --- !u!114 &1912229755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12894,6 +13121,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blastRadius: 10
   alreadyCountedInChainForAimThisFrame: 0
+  ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
+  NumberOfTargetsList: {fileID: 11400000, guid: 6cbfb9320404555408bf2458a4954588,
+    type: 2}
+  TotalNumberOfTargetHits: {fileID: 11400000, guid: ea33fceecb8fae6458630a3df5d05b5a,
+    type: 2}
 --- !u!64 &1915955860
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -13366,6 +13598,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blastRadius: 5
   alreadyCountedInChainForAimThisFrame: 0
+  ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
+  NumberOfTargetsList: {fileID: 11400000, guid: 6cbfb9320404555408bf2458a4954588,
+    type: 2}
+  TotalNumberOfTargetHits: {fileID: 11400000, guid: ea33fceecb8fae6458630a3df5d05b5a,
+    type: 2}
 --- !u!135 &2006403654
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -13909,6 +14146,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blastRadius: 5
   alreadyCountedInChainForAimThisFrame: 0
+  ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
+  NumberOfTargetsList: {fileID: 11400000, guid: 6cbfb9320404555408bf2458a4954588,
+    type: 2}
+  TotalNumberOfTargetHits: {fileID: 11400000, guid: ea33fceecb8fae6458630a3df5d05b5a,
+    type: 2}
 --- !u!135 &2135508704
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -14075,14 +14317,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 317164275, guid: bc4f48e812a1248de8809047f43f5d52, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1104010620, guid: bc4f48e812a1248de8809047f43f5d52, type: 3}
-      propertyPath: forceVR
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1731246912, guid: bc4f48e812a1248de8809047f43f5d52, type: 3}
       propertyPath: ShootingPoints
       value: 
@@ -14091,10 +14325,10 @@ PrefabInstance:
       propertyPath: ShootingPoints
       value: 
       objectReference: {fileID: 1733959948}
-    - target: {fileID: 495406883296974466, guid: bc4f48e812a1248de8809047f43f5d52,
+    - target: {fileID: 495406883431530574, guid: bc4f48e812a1248de8809047f43f5d52,
         type: 3}
-      propertyPath: m_ClearFlags
-      value: 1
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 495406883564876840, guid: bc4f48e812a1248de8809047f43f5d52,
         type: 3}
@@ -14161,31 +14395,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 495406884715370419, guid: bc4f48e812a1248de8809047f43f5d52,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 10.300049
-      objectReference: {fileID: 0}
-    - target: {fileID: 889022909775138351, guid: bc4f48e812a1248de8809047f43f5d52,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4942749728222087159, guid: bc4f48e812a1248de8809047f43f5d52,
-        type: 3}
-      propertyPath: m_RequestedTrackingMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6338900297451821041, guid: bc4f48e812a1248de8809047f43f5d52,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6831061349376428568, guid: bc4f48e812a1248de8809047f43f5d52,
-        type: 3}
-      propertyPath: m_CullingMask.m_Bits
-      value: 567
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc4f48e812a1248de8809047f43f5d52, type: 3}
 --- !u!1001 &5673546600851501042
@@ -14195,15 +14404,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5260171869905111256, guid: c467154ce9d5a496cb6dd495d0ca2fdd,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1169089914}
+    - target: {fileID: 5260171869905111256, guid: c467154ce9d5a496cb6dd495d0ca2fdd,
+        type: 3}
+      propertyPath: RoundSummaryUIWebGL
+      value: 
+      objectReference: {fileID: 828537790}
     - target: {fileID: 5673546600644104664, guid: c467154ce9d5a496cb6dd495d0ca2fdd,
         type: 3}
       propertyPath: m_Name
       value: GameManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 5673546600644104665, guid: c467154ce9d5a496cb6dd495d0ca2fdd,
-        type: 3}
-      propertyPath: fauxTime
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5673546600644104670, guid: c467154ce9d5a496cb6dd495d0ca2fdd,
         type: 3}
@@ -14294,6 +14508,24 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6496999578940665336, guid: 639d36e1394c74d82a4f9e2f98c95d11,
+        type: 3}
+      propertyPath: ScoreList
+      value: 
+      objectReference: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759,
+        type: 2}
+    - target: {fileID: 6496999578940665336, guid: 639d36e1394c74d82a4f9e2f98c95d11,
+        type: 3}
+      propertyPath: NumberOfTargetsList
+      value: 
+      objectReference: {fileID: 11400000, guid: 6cbfb9320404555408bf2458a4954588,
+        type: 2}
+    - target: {fileID: 6496999578940665336, guid: 639d36e1394c74d82a4f9e2f98c95d11,
+        type: 3}
+      propertyPath: TotalNumberOfTargetHits
+      value: 
+      objectReference: {fileID: 11400000, guid: ea33fceecb8fae6458630a3df5d05b5a,
+        type: 2}
     - target: {fileID: 6496999578940665337, guid: 639d36e1394c74d82a4f9e2f98c95d11,
         type: 3}
       propertyPath: drawMeshGizmo
