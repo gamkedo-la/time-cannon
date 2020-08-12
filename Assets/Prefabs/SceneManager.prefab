@@ -43,10 +43,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed97e89f79583a94dbc8ad2251502d95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 495406883564876840, guid: bc4f48e812a1248de8809047f43f5d52, type: 3}
-  RoundSummaryUIWebGL: {fileID: 6778940530094401000, guid: 9ecaf74036b38624984d3fae53d3dc51,
-    type: 3}
-  timePassed: {fileID: 11400000, guid: 18add83e7df4e5c40b83759c1faa4236, type: 2}
-  totalNumberOfHits: {fileID: 11400000, guid: ea33fceecb8fae6458630a3df5d05b5a, type: 2}
-  numberOfHitsList: {fileID: 11400000, guid: 6cbfb9320404555408bf2458a4954588, type: 2}
-  scoreFromEachShot: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
