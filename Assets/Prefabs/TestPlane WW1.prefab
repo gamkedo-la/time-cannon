@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 267c7005b3aff334fa6abb16741f4c86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spinRate: 1200
 --- !u!1 &1042324404203185107
 GameObject:
   m_ObjectHideFlags: 0
@@ -140,6 +141,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blastRadius: 10
   alreadyCountedInChainForAimThisFrame: 0
+  ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
+  NumberOfTargetsList: {fileID: 11400000, guid: 6cbfb9320404555408bf2458a4954588,
+    type: 2}
+  TotalNumberOfTargetHits: {fileID: 11400000, guid: ea33fceecb8fae6458630a3df5d05b5a,
+    type: 2}
 --- !u!114 &9031680515206372652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,6 +159,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  speedScale: 1
+  drawLingGizmo: 1
+  drawMeshGizmo: 1
+  drawFauxLocation: 0
+  gizmoSize: 2
+  fauxTime: 0
+  oldFauxTime: 0
+  fauxTimeScaled: 0
 --- !u!1001 &9031680516000642936
 PrefabInstance:
   m_ObjectHideFlags: 0
