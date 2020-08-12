@@ -17,10 +17,6 @@ public class ExplodeChainReact : MonoBehaviour
     private int numSegments = 100;
     private LineRenderer lineRenderer;
 
-    //UI Elements for round summary screen
-    [SerializeField] private IntListSO ScoreList;
-    [SerializeField] private IntListSO NumberOfTargetsList;
-    [SerializeField] private IntSO TotalNumberOfTargetHits;
     private void Start()
     {
         blastVFX = Resources.Load("Explosion5m") as GameObject;
@@ -94,22 +90,8 @@ public class ExplodeChainReact : MonoBehaviour
 
         GameObject pointGO = GameObject.Instantiate(pointPopper, transform.position, transform.rotation);
         PointScaleFadeDie psfdScript = pointGO.GetComponent<PointScaleFadeDie>();
-        int score = chainDepth * 100;
-        psfdScript.SetText(score, chainDepth);
-        ScoreKeeper.instance.AddScore(score);
-
-        // UI Elements Handling
-        TotalNumberOfTargetHits.value += 1;
-        if (chainDepth == 1)
-        {
-            ScoreList.value.Add(score);
-            NumberOfTargetsList.value.Add(chainDepth);
-        }
-        else if (chainDepth > 1)
-        {
-            ScoreList.value[ScoreList.value.Count -1] += score;
-            NumberOfTargetsList.value[NumberOfTargetsList.value.Count - 1] += 1;
-        }
+        psfdScript.SetText(chainDepth * 100, chainDepth);
+        ScoreKeeper.instance.AddScore(100 * chainDepth);
 
         GameObject.Instantiate(blastVFX, transform.position, transform.rotation);
 

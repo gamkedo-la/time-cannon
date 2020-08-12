@@ -577,11 +577,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blastRadius: 5
   alreadyCountedInChainForAimThisFrame: 0
-  ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
-  NumberOfTargetsList: {fileID: 11400000, guid: 6cbfb9320404555408bf2458a4954588,
-    type: 2}
-  TotalNumberOfTargetHits: {fileID: 11400000, guid: ea33fceecb8fae6458630a3df5d05b5a,
-    type: 2}
 --- !u!1 &3203204843298072238
 GameObject:
   m_ObjectHideFlags: 0

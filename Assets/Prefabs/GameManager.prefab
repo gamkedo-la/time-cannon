@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5673546600644104665}
   - component: {fileID: 5673546600644104671}
   - component: {fileID: 3372480179663884653}
-  - component: {fileID: 5260171869905111256}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -49,7 +48,6 @@ MonoBehaviour:
   fakeTime: 0
   fakeTimePace: 1
   fakeTimeDelta: 0
-  RoundTime: {fileID: 11400000, guid: 18add83e7df4e5c40b83759c1faa4236, type: 2}
 --- !u!114 &5673546600644104671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77,17 +75,4 @@ MonoBehaviour:
   mixer: {fileID: 24100000, guid: 097f799e5997b614985808d5fcbc2a7d, type: 2}
   group: {fileID: 0}
   tempoMultRange: 0.2
---- !u!114 &5260171869905111256
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5673546600644104664}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e6721b6b5f567b48be08cb6e9703da8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 0}
-  RoundSummaryUIWebGL: {fileID: 0}
+  sources: []
