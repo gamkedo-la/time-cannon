@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(LineRenderer))]
+// [RequireComponent(typeof(LineRenderer))]
 public class ExplodeChainReact : MonoBehaviour
 {
     private GameObject blastVFX;
@@ -126,8 +126,8 @@ public class ExplodeChainReact : MonoBehaviour
         lineRenderer.material = new Material(Shader.Find("Particles/Standard Unlit"));
         lineRenderer.startColor = c1;
         lineRenderer.endColor = c1;
-        lineRenderer.startWidth = 0.03f;
-        lineRenderer.endWidth = 0.03f;
+        lineRenderer.startWidth = 0.05f * blastRadius/10.0f;
+        lineRenderer.endWidth = 0.05f * blastRadius / 10.0f;
         lineRenderer.positionCount = numSegments + 1;
         lineRenderer.useWorldSpace = true;
         lineRenderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
