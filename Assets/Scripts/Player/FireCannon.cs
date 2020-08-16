@@ -72,8 +72,8 @@ public class FireCannon : MonoBehaviour
             lastAimedRange = Vector3.Distance(transform.position, rhInfo.point);
             crosshair.color = Color.red;
 
-            ExplodeChainReact ecrScript = rhInfo.collider.gameObject.GetComponent<ExplodeChainReact>();
-            bool isItShootingPoint = rhInfo.collider.gameObject.transform.IsChildOf(ShootingPoints.transform);
+            ExplodeChainReact ecrScript = rhInfo.collider.gameObject.GetComponentInParent<ExplodeChainReact>();
+            bool isItShootingPoint = (ShootingPoints ? rhInfo.collider.gameObject.transform.IsChildOf(ShootingPoints.transform) : false);
             if (Input.GetMouseButtonDown(0) || Input.GetAxis("TriggerAxis") > 0.2f)
             {
                 if (isItShootingPoint)

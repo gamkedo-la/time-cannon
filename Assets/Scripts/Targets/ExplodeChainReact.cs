@@ -23,11 +23,13 @@ public class ExplodeChainReact : MonoBehaviour
     [SerializeField] private IntSO TotalNumberOfTargetHits;
     private void Start()
     {
-        blastVFX = Resources.Load("Explosion5m") as GameObject;
+        blastVFX = Resources.Load("Explosion"+blastRadius+"m") as GameObject;
         if(blastVFX == null)
         {
-            Debug.LogError("Blast Radius needs to match an existing Resources/Explosion_m prefab");
-            Debug.LogError("No Resources/Explosion"+ blastRadius+"m definition found for " +gameObject.name);
+            Debug.LogWarning("Blast Radius needs to match an existing Resources/Explosion_m prefab");
+            Debug.LogWarning("No Resources/Explosion"+ blastRadius+"m definition found for " +gameObject.name);
+            Debug.LogWarning("defaulting to 5m explosion, sad :/");
+            blastVFX = Resources.Load("Explosion5m") as GameObject;
         }
         pointPopper = Resources.Load("MultiplierPop") as GameObject;
 
