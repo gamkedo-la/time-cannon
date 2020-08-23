@@ -6,7 +6,7 @@ public class WaypointMover : MonoBehaviour
 {
 	public Waypoint target;
 	public float speedScale = 1f; // scales all waypoint speeds
-
+    public bool driveSharpTurns = false;
 	private float progressAmt = 0.0f;
 
 	void Start()
@@ -14,7 +14,37 @@ public class WaypointMover : MonoBehaviour
 		transform.position = target.transform.position;
 		transform.rotation = target.transform.rotation;
 
-		MeshRenderer[] renderers = gameObject.GetComponentsInChildren<MeshRenderer>();
+        if(driveSharpTurns) { // force each point to point directly at the next waypoint
+            Waypoint firstGO = target;
+            Waypoint tracePt = target;
+
+            do { // drop each to a bit off the ground
+                RaycastHit rhInfo;
+                // 100.0f margin is in case path waypoint is accidentally a bit underground
+                if(Physics.Raycast(tracePt.transform.position + Vector3.up*100.0f,Vector3.down, out rhInfo, 150.0f)) {
+                    tracePt.transform.position = rhInfo.point + Vector3.up * 1.5f;
+                }
+                tracePt = tracePt.next;
+            } while (firstGO != tracePt);
+
+            float totalPathDist = 0.0f;
+            do { // tally total path length, to adjust distance for consistent speed
+                totalPathDist += Vector3.Distance(tracePt.transform.position, tracePt.next.transform.position);
+                tracePt = tracePt.next;
+            } while (firstGO != tracePt);
+
+            do { // remap proportions of path length for consistent ground speed
+                tracePt.speedMultiplierAfterHere = totalPathDist / Vector3.Distance(tracePt.transform.position, tracePt.next.transform.position);
+                tracePt = tracePt.next;
+            } while (firstGO != tracePt);
+
+            do { // point each at the next
+                tracePt.transform.LookAt(tracePt.next.transform);
+                tracePt = tracePt.next;
+            } while (firstGO != tracePt);
+        }
+
+        MeshRenderer[] renderers = gameObject.GetComponentsInChildren<MeshRenderer>();
 		MeshCollider[] colliders = gameObject.GetComponentsInChildren<MeshCollider>();
 		foreach (MeshRenderer renderer in renderers)
 		{
@@ -40,7 +70,9 @@ public class WaypointMover : MonoBehaviour
 			target = target.next;
 		}
 		transform.position = target.InterpPt(progressAmt);
-		transform.rotation = target.InterpRot(progressAmt);
+		transform.rotation = target.InterpRot(driveSharpTurns ?
+            progressAmt* progressAmt* progressAmt * progressAmt * progressAmt * progressAmt : // heavy, heavy bias towards end
+            progressAmt);
 	}
 
 	private bool initialized = false;
