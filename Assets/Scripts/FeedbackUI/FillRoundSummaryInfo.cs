@@ -15,6 +15,9 @@ public class FillRoundSummaryInfo : MonoBehaviour
     [SerializeField] private IntListSO numberOfHitsList;
     [SerializeField] private IntListSO scoreFromEachShot;
 
+    private void Awake() {
+        gameObject.SetActive(false); // starts enabled, instantly turned off, otherwise find in children fails
+    }
     private void Update()
     {
         Time.timeScale = 0;

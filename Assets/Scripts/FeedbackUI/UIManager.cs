@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    [SerializeField] private GameObject Player;
+    private GameObject Player;
     private SetVROrNot setVROrNotScript;
-    [SerializeField] private GameObject RoundSummaryUIWebGL;
-    void Start()
+    [SerializeField] private FillRoundSummaryInfo endScreen;
+    //private GameObject RoundSummaryUIWebGL;
+
+    void Awake() // has to be Awake, to before FillRoundSummaryInfo turns self off in Start
     {
+        Player = GameObject.FindWithTag("Player");
         setVROrNotScript = Player.GetComponent<SetVROrNot>();
+        Debug.Log(endScreen);
+        // RoundSummaryUIWebGL = Player.GetComponentInChildren<UIManager>().gameObject;
     }
 
     // Update is called once per frame
@@ -20,8 +24,8 @@ public class UIManager : MonoBehaviour
         {
             if (!setVROrNotScript.forceVR)
             {
-                RoundSummaryUIWebGL.GetComponent<FillRoundSummaryInfo>().DrawScreen();
-                RoundSummaryUIWebGL.SetActive(true);
+                endScreen.DrawScreen();
+                endScreen.gameObject.SetActive(true);
             }
             //else //TODO
             //{
