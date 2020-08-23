@@ -4825,7 +4825,7 @@ GameObject:
   - component: {fileID: 2596094842900333582}
   - component: {fileID: 1385078349547264921}
   m_Layer: 0
-  m_Name: Explosion100m
+  m_Name: Explosion300m
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4840,7 +4840,7 @@ Transform:
   m_GameObject: {fileID: 2900615545678228944}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 30, y: 30, z: 30}
   m_Children:
   - {fileID: 927959105578395755}
   m_Father: {fileID: 0}

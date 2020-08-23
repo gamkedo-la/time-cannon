@@ -69,7 +69,7 @@ public class ExplodeChainReact : MonoBehaviour
 
         for (int i = 0; i < allNear.Length; i++)
         {
-            ExplodeChainReact ecrScriptNext = allNear[i].gameObject.GetComponent<ExplodeChainReact>();
+            ExplodeChainReact ecrScriptNext = allNear[i].gameObject.GetComponentInParent<ExplodeChainReact>();
             if (ecrScriptNext && ecrScriptNext.alreadyCountedInChainForAimThisFrame == false)
             {
                 hitsThroughMe += ecrScriptNext.HitsInRange();
@@ -84,7 +84,7 @@ public class ExplodeChainReact : MonoBehaviour
 
         for (int i = 0; i < allNear.Length; i++)
         {
-            ExplodeChainReact ecrScript = allNear[i].gameObject.GetComponent<ExplodeChainReact>();
+            ExplodeChainReact ecrScript = allNear[i].gameObject.GetComponentInParent<ExplodeChainReact>();
             if (ecrScript && gameObject != allNear[i].gameObject) // can explode, and isn't self
             {
                 Debug.Log("CHAIN ("+chainDepth+") from " + gameObject.name + " to " + allNear[i].gameObject.name);

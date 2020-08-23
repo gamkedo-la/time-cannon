@@ -382,6 +382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 850136871}
   speedScale: 1
+  driveSharpTurns: 0
   drawLingGizmo: 1
   drawMeshGizmo: 1
   drawFauxLocation: 0
@@ -836,6 +837,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1408295931}
   speedScale: 1
+  driveSharpTurns: 0
   drawLingGizmo: 1
   drawMeshGizmo: 1
   drawFauxLocation: 0
@@ -2530,6 +2532,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 743106320}
   speedScale: 1
+  driveSharpTurns: 0
   drawLingGizmo: 1
   drawMeshGizmo: 1
   drawFauxLocation: 0
@@ -2720,6 +2723,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1795561775}
   speedScale: 1
+  driveSharpTurns: 0
   drawLingGizmo: 1
   drawMeshGizmo: 1
   drawFauxLocation: 0
@@ -2994,6 +2998,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 192990622}
   speedScale: 1
+  driveSharpTurns: 0
   drawLingGizmo: 1
   drawMeshGizmo: 1
   drawFauxLocation: 0
@@ -3564,6 +3569,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1923362552}
   speedScale: 1
+  driveSharpTurns: 0
   drawLingGizmo: 1
   drawMeshGizmo: 1
   drawFauxLocation: 0
@@ -4335,7 +4341,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 76ff16cb14d8b44a48f138445f7057ea,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -327.1
+      value: -87.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 76ff16cb14d8b44a48f138445f7057ea,
         type: 3}
@@ -4345,7 +4351,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 76ff16cb14d8b44a48f138445f7057ea,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 122.3
+      value: -8.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 76ff16cb14d8b44a48f138445f7057ea,
         type: 3}
@@ -4958,6 +4964,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1078601832}
   speedScale: 1
+  driveSharpTurns: 0
   drawLingGizmo: 1
   drawMeshGizmo: 1
   drawFauxLocation: 0
@@ -7238,6 +7245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 248422200}
   speedScale: 1
+  driveSharpTurns: 0
   drawLingGizmo: 1
   drawMeshGizmo: 1
   drawFauxLocation: 0
@@ -8319,6 +8327,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1866894697}
   speedScale: 1
+  driveSharpTurns: 0
   drawLingGizmo: 1
   drawMeshGizmo: 1
   drawFauxLocation: 0
@@ -8612,6 +8621,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1177720089}
   speedScale: 1
+  driveSharpTurns: 0
   drawLingGizmo: 1
   drawMeshGizmo: 1
   drawFauxLocation: 0
@@ -8802,6 +8812,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1944957673}
   speedScale: 1
+  driveSharpTurns: 0
   drawLingGizmo: 1
   drawMeshGizmo: 1
   drawFauxLocation: 0
@@ -9671,6 +9682,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 396170239}
   speedScale: 1
+  driveSharpTurns: 0
   drawLingGizmo: 1
   drawMeshGizmo: 1
   drawFauxLocation: 0
@@ -9982,6 +9994,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 311720652}
   speedScale: 1
+  driveSharpTurns: 0
   drawLingGizmo: 1
   drawMeshGizmo: 1
   drawFauxLocation: 0
@@ -10275,6 +10288,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 2050860927}
   speedScale: 1
+  driveSharpTurns: 0
   drawLingGizmo: 1
   drawMeshGizmo: 1
   drawFauxLocation: 0
@@ -10878,6 +10892,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 913084286}
   speedScale: 1
+  driveSharpTurns: 0
   drawLingGizmo: 1
   drawMeshGizmo: 1
   drawFauxLocation: 0
@@ -11656,6 +11671,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1474138807}
   speedScale: 1
+  driveSharpTurns: 0
   drawLingGizmo: 1
   drawMeshGizmo: 1
   drawFauxLocation: 0
@@ -12026,6 +12042,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 2131701095}
   speedScale: 1
+  driveSharpTurns: 0
   drawLingGizmo: 1
   drawMeshGizmo: 1
   drawFauxLocation: 0
@@ -12089,6 +12106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 980428478}
   speedScale: 1
+  driveSharpTurns: 0
   drawLingGizmo: 1
   drawMeshGizmo: 1
   drawFauxLocation: 0
@@ -12689,6 +12707,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 931878563}
   speedScale: 1
+  driveSharpTurns: 0
   drawLingGizmo: 1
   drawMeshGizmo: 1
   drawFauxLocation: 0
@@ -12963,6 +12982,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1503495892}
   speedScale: 1
+  driveSharpTurns: 0
   drawLingGizmo: 1
   drawMeshGizmo: 1
   drawFauxLocation: 0
@@ -13134,6 +13154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1044203721}
   speedScale: 1
+  driveSharpTurns: 0
   drawLingGizmo: 1
   drawMeshGizmo: 1
   drawFauxLocation: 0
@@ -13632,6 +13653,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 734481654}
   speedScale: 1
+  driveSharpTurns: 0
   drawLingGizmo: 1
   drawMeshGizmo: 1
   drawFauxLocation: 0
@@ -14423,6 +14445,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1639835429}
   speedScale: 1
+  driveSharpTurns: 0
   drawLingGizmo: 1
   drawMeshGizmo: 1
   drawFauxLocation: 0
@@ -14575,6 +14598,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 453443695}
   speedScale: 1
+  driveSharpTurns: 0
   drawLingGizmo: 1
   drawMeshGizmo: 1
   drawFauxLocation: 0
@@ -15802,6 +15826,11 @@ PrefabInstance:
       propertyPath: ShootingPoints
       value: 
       objectReference: {fileID: 1733959948}
+    - target: {fileID: 5673546600593658957, guid: c467154ce9d5a496cb6dd495d0ca2fdd,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5673546600644104664, guid: c467154ce9d5a496cb6dd495d0ca2fdd,
         type: 3}
       propertyPath: m_Name
@@ -15860,6 +15889,11 @@ PrefabInstance:
     - target: {fileID: 5673546600644104670, guid: c467154ce9d5a496cb6dd495d0ca2fdd,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5673546601055638150, guid: c467154ce9d5a496cb6dd495d0ca2fdd,
+        type: 3}
+      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

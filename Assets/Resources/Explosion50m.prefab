@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5356337482718662731}
   - component: {fileID: 3515997548575700710}
   m_Layer: 0
-  m_Name: Explosion100m
+  m_Name: Explosion10m
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -115,8 +115,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 8
-      minScalar: 3
+      scalar: 7
+      minScalar: 2
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -168,8 +168,8 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 20
-      minScalar: 8
+      scalar: 17
+      minScalar: 7
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -284,8 +284,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 10
-      minScalar: 1
+      scalar: 8
+      minScalar: 0.8
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -4825,7 +4825,7 @@ GameObject:
   - component: {fileID: 2596094842900333582}
   - component: {fileID: 1385078349547264921}
   m_Layer: 0
-  m_Name: Explosion100m
+  m_Name: Explosion50m
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4840,7 +4840,7 @@ Transform:
   m_GameObject: {fileID: 2900615545678228944}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children:
   - {fileID: 927959105578395755}
   m_Father: {fileID: 0}
@@ -4929,8 +4929,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 4.5
-      minScalar: 3.5
+      scalar: 4
+      minScalar: 3
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -4982,8 +4982,8 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 20
-      minScalar: 15
+      scalar: 18
+      minScalar: 12
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -5098,8 +5098,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 6
-      minScalar: 0.6
+      scalar: 4
+      minScalar: 0.4
       maxCurve:
         serializedVersion: 2
         m_Curve:
