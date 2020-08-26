@@ -24,7 +24,7 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.09433961, g: 0.055186104, b: 0.0485048, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 1
+  m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 27149a025aca04c49b5a0a42b1da98d4, type: 2}
   m_HaloStrength: 0.5
@@ -208,9 +208,9 @@ GameObject:
   - component: {fileID: 215072163}
   - component: {fileID: 215072162}
   - component: {fileID: 215072161}
-  - component: {fileID: 215072160}
   - component: {fileID: 215072165}
   - component: {fileID: 215072166}
+  - component: {fileID: 215072167}
   m_Layer: 0
   m_Name: OscillatingTargetC (2)
   m_TagString: Untagged
@@ -226,28 +226,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 215072158}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 35.01, y: 38.82, z: 21.39}
+  m_LocalPosition: {x: 39.28, y: 47.75, z: 4.8100014}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2103568875}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &215072160
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 215072158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fed602a9ec954229b5c087eed823bef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  oscPhase: 0.5
-  oscAmt: 3
-  oscRate: 0.3
-  oscAng: 0
 --- !u!114 &215072161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -340,7 +324,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 2
-  m_Range: 5
+  m_Range: 8
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -388,16 +372,17 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!120 &215072166
-LineRenderer:
+--- !u!96 &215072166
+TrailRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 215072158}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 0
   m_LightProbeUsage: 0
@@ -406,7 +391,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: f8aecd43e0d0f914986411ff91d05e68, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -427,9 +412,7 @@ LineRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Positions:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
+  m_Time: 4
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -445,6 +428,15 @@ LineRenderer:
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -483,8 +475,41 @@ LineRenderer:
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_UseWorldSpace: 1
-  m_Loop: 0
+  m_MinVertexDistance: 0.1
+  m_Autodestruct: 0
+  m_Emitting: 1
+--- !u!114 &215072167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 215072158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa3fcc178cbf2434eb46fba3b2a60818, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oscPhaseX: 0.5
+  oscPhaseY: 0.5
+  oscPhaseZ: 0.5
+  oscAmtX: 3
+  oscAmtY: 3
+  oscAmtZ: 3
+  oscRateX: 1
+  oscRateY: 1
+  oscRateZ: 1
+  oscAngX: 0
+  oscAngY: 0
+  oscAngZ: 0
+  spinX: 1
+  spinY: 1.33
+  spinZ: 3.14
+  phaseVariance: 10
+  amtVariance: 1.5
+  rateVariance: 0.5
+  angVariance: 180
+  spinVariance: 1
 --- !u!1 &391811687
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,9 +523,9 @@ GameObject:
   - component: {fileID: 391811692}
   - component: {fileID: 391811691}
   - component: {fileID: 391811690}
-  - component: {fileID: 391811689}
   - component: {fileID: 391811694}
   - component: {fileID: 391811695}
+  - component: {fileID: 391811696}
   m_Layer: 0
   m_Name: OscillatingTargetC
   m_TagString: Untagged
@@ -516,28 +541,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 391811687}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 24.669998, y: 34.72, z: 21.029999}
+  m_LocalPosition: {x: 33.69, y: 34.72, z: 8.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2103568875}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &391811689
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 391811687}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fed602a9ec954229b5c087eed823bef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  oscPhase: 0.5
-  oscAmt: 3
-  oscRate: 0.3
-  oscAng: 0
 --- !u!114 &391811690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -630,7 +639,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 2
-  m_Range: 5
+  m_Range: 8
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -678,16 +687,17 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!120 &391811695
-LineRenderer:
+--- !u!96 &391811695
+TrailRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 391811687}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 0
   m_LightProbeUsage: 0
@@ -696,7 +706,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: f8aecd43e0d0f914986411ff91d05e68, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -717,9 +727,7 @@ LineRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Positions:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
+  m_Time: 4
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -735,6 +743,15 @@ LineRenderer:
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -773,8 +790,41 @@ LineRenderer:
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_UseWorldSpace: 1
-  m_Loop: 0
+  m_MinVertexDistance: 0.1
+  m_Autodestruct: 0
+  m_Emitting: 1
+--- !u!114 &391811696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 391811687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa3fcc178cbf2434eb46fba3b2a60818, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oscPhaseX: 0.5
+  oscPhaseY: 0.5
+  oscPhaseZ: 0.5
+  oscAmtX: 3
+  oscAmtY: 3
+  oscAmtZ: 3
+  oscRateX: 1
+  oscRateY: 1
+  oscRateZ: 1
+  oscAngX: 0
+  oscAngY: 0
+  oscAngZ: 0
+  spinX: 1
+  spinY: 1.33
+  spinZ: 3.14
+  phaseVariance: 10
+  amtVariance: 1.5
+  rateVariance: 0.5
+  angVariance: 180
+  spinVariance: 1
 --- !u!1 &443440412
 GameObject:
   m_ObjectHideFlags: 0
@@ -788,9 +838,9 @@ GameObject:
   - component: {fileID: 443440417}
   - component: {fileID: 443440416}
   - component: {fileID: 443440415}
-  - component: {fileID: 443440414}
   - component: {fileID: 443440419}
   - component: {fileID: 443440420}
+  - component: {fileID: 443440421}
   m_Layer: 0
   m_Name: OscillatingTargetD (1)
   m_TagString: Untagged
@@ -806,28 +856,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 443440412}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16.619999, y: 40.51, z: 34.579998}
+  m_LocalPosition: {x: 13.7, y: 40.51, z: 18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2103568875}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &443440414
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 443440412}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fed602a9ec954229b5c087eed823bef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  oscPhase: 0.5
-  oscAmt: 3
-  oscRate: 0.3
-  oscAng: 0
 --- !u!114 &443440415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -920,7 +954,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 2
-  m_Range: 5
+  m_Range: 8
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -968,16 +1002,17 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!120 &443440420
-LineRenderer:
+--- !u!96 &443440420
+TrailRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 443440412}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 0
   m_LightProbeUsage: 0
@@ -986,7 +1021,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: f8aecd43e0d0f914986411ff91d05e68, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1007,9 +1042,7 @@ LineRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Positions:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
+  m_Time: 4
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -1025,6 +1058,15 @@ LineRenderer:
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -1063,8 +1105,41 @@ LineRenderer:
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_UseWorldSpace: 1
-  m_Loop: 0
+  m_MinVertexDistance: 0.1
+  m_Autodestruct: 0
+  m_Emitting: 1
+--- !u!114 &443440421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443440412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa3fcc178cbf2434eb46fba3b2a60818, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oscPhaseX: 0.5
+  oscPhaseY: 0.5
+  oscPhaseZ: 0.5
+  oscAmtX: 3
+  oscAmtY: 3
+  oscAmtZ: 3
+  oscRateX: 1
+  oscRateY: 1
+  oscRateZ: 1
+  oscAngX: 0
+  oscAngY: 0
+  oscAngZ: 0
+  spinX: 1
+  spinY: 1.33
+  spinZ: 3.14
+  phaseVariance: 10
+  amtVariance: 1.5
+  rateVariance: 0.5
+  angVariance: 180
+  spinVariance: 1
 --- !u!1 &543807322
 GameObject:
   m_ObjectHideFlags: 0
@@ -1171,9 +1246,9 @@ GameObject:
   - component: {fileID: 558233741}
   - component: {fileID: 558233740}
   - component: {fileID: 558233739}
-  - component: {fileID: 558233738}
   - component: {fileID: 558233743}
   - component: {fileID: 558233744}
+  - component: {fileID: 558233745}
   m_Layer: 0
   m_Name: OscillatingTargetB
   m_TagString: Untagged
@@ -1189,28 +1264,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 558233736}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 19.46, y: 34.72, z: 20.64}
+  m_LocalPosition: {x: 14.04, y: 42.78, z: -0.34}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2103568875}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &558233738
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 558233736}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fed602a9ec954229b5c087eed823bef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  oscPhase: 0.5
-  oscAmt: 3
-  oscRate: 0.3
-  oscAng: 0
 --- !u!114 &558233739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1303,7 +1362,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 2
-  m_Range: 5
+  m_Range: 8
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -1351,16 +1410,17 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!120 &558233744
-LineRenderer:
+--- !u!96 &558233744
+TrailRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 558233736}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 0
   m_LightProbeUsage: 0
@@ -1369,7 +1429,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: f8aecd43e0d0f914986411ff91d05e68, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1390,9 +1450,7 @@ LineRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Positions:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
+  m_Time: 4
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -1408,6 +1466,15 @@ LineRenderer:
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -1446,8 +1513,41 @@ LineRenderer:
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_UseWorldSpace: 1
-  m_Loop: 0
+  m_MinVertexDistance: 0.1
+  m_Autodestruct: 0
+  m_Emitting: 1
+--- !u!114 &558233745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 558233736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa3fcc178cbf2434eb46fba3b2a60818, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oscPhaseX: 0.5
+  oscPhaseY: 0.5
+  oscPhaseZ: 0.5
+  oscAmtX: 3
+  oscAmtY: 3
+  oscAmtZ: 3
+  oscRateX: 1
+  oscRateY: 1
+  oscRateZ: 1
+  oscAngX: 0
+  oscAngY: 0
+  oscAngZ: 0
+  spinX: 1
+  spinY: 1.33
+  spinZ: 3.14
+  phaseVariance: 10
+  amtVariance: 1.5
+  rateVariance: 0.5
+  angVariance: 180
+  spinVariance: 1
 --- !u!1 &627454857
 GameObject:
   m_ObjectHideFlags: 0
@@ -1681,9 +1781,9 @@ GameObject:
   - component: {fileID: 675434699}
   - component: {fileID: 675434698}
   - component: {fileID: 675434697}
-  - component: {fileID: 675434696}
   - component: {fileID: 675434701}
   - component: {fileID: 675434702}
+  - component: {fileID: 675434703}
   m_Layer: 0
   m_Name: OscillatingTargetB (1)
   m_TagString: Untagged
@@ -1699,28 +1799,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 675434694}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.41, y: 38.82, z: 36.890003}
+  m_LocalPosition: {x: 40.5, y: 38.82, z: -7.81}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2103568875}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &675434696
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 675434694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fed602a9ec954229b5c087eed823bef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  oscPhase: 0.5
-  oscAmt: 3
-  oscRate: 0.3
-  oscAng: 0
 --- !u!114 &675434697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1813,7 +1897,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 2
-  m_Range: 5
+  m_Range: 8
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -1861,16 +1945,17 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!120 &675434702
-LineRenderer:
+--- !u!96 &675434702
+TrailRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 675434694}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 0
   m_LightProbeUsage: 0
@@ -1879,7 +1964,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: f8aecd43e0d0f914986411ff91d05e68, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1900,9 +1985,7 @@ LineRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Positions:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
+  m_Time: 4
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -1918,6 +2001,15 @@ LineRenderer:
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -1956,8 +2048,41 @@ LineRenderer:
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_UseWorldSpace: 1
-  m_Loop: 0
+  m_MinVertexDistance: 0.1
+  m_Autodestruct: 0
+  m_Emitting: 1
+--- !u!114 &675434703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 675434694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa3fcc178cbf2434eb46fba3b2a60818, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oscPhaseX: 0.5
+  oscPhaseY: 0.5
+  oscPhaseZ: 0.5
+  oscAmtX: 3
+  oscAmtY: 3
+  oscAmtZ: 3
+  oscRateX: 1
+  oscRateY: 1
+  oscRateZ: 1
+  oscAngX: 0
+  oscAngY: 0
+  oscAngZ: 0
+  spinX: 1
+  spinY: 1.33
+  spinZ: 3.14
+  phaseVariance: 10
+  amtVariance: 1.5
+  rateVariance: 0.5
+  angVariance: 180
+  spinVariance: 1
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -2189,9 +2314,9 @@ GameObject:
   - component: {fileID: 1014895603}
   - component: {fileID: 1014895602}
   - component: {fileID: 1014895601}
-  - component: {fileID: 1014895600}
   - component: {fileID: 1014895605}
   - component: {fileID: 1014895606}
+  - component: {fileID: 1014895607}
   m_Layer: 0
   m_Name: OscillatingTargetD
   m_TagString: Untagged
@@ -2207,28 +2332,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1014895598}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 30.45, y: 52.72, z: 22.94}
+  m_LocalPosition: {x: 27.530003, y: 52.72, z: 6.3600025}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2103568875}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1014895600
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1014895598}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fed602a9ec954229b5c087eed823bef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  oscPhase: 0.5
-  oscAmt: 3
-  oscRate: 0.3
-  oscAng: 0
 --- !u!114 &1014895601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2321,7 +2430,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 2
-  m_Range: 5
+  m_Range: 8
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -2369,16 +2478,17 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!120 &1014895606
-LineRenderer:
+--- !u!96 &1014895606
+TrailRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1014895598}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 0
   m_LightProbeUsage: 0
@@ -2387,7 +2497,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: f8aecd43e0d0f914986411ff91d05e68, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2408,9 +2518,7 @@ LineRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Positions:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
+  m_Time: 4
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -2426,6 +2534,15 @@ LineRenderer:
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -2464,8 +2581,41 @@ LineRenderer:
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_UseWorldSpace: 1
-  m_Loop: 0
+  m_MinVertexDistance: 0.1
+  m_Autodestruct: 0
+  m_Emitting: 1
+--- !u!114 &1014895607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1014895598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa3fcc178cbf2434eb46fba3b2a60818, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oscPhaseX: 0.5
+  oscPhaseY: 0.5
+  oscPhaseZ: 0.5
+  oscAmtX: 3
+  oscAmtY: 3
+  oscAmtZ: 3
+  oscRateX: 1
+  oscRateY: 1
+  oscRateZ: 1
+  oscAngX: 0
+  oscAngY: 0
+  oscAngZ: 0
+  spinX: 1
+  spinY: 1.33
+  spinZ: 3.14
+  phaseVariance: 10
+  amtVariance: 1.5
+  rateVariance: 0.5
+  angVariance: 180
+  spinVariance: 1
 --- !u!1 &1083017794
 GameObject:
   m_ObjectHideFlags: 0
@@ -2479,9 +2629,9 @@ GameObject:
   - component: {fileID: 1083017799}
   - component: {fileID: 1083017798}
   - component: {fileID: 1083017797}
-  - component: {fileID: 1083017796}
   - component: {fileID: 1083017801}
   - component: {fileID: 1083017802}
+  - component: {fileID: 1083017803}
   m_Layer: 0
   m_Name: OscillatingTargetA (1)
   m_TagString: Untagged
@@ -2497,28 +2647,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1083017794}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.639996, y: 38.82, z: 39.81}
+  m_LocalPosition: {x: 9.719996, y: 38.82, z: -0.14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2103568875}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1083017796
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1083017794}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fed602a9ec954229b5c087eed823bef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  oscPhase: 0.5
-  oscAmt: 3
-  oscRate: 0.3
-  oscAng: 0
 --- !u!114 &1083017797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2611,7 +2745,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 2
-  m_Range: 5
+  m_Range: 8
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -2659,16 +2793,17 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!120 &1083017802
-LineRenderer:
+--- !u!96 &1083017802
+TrailRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1083017794}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 0
   m_LightProbeUsage: 0
@@ -2677,7 +2812,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: f8aecd43e0d0f914986411ff91d05e68, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2698,9 +2833,7 @@ LineRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Positions:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
+  m_Time: 4
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -2716,6 +2849,15 @@ LineRenderer:
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -2754,8 +2896,41 @@ LineRenderer:
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_UseWorldSpace: 1
-  m_Loop: 0
+  m_MinVertexDistance: 0.1
+  m_Autodestruct: 0
+  m_Emitting: 1
+--- !u!114 &1083017803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083017794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa3fcc178cbf2434eb46fba3b2a60818, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oscPhaseX: 0.5
+  oscPhaseY: 0.5
+  oscPhaseZ: 0.5
+  oscAmtX: 3
+  oscAmtY: 3
+  oscAmtZ: 3
+  oscRateX: 1
+  oscRateY: 1
+  oscRateZ: 1
+  oscAngX: 0
+  oscAngY: 0
+  oscAngZ: 0
+  spinX: 1
+  spinY: 1.33
+  spinZ: 3.14
+  phaseVariance: 10
+  amtVariance: 1.5
+  rateVariance: 0.5
+  angVariance: 180
+  spinVariance: 1
 --- !u!1 &1106325324
 GameObject:
   m_ObjectHideFlags: 0
@@ -2769,9 +2944,9 @@ GameObject:
   - component: {fileID: 1106325329}
   - component: {fileID: 1106325328}
   - component: {fileID: 1106325327}
-  - component: {fileID: 1106325326}
   - component: {fileID: 1106325331}
   - component: {fileID: 1106325332}
+  - component: {fileID: 1106325333}
   m_Layer: 0
   m_Name: OscillatingTargetB (2)
   m_TagString: Untagged
@@ -2787,28 +2962,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1106325324}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 29.800001, y: 38.82, z: 21}
+  m_LocalPosition: {x: 26.880001, y: 38.82, z: 4.420002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2103568875}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1106325326
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1106325324}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fed602a9ec954229b5c087eed823bef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  oscPhase: 0.5
-  oscAmt: 3
-  oscRate: 0.3
-  oscAng: 0
 --- !u!114 &1106325327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2901,7 +3060,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 2
-  m_Range: 5
+  m_Range: 8
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -2949,16 +3108,17 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!120 &1106325332
-LineRenderer:
+--- !u!96 &1106325332
+TrailRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1106325324}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 0
   m_LightProbeUsage: 0
@@ -2967,7 +3127,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: f8aecd43e0d0f914986411ff91d05e68, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2988,9 +3148,7 @@ LineRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Positions:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
+  m_Time: 4
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -3006,6 +3164,15 @@ LineRenderer:
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -3044,8 +3211,41 @@ LineRenderer:
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_UseWorldSpace: 1
-  m_Loop: 0
+  m_MinVertexDistance: 0.1
+  m_Autodestruct: 0
+  m_Emitting: 1
+--- !u!114 &1106325333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106325324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa3fcc178cbf2434eb46fba3b2a60818, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oscPhaseX: 0.5
+  oscPhaseY: 0.5
+  oscPhaseZ: 0.5
+  oscAmtX: 3
+  oscAmtY: 3
+  oscAmtZ: 3
+  oscRateX: 1
+  oscRateY: 1
+  oscRateZ: 1
+  oscAngX: 0
+  oscAngY: 0
+  oscAngZ: 0
+  spinX: 1
+  spinY: 1.33
+  spinZ: 3.14
+  phaseVariance: 10
+  amtVariance: 1.5
+  rateVariance: 0.5
+  angVariance: 180
+  spinVariance: 1
 --- !u!1 &1187085443
 GameObject:
   m_ObjectHideFlags: 0
@@ -3059,9 +3259,9 @@ GameObject:
   - component: {fileID: 1187085448}
   - component: {fileID: 1187085447}
   - component: {fileID: 1187085446}
-  - component: {fileID: 1187085445}
   - component: {fileID: 1187085450}
   - component: {fileID: 1187085451}
+  - component: {fileID: 1187085452}
   m_Layer: 0
   m_Name: OscillatingTargetD (2)
   m_TagString: Untagged
@@ -3077,28 +3277,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1187085443}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 35.009995, y: 40.51, z: 18.689999}
+  m_LocalPosition: {x: 40.57, y: 40.51, z: 8.34}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2103568875}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1187085445
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1187085443}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fed602a9ec954229b5c087eed823bef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  oscPhase: 0.5
-  oscAmt: 3
-  oscRate: 0.3
-  oscAng: 0
 --- !u!114 &1187085446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3191,7 +3375,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 2
-  m_Range: 5
+  m_Range: 8
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -3239,16 +3423,17 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!120 &1187085451
-LineRenderer:
+--- !u!96 &1187085451
+TrailRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1187085443}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 0
   m_LightProbeUsage: 0
@@ -3257,7 +3442,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: f8aecd43e0d0f914986411ff91d05e68, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3278,9 +3463,7 @@ LineRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Positions:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
+  m_Time: 4
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -3296,6 +3479,15 @@ LineRenderer:
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -3334,8 +3526,41 @@ LineRenderer:
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_UseWorldSpace: 1
-  m_Loop: 0
+  m_MinVertexDistance: 0.1
+  m_Autodestruct: 0
+  m_Emitting: 1
+--- !u!114 &1187085452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1187085443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa3fcc178cbf2434eb46fba3b2a60818, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oscPhaseX: 0.5
+  oscPhaseY: 0.5
+  oscPhaseZ: 0.5
+  oscAmtX: 3
+  oscAmtY: 3
+  oscAmtZ: 3
+  oscRateX: 1
+  oscRateY: 1
+  oscRateZ: 1
+  oscAngX: 0
+  oscAngY: 0
+  oscAngZ: 0
+  spinX: 1
+  spinY: 1.33
+  spinZ: 3.14
+  phaseVariance: 10
+  amtVariance: 1.5
+  rateVariance: 0.5
+  angVariance: 180
+  spinVariance: 1
 --- !u!1 &1268390473
 GameObject:
   m_ObjectHideFlags: 0
@@ -3349,9 +3574,9 @@ GameObject:
   - component: {fileID: 1268390478}
   - component: {fileID: 1268390477}
   - component: {fileID: 1268390476}
-  - component: {fileID: 1268390475}
   - component: {fileID: 1268390480}
   - component: {fileID: 1268390481}
+  - component: {fileID: 1268390482}
   m_Layer: 0
   m_Name: OscillatingTargetE
   m_TagString: Untagged
@@ -3367,28 +3592,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1268390473}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 33.97, y: 51.58, z: 22.6}
+  m_LocalPosition: {x: 30.52, y: 44.9, z: 6.0200024}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2103568875}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1268390475
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1268390473}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fed602a9ec954229b5c087eed823bef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  oscPhase: 0.5
-  oscAmt: 3
-  oscRate: 0.3
-  oscAng: 0
 --- !u!114 &1268390476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3481,7 +3690,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 2
-  m_Range: 5
+  m_Range: 8
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -3529,16 +3738,17 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!120 &1268390481
-LineRenderer:
+--- !u!96 &1268390481
+TrailRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1268390473}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 0
   m_LightProbeUsage: 0
@@ -3547,7 +3757,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: f8aecd43e0d0f914986411ff91d05e68, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3568,9 +3778,7 @@ LineRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Positions:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
+  m_Time: 4
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -3586,6 +3794,15 @@ LineRenderer:
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -3624,8 +3841,41 @@ LineRenderer:
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_UseWorldSpace: 1
-  m_Loop: 0
+  m_MinVertexDistance: 0.1
+  m_Autodestruct: 0
+  m_Emitting: 1
+--- !u!114 &1268390482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268390473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa3fcc178cbf2434eb46fba3b2a60818, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oscPhaseX: 0.5
+  oscPhaseY: 0.5
+  oscPhaseZ: 0.5
+  oscAmtX: 3
+  oscAmtY: 3
+  oscAmtZ: 3
+  oscRateX: 1
+  oscRateY: 1
+  oscRateZ: 1
+  oscAngX: 0
+  oscAngY: 0
+  oscAngZ: 0
+  spinX: 1
+  spinY: 1.33
+  spinZ: 3.14
+  phaseVariance: 10
+  amtVariance: 1.5
+  rateVariance: 0.5
+  angVariance: 180
+  spinVariance: 1
 --- !u!1 &1282101739
 GameObject:
   m_ObjectHideFlags: 0
@@ -3639,9 +3889,9 @@ GameObject:
   - component: {fileID: 1282101744}
   - component: {fileID: 1282101743}
   - component: {fileID: 1282101742}
-  - component: {fileID: 1282101741}
   - component: {fileID: 1282101746}
   - component: {fileID: 1282101747}
+  - component: {fileID: 1282101748}
   m_Layer: 0
   m_Name: OscillatingTargetC (1)
   m_TagString: Untagged
@@ -3657,28 +3907,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1282101739}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16.619999, y: 38.82, z: 37.280003}
+  m_LocalPosition: {x: 13.7, y: 38.82, z: 20.700005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2103568875}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1282101741
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1282101739}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fed602a9ec954229b5c087eed823bef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  oscPhase: 0.5
-  oscAmt: 3
-  oscRate: 0.3
-  oscAng: 0
 --- !u!114 &1282101742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3771,7 +4005,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 2
-  m_Range: 5
+  m_Range: 8
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -3819,16 +4053,17 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!120 &1282101747
-LineRenderer:
+--- !u!96 &1282101747
+TrailRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1282101739}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 0
   m_LightProbeUsage: 0
@@ -3837,7 +4072,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: f8aecd43e0d0f914986411ff91d05e68, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3858,9 +4093,7 @@ LineRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Positions:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
+  m_Time: 4
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -3876,6 +4109,15 @@ LineRenderer:
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -3914,8 +4156,41 @@ LineRenderer:
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_UseWorldSpace: 1
-  m_Loop: 0
+  m_MinVertexDistance: 0.1
+  m_Autodestruct: 0
+  m_Emitting: 1
+--- !u!114 &1282101748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1282101739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa3fcc178cbf2434eb46fba3b2a60818, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oscPhaseX: 0.5
+  oscPhaseY: 0.5
+  oscPhaseZ: 0.5
+  oscAmtX: 3
+  oscAmtY: 3
+  oscAmtZ: 3
+  oscRateX: 1
+  oscRateY: 1
+  oscRateZ: 1
+  oscAngX: 0
+  oscAngY: 0
+  oscAngZ: 0
+  spinX: 1
+  spinY: 1.33
+  spinZ: 3.14
+  phaseVariance: 10
+  amtVariance: 1.5
+  rateVariance: 0.5
+  angVariance: 180
+  spinVariance: 1
 --- !u!1 &1364827370
 GameObject:
   m_ObjectHideFlags: 0
@@ -3963,9 +4238,9 @@ GameObject:
   - component: {fileID: 1379514481}
   - component: {fileID: 1379514480}
   - component: {fileID: 1379514479}
-  - component: {fileID: 1379514478}
   - component: {fileID: 1379514483}
   - component: {fileID: 1379514484}
+  - component: {fileID: 1379514485}
   m_Layer: 0
   m_Name: OscillatingTargetE (2)
   m_TagString: Untagged
@@ -3981,28 +4256,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1379514476}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 38.52999, y: 39.37, z: 18.349998}
+  m_LocalPosition: {x: 46.29, y: 45.06, z: -1.29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2103568875}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1379514478
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1379514476}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fed602a9ec954229b5c087eed823bef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  oscPhase: 0.5
-  oscAmt: 3
-  oscRate: 0.3
-  oscAng: 0
 --- !u!114 &1379514479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4095,7 +4354,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 2
-  m_Range: 5
+  m_Range: 8
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -4143,16 +4402,17 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!120 &1379514484
-LineRenderer:
+--- !u!96 &1379514484
+TrailRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1379514476}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 0
   m_LightProbeUsage: 0
@@ -4161,7 +4421,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: f8aecd43e0d0f914986411ff91d05e68, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4182,9 +4442,7 @@ LineRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Positions:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
+  m_Time: 4
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -4200,6 +4458,15 @@ LineRenderer:
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -4238,8 +4505,41 @@ LineRenderer:
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_UseWorldSpace: 1
-  m_Loop: 0
+  m_MinVertexDistance: 0.1
+  m_Autodestruct: 0
+  m_Emitting: 1
+--- !u!114 &1379514485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379514476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa3fcc178cbf2434eb46fba3b2a60818, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oscPhaseX: 0.5
+  oscPhaseY: 0.5
+  oscPhaseZ: 0.5
+  oscAmtX: 3
+  oscAmtY: 3
+  oscAmtZ: 3
+  oscRateX: 1
+  oscRateY: 1
+  oscRateZ: 1
+  oscAngX: 0
+  oscAngY: 0
+  oscAngZ: 0
+  spinX: 1
+  spinY: 1.33
+  spinZ: 3.14
+  phaseVariance: 10
+  amtVariance: 1.5
+  rateVariance: 0.5
+  angVariance: 180
+  spinVariance: 1
 --- !u!1 &1487748994
 GameObject:
   m_ObjectHideFlags: 0
@@ -4253,9 +4553,9 @@ GameObject:
   - component: {fileID: 1487748999}
   - component: {fileID: 1487748998}
   - component: {fileID: 1487748997}
-  - component: {fileID: 1487748996}
   - component: {fileID: 1487749001}
   - component: {fileID: 1487749002}
+  - component: {fileID: 1487749003}
   m_Layer: 0
   m_Name: OscillatingTargetD
   m_TagString: Untagged
@@ -4271,28 +4571,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1487748994}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 24.669998, y: 36.41, z: 18.329998}
+  m_LocalPosition: {x: 21.75, y: 36.41, z: 1.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2103568875}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1487748996
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1487748994}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fed602a9ec954229b5c087eed823bef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  oscPhase: 0.5
-  oscAmt: 3
-  oscRate: 0.3
-  oscAng: 0
 --- !u!114 &1487748997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4385,7 +4669,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 2
-  m_Range: 5
+  m_Range: 8
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -4433,16 +4717,17 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!120 &1487749002
-LineRenderer:
+--- !u!96 &1487749002
+TrailRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1487748994}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 0
   m_LightProbeUsage: 0
@@ -4451,7 +4736,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: f8aecd43e0d0f914986411ff91d05e68, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4472,9 +4757,7 @@ LineRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Positions:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
+  m_Time: 4
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -4490,6 +4773,15 @@ LineRenderer:
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -4528,8 +4820,41 @@ LineRenderer:
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_UseWorldSpace: 1
-  m_Loop: 0
+  m_MinVertexDistance: 0.1
+  m_Autodestruct: 0
+  m_Emitting: 1
+--- !u!114 &1487749003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1487748994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa3fcc178cbf2434eb46fba3b2a60818, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oscPhaseX: 0.5
+  oscPhaseY: 0.5
+  oscPhaseZ: 0.5
+  oscAmtX: 3
+  oscAmtY: 3
+  oscAmtZ: 3
+  oscRateX: 1
+  oscRateY: 1
+  oscRateZ: 1
+  oscAngX: 0
+  oscAngY: 0
+  oscAngZ: 0
+  spinX: 1
+  spinY: 1.33
+  spinZ: 3.14
+  phaseVariance: 10
+  amtVariance: 1.5
+  rateVariance: 0.5
+  angVariance: 180
+  spinVariance: 1
 --- !u!1 &1508339223
 GameObject:
   m_ObjectHideFlags: 0
@@ -4543,9 +4868,9 @@ GameObject:
   - component: {fileID: 1508339228}
   - component: {fileID: 1508339227}
   - component: {fileID: 1508339226}
-  - component: {fileID: 1508339225}
   - component: {fileID: 1508339230}
   - component: {fileID: 1508339231}
+  - component: {fileID: 1508339232}
   m_Layer: 0
   m_Name: OscillatingTargetE
   m_TagString: Untagged
@@ -4561,28 +4886,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1508339223}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 28.189995, y: 35.27, z: 17.989998}
+  m_LocalPosition: {x: 25.269997, y: 36.46, z: -3.91}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2103568875}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1508339225
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1508339223}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fed602a9ec954229b5c087eed823bef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  oscPhase: 0.5
-  oscAmt: 3
-  oscRate: 0.3
-  oscAng: 0
 --- !u!114 &1508339226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4675,7 +4984,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 2
-  m_Range: 5
+  m_Range: 8
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -4723,16 +5032,17 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!120 &1508339231
-LineRenderer:
+--- !u!96 &1508339231
+TrailRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1508339223}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 0
   m_LightProbeUsage: 0
@@ -4741,7 +5051,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: f8aecd43e0d0f914986411ff91d05e68, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4762,9 +5072,7 @@ LineRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Positions:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
+  m_Time: 4
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -4780,6 +5088,15 @@ LineRenderer:
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -4818,8 +5135,41 @@ LineRenderer:
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_UseWorldSpace: 1
-  m_Loop: 0
+  m_MinVertexDistance: 0.1
+  m_Autodestruct: 0
+  m_Emitting: 1
+--- !u!114 &1508339232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508339223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa3fcc178cbf2434eb46fba3b2a60818, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oscPhaseX: 0.5
+  oscPhaseY: 0.5
+  oscPhaseZ: 0.5
+  oscAmtX: 3
+  oscAmtY: 3
+  oscAmtZ: 3
+  oscRateX: 1
+  oscRateY: 1
+  oscRateZ: 1
+  oscAngX: 0
+  oscAngY: 0
+  oscAngZ: 0
+  spinX: 1
+  spinY: 1.33
+  spinZ: 3.14
+  phaseVariance: 10
+  amtVariance: 1.5
+  rateVariance: 0.5
+  angVariance: 180
+  spinVariance: 1
 --- !u!1 &1630960459
 GameObject:
   m_ObjectHideFlags: 0
@@ -5039,9 +5389,9 @@ GameObject:
   - component: {fileID: 1707983595}
   - component: {fileID: 1707983594}
   - component: {fileID: 1707983593}
-  - component: {fileID: 1707983592}
   - component: {fileID: 1707983597}
   - component: {fileID: 1707983598}
+  - component: {fileID: 1707983599}
   m_Layer: 0
   m_Name: OscillatingTargetC
   m_TagString: Untagged
@@ -5057,28 +5407,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1707983590}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 30.449999, y: 51.030003, z: 25.640003}
+  m_LocalPosition: {x: 40.28, y: 53.87, z: 10.78}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2103568875}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1707983592
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1707983590}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fed602a9ec954229b5c087eed823bef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  oscPhase: 0.5
-  oscAmt: 3
-  oscRate: 0.3
-  oscAng: 0
 --- !u!114 &1707983593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5171,7 +5505,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 2
-  m_Range: 5
+  m_Range: 8
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -5219,16 +5553,17 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!120 &1707983598
-LineRenderer:
+--- !u!96 &1707983598
+TrailRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1707983590}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 0
   m_LightProbeUsage: 0
@@ -5237,7 +5572,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: f8aecd43e0d0f914986411ff91d05e68, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5258,9 +5593,7 @@ LineRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Positions:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
+  m_Time: 4
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -5276,6 +5609,15 @@ LineRenderer:
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -5314,8 +5656,41 @@ LineRenderer:
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_UseWorldSpace: 1
-  m_Loop: 0
+  m_MinVertexDistance: 0.1
+  m_Autodestruct: 0
+  m_Emitting: 1
+--- !u!114 &1707983599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1707983590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa3fcc178cbf2434eb46fba3b2a60818, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oscPhaseX: 0.5
+  oscPhaseY: 0.5
+  oscPhaseZ: 0.5
+  oscAmtX: 3
+  oscAmtY: 3
+  oscAmtZ: 3
+  oscRateX: 1
+  oscRateY: 1
+  oscRateZ: 1
+  oscAngX: 0
+  oscAngY: 0
+  oscAngZ: 0
+  spinX: 1
+  spinY: 1.33
+  spinZ: 3.14
+  phaseVariance: 10
+  amtVariance: 1.5
+  rateVariance: 0.5
+  angVariance: 180
+  spinVariance: 1
 --- !u!1 &1770199274
 GameObject:
   m_ObjectHideFlags: 0
@@ -5329,9 +5704,9 @@ GameObject:
   - component: {fileID: 1770199279}
   - component: {fileID: 1770199278}
   - component: {fileID: 1770199277}
-  - component: {fileID: 1770199276}
   - component: {fileID: 1770199281}
   - component: {fileID: 1770199282}
+  - component: {fileID: 1770199283}
   m_Layer: 0
   m_Name: OscillatingTargetA
   m_TagString: Untagged
@@ -5347,28 +5722,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1770199274}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20.689995, y: 34.72, z: 23.559998}
+  m_LocalPosition: {x: 17.769997, y: 34.72, z: 12.45}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2103568875}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1770199276
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1770199274}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fed602a9ec954229b5c087eed823bef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  oscPhase: 0.5
-  oscAmt: 3
-  oscRate: 0.3
-  oscAng: 0
 --- !u!114 &1770199277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5461,7 +5820,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 2
-  m_Range: 5
+  m_Range: 8
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -5509,16 +5868,17 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!120 &1770199282
-LineRenderer:
+--- !u!96 &1770199282
+TrailRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1770199274}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 0
   m_LightProbeUsage: 0
@@ -5527,7 +5887,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: f8aecd43e0d0f914986411ff91d05e68, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5548,9 +5908,7 @@ LineRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Positions:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
+  m_Time: 4
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -5566,6 +5924,15 @@ LineRenderer:
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -5604,8 +5971,41 @@ LineRenderer:
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_UseWorldSpace: 1
-  m_Loop: 0
+  m_MinVertexDistance: 0.1
+  m_Autodestruct: 0
+  m_Emitting: 1
+--- !u!114 &1770199283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770199274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa3fcc178cbf2434eb46fba3b2a60818, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oscPhaseX: 0.5
+  oscPhaseY: 0.5
+  oscPhaseZ: 0.5
+  oscAmtX: 3
+  oscAmtY: 3
+  oscAmtZ: 3
+  oscRateX: 1
+  oscRateY: 1
+  oscRateZ: 1
+  oscAngX: 0
+  oscAngY: 0
+  oscAngZ: 0
+  spinX: 1
+  spinY: 1.33
+  spinZ: 3.14
+  phaseVariance: 10
+  amtVariance: 1.5
+  rateVariance: 0.5
+  angVariance: 180
+  spinVariance: 1
 --- !u!1 &1894328576
 GameObject:
   m_ObjectHideFlags: 0
@@ -5619,9 +6019,9 @@ GameObject:
   - component: {fileID: 1894328581}
   - component: {fileID: 1894328580}
   - component: {fileID: 1894328579}
-  - component: {fileID: 1894328578}
   - component: {fileID: 1894328583}
   - component: {fileID: 1894328584}
+  - component: {fileID: 1894328585}
   m_Layer: 0
   m_Name: OscillatingTargetB
   m_TagString: Untagged
@@ -5637,28 +6037,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1894328576}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 25.24, y: 51.030003, z: 25.250004}
+  m_LocalPosition: {x: 22.32, y: 51.030003, z: -3.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2103568875}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1894328578
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1894328576}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fed602a9ec954229b5c087eed823bef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  oscPhase: 0.5
-  oscAmt: 3
-  oscRate: 0.3
-  oscAng: 0
 --- !u!114 &1894328579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5751,7 +6135,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 2
-  m_Range: 5
+  m_Range: 8
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -5799,16 +6183,17 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!120 &1894328584
-LineRenderer:
+--- !u!96 &1894328584
+TrailRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1894328576}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 0
   m_LightProbeUsage: 0
@@ -5817,7 +6202,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: f8aecd43e0d0f914986411ff91d05e68, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5838,9 +6223,7 @@ LineRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Positions:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
+  m_Time: 4
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -5856,6 +6239,15 @@ LineRenderer:
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -5894,8 +6286,41 @@ LineRenderer:
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_UseWorldSpace: 1
-  m_Loop: 0
+  m_MinVertexDistance: 0.1
+  m_Autodestruct: 0
+  m_Emitting: 1
+--- !u!114 &1894328585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1894328576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa3fcc178cbf2434eb46fba3b2a60818, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oscPhaseX: 0.5
+  oscPhaseY: 0.5
+  oscPhaseZ: 0.5
+  oscAmtX: 3
+  oscAmtY: 3
+  oscAmtZ: 3
+  oscRateX: 1
+  oscRateY: 1
+  oscRateZ: 1
+  oscAngX: 0
+  oscAngY: 0
+  oscAngZ: 0
+  spinX: 1
+  spinY: 1.33
+  spinZ: 3.14
+  phaseVariance: 10
+  amtVariance: 1.5
+  rateVariance: 0.5
+  angVariance: 180
+  spinVariance: 1
 --- !u!1 &1904659125
 GameObject:
   m_ObjectHideFlags: 0
@@ -6050,9 +6475,9 @@ GameObject:
   - component: {fileID: 1939312653}
   - component: {fileID: 1939312652}
   - component: {fileID: 1939312651}
-  - component: {fileID: 1939312650}
   - component: {fileID: 1939312655}
   - component: {fileID: 1939312656}
+  - component: {fileID: 1939312657}
   m_Layer: 0
   m_Name: OscillatingTargetA
   m_TagString: Untagged
@@ -6068,28 +6493,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1939312648}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 26.470003, y: 51.030003, z: 28.170002}
+  m_LocalPosition: {x: 14.9, y: 45.75, z: 11.590004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2103568875}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1939312650
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1939312648}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fed602a9ec954229b5c087eed823bef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  oscPhase: 0.5
-  oscAmt: 3
-  oscRate: 0.3
-  oscAng: 0
 --- !u!114 &1939312651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6182,7 +6591,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 2
-  m_Range: 5
+  m_Range: 8
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -6230,16 +6639,17 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!120 &1939312656
-LineRenderer:
+--- !u!96 &1939312656
+TrailRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1939312648}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 0
   m_LightProbeUsage: 0
@@ -6248,7 +6658,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: f8aecd43e0d0f914986411ff91d05e68, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6269,9 +6679,7 @@ LineRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Positions:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
+  m_Time: 4
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -6287,6 +6695,15 @@ LineRenderer:
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -6325,8 +6742,41 @@ LineRenderer:
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_UseWorldSpace: 1
-  m_Loop: 0
+  m_MinVertexDistance: 0.1
+  m_Autodestruct: 0
+  m_Emitting: 1
+--- !u!114 &1939312657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1939312648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa3fcc178cbf2434eb46fba3b2a60818, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oscPhaseX: 0.5
+  oscPhaseY: 0.5
+  oscPhaseZ: 0.5
+  oscAmtX: 3
+  oscAmtY: 3
+  oscAmtZ: 3
+  oscRateX: 1
+  oscRateY: 1
+  oscRateZ: 1
+  oscAngX: 0
+  oscAngY: 0
+  oscAngZ: 0
+  spinX: 1
+  spinY: 1.33
+  spinZ: 3.14
+  phaseVariance: 10
+  amtVariance: 1.5
+  rateVariance: 0.5
+  angVariance: 180
+  spinVariance: 1
 --- !u!1001 &1952106958
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6539,9 +6989,9 @@ GameObject:
   - component: {fileID: 2007296600}
   - component: {fileID: 2007296599}
   - component: {fileID: 2007296598}
-  - component: {fileID: 2007296597}
   - component: {fileID: 2007296602}
   - component: {fileID: 2007296603}
+  - component: {fileID: 2007296604}
   m_Layer: 0
   m_Name: OscillatingTargetA (2)
   m_TagString: Untagged
@@ -6557,28 +7007,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2007296595}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 31.029997, y: 38.82, z: 23.919998}
+  m_LocalPosition: {x: 28.109997, y: 38.82, z: 7.34}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2103568875}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2007296597
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2007296595}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fed602a9ec954229b5c087eed823bef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  oscPhase: 0.5
-  oscAmt: 3
-  oscRate: 0.3
-  oscAng: 0
 --- !u!114 &2007296598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6671,7 +7105,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 2
-  m_Range: 5
+  m_Range: 8
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -6719,16 +7153,17 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!120 &2007296603
-LineRenderer:
+--- !u!96 &2007296603
+TrailRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2007296595}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 0
   m_LightProbeUsage: 0
@@ -6737,7 +7172,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: f8aecd43e0d0f914986411ff91d05e68, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6758,9 +7193,7 @@ LineRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Positions:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
+  m_Time: 4
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -6776,6 +7209,15 @@ LineRenderer:
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -6814,8 +7256,41 @@ LineRenderer:
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_UseWorldSpace: 1
-  m_Loop: 0
+  m_MinVertexDistance: 0.1
+  m_Autodestruct: 0
+  m_Emitting: 1
+--- !u!114 &2007296604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2007296595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa3fcc178cbf2434eb46fba3b2a60818, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oscPhaseX: 0.5
+  oscPhaseY: 0.5
+  oscPhaseZ: 0.5
+  oscAmtX: 3
+  oscAmtY: 3
+  oscAmtZ: 3
+  oscRateX: 1
+  oscRateY: 1
+  oscRateZ: 1
+  oscAngX: 0
+  oscAngY: 0
+  oscAngZ: 0
+  spinX: 1
+  spinY: 1.33
+  spinZ: 3.14
+  phaseVariance: 10
+  amtVariance: 1.5
+  rateVariance: 0.5
+  angVariance: 180
+  spinVariance: 1
 --- !u!1 &2017524147
 GameObject:
   m_ObjectHideFlags: 0
@@ -6829,9 +7304,9 @@ GameObject:
   - component: {fileID: 2017524152}
   - component: {fileID: 2017524151}
   - component: {fileID: 2017524150}
-  - component: {fileID: 2017524149}
   - component: {fileID: 2017524154}
   - component: {fileID: 2017524155}
+  - component: {fileID: 2017524156}
   m_Layer: 0
   m_Name: OscillatingTargetE (1)
   m_TagString: Untagged
@@ -6847,28 +7322,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2017524147}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20.139996, y: 39.37, z: 34.24}
+  m_LocalPosition: {x: 17.219997, y: 39.37, z: 17.660004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2103568875}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2017524149
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2017524147}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fed602a9ec954229b5c087eed823bef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  oscPhase: 0.5
-  oscAmt: 3
-  oscRate: 0.3
-  oscAng: 0
 --- !u!114 &2017524150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6961,7 +7420,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 2
-  m_Range: 5
+  m_Range: 8
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -7009,16 +7468,17 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!120 &2017524155
-LineRenderer:
+--- !u!96 &2017524155
+TrailRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2017524147}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 0
   m_LightProbeUsage: 0
@@ -7027,7 +7487,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: f8aecd43e0d0f914986411ff91d05e68, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7048,9 +7508,7 @@ LineRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Positions:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
+  m_Time: 4
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -7066,6 +7524,15 @@ LineRenderer:
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -7104,8 +7571,41 @@ LineRenderer:
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_UseWorldSpace: 1
-  m_Loop: 0
+  m_MinVertexDistance: 0.1
+  m_Autodestruct: 0
+  m_Emitting: 1
+--- !u!114 &2017524156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2017524147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa3fcc178cbf2434eb46fba3b2a60818, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oscPhaseX: 0.5
+  oscPhaseY: 0.5
+  oscPhaseZ: 0.5
+  oscAmtX: 3
+  oscAmtY: 3
+  oscAmtZ: 3
+  oscRateX: 1
+  oscRateY: 1
+  oscRateZ: 1
+  oscAngX: 0
+  oscAngY: 0
+  oscAngZ: 0
+  spinX: 1
+  spinY: 1.33
+  spinZ: 3.14
+  phaseVariance: 10
+  amtVariance: 1.5
+  rateVariance: 0.5
+  angVariance: 180
+  spinVariance: 1
 --- !u!1 &2035940556
 GameObject:
   m_ObjectHideFlags: 0
@@ -7180,7 +7680,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2103568874}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.980127, y: -41.635864, z: -42.517395}
+  m_LocalPosition: {x: -8.980127, y: -41.635864, z: -26}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1379514477}
