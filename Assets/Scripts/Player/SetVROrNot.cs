@@ -7,6 +7,8 @@ public class SetVROrNot : MonoBehaviour {
 
     public GameObject webController;
     public GameObject vrController;
+    public GameObject postProcessingVolume;
+    public bool disablePostProcessinginVR = false;
 
     void Awake() {
         if (Application.platform == RuntimePlatform.WebGLPlayer) {
@@ -16,5 +18,17 @@ public class SetVROrNot : MonoBehaviour {
         }
         vrController.SetActive(forceVR);
         webController.SetActive(!forceVR);
+
+        if (forceVR && disablePostProcessinginVR)
+        {
+            if (postProcessingVolume != null)
+            {
+                postProcessingVolume.SetActive(false);
+            }
+            else
+            {
+                Debug.LogError("To disable post-processing in VR you have to attach it's volume to this script", gameObject);
+            }
+        }
     }
 }
