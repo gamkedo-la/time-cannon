@@ -14,6 +14,11 @@ public class OceanScrollScript : MonoBehaviour {
 
     public Material scrollMat;
 
+    void OnApplicationQuit() {
+        scrollMat.mainTextureOffset = Vector2.zero;
+        scrollMat.SetTextureOffset("_DetailAlbedoMap", Vector2.zero);
+    }
+
     void Update () {
        float rate = scrollSpeed * TimeKeeper.instance.fakeTimeDelta;
 
