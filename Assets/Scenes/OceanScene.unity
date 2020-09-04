@@ -2664,7 +2664,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &320606742360781077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2677,7 +2677,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sharedProfile: {fileID: 11400000, guid: b8882d288e1837843b07c948322f4650, type: 2}
+  sharedProfile: {fileID: 11400000, guid: 60d01aa36506b274baf6c3a4187ba625, type: 2}
   isGlobal: 1
   blendDistance: 0
   weight: 1
