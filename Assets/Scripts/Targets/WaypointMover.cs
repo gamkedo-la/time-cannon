@@ -10,7 +10,7 @@ public class WaypointMover : MonoBehaviour
     public bool isWater = false; // only used if driveSharpTurns, for driftier (but not air drifty) turn
     private float progressAmt = 0.0f;
 
-	void Start()
+    void Start()
 	{
 		transform.position = target.transform.position;
 		transform.rotation = target.transform.rotation;
@@ -19,14 +19,16 @@ public class WaypointMover : MonoBehaviour
             Waypoint firstGO = target;
             Waypoint tracePt = target;
 
-            do { // drop each to a bit off the ground
-                RaycastHit rhInfo;
-                // 100.0f margin is in case path waypoint is accidentally a bit underground
-                if(Physics.Raycast(tracePt.transform.position + Vector3.up*100.0f,Vector3.down, out rhInfo, 150.0f)) {
-                    tracePt.transform.position = rhInfo.point + Vector3.up * 1.5f;
-                }
-                tracePt = tracePt.next;
-            } while (firstGO != tracePt);
+            if (isWater == false) { // if this is on ground...
+                do { // drop each to a bit off the ground
+                    RaycastHit rhInfo;
+                    // 100.0f margin is in case path waypoint is accidentally a bit underground
+                    if (Physics.Raycast(tracePt.transform.position + Vector3.up * 100.0f, Vector3.down, out rhInfo, 150.0f)) {
+                        tracePt.transform.position = rhInfo.point + Vector3.up * 1.5f;
+                    }
+                    tracePt = tracePt.next;
+                } while (firstGO != tracePt);
+            }
 
             float totalPathDist = 0.0f;
             do { // tally total path length, to adjust distance for consistent speed
@@ -40,7 +42,13 @@ public class WaypointMover : MonoBehaviour
             } while (firstGO != tracePt);
 
             do { // point each at the next
-                tracePt.transform.LookAt(tracePt.next.transform);
+                if(isWater) {
+                    Quaternion outQuat = Quaternion.LookRotation(tracePt.next.transform.position - tracePt.transform.position);
+                    Quaternion inQuat = Quaternion.LookRotation(tracePt.transform.position - tracePt.GetPrev().transform.position);
+                    tracePt.transform.rotation = Quaternion.Slerp(outQuat,inQuat,0.35f); // % aiming to next pt in water
+                } else {
+                    tracePt.transform.LookAt(tracePt.next.transform);
+                }
                 tracePt = tracePt.next;
             } while (firstGO != tracePt);
         }
@@ -70,9 +78,13 @@ public class WaypointMover : MonoBehaviour
 			progressAmt -= 1.0f;
 			target = target.next;
 		}
-		transform.position = target.InterpPt(progressAmt);
-		transform.rotation = target.InterpRot(driveSharpTurns ?
-            progressAmt* progressAmt* progressAmt * (isWater ? 1 : progressAmt * progressAmt * progressAmt) : // heavy, heavy bias towards end
+        if(isWater) {
+            transform.position = target.InterpPt(progressAmt,40.0f);
+        } else {
+            transform.position = target.InterpPt(progressAmt);
+        }
+        transform.rotation = target.InterpRot(driveSharpTurns ?
+            progressAmt* progressAmt* (isWater ? 1 : progressAmt * progressAmt * progressAmt * progressAmt) : // heavy, heavy bias towards end
             progressAmt);
 	}
 

@@ -22,13 +22,12 @@ public class Waypoint : MonoBehaviour
         return prev;
     }
 
-    public Vector3 InterpPt(float atT)
+    public Vector3 InterpPt(float atT, float anchorSmoothDist = 6.0f)
     {
         if(next == null)
         {
             return transform.position;
         }
-        float anchorSmoothDist = 6.0f;
         Vector3 anchorFront = transform.position + transform.forward * anchorSmoothDist;
         Vector3 anchorEnd = next.transform.position - next.transform.forward * anchorSmoothDist;
         float antiT = 1.0f - atT;
