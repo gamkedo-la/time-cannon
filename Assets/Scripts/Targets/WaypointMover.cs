@@ -7,7 +7,8 @@ public class WaypointMover : MonoBehaviour
 	public Waypoint target;
 	public float speedScale = 1f; // scales all waypoint speeds
     public bool driveSharpTurns = false;
-	private float progressAmt = 0.0f;
+    public bool isWater = false; // only used if driveSharpTurns, for driftier (but not air drifty) turn
+    private float progressAmt = 0.0f;
 
 	void Start()
 	{
@@ -71,7 +72,7 @@ public class WaypointMover : MonoBehaviour
 		}
 		transform.position = target.InterpPt(progressAmt);
 		transform.rotation = target.InterpRot(driveSharpTurns ?
-            progressAmt* progressAmt* progressAmt * progressAmt * progressAmt * progressAmt : // heavy, heavy bias towards end
+            progressAmt* progressAmt* progressAmt * (isWater ? 1 : progressAmt * progressAmt * progressAmt) : // heavy, heavy bias towards end
             progressAmt);
 	}
 
