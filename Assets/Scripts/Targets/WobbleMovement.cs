@@ -63,7 +63,7 @@ public class WobbleMovement : MonoBehaviour
         // FIXME this appears to not take startPos into account:
         // no matter where they start, they orbit the same place
         Vector3 tx = /*startPos +*/ Quaternion.AngleAxis(oscAngX, Vector3.right) *
-                        Vector3.up * oscAmtX * Mathf.Cos(oscPhaseX + TimeKeeper.instance.fakeTime * oscRateX);
+                        Vector3.right * oscAmtX * Mathf.Cos(oscPhaseX + TimeKeeper.instance.fakeTime * oscRateX);
         Vector3 ty = /*startPos +*/ Quaternion.AngleAxis(oscAngY, Vector3.up) *
                         Vector3.up * oscAmtY * Mathf.Cos(oscPhaseY + TimeKeeper.instance.fakeTime * oscRateY);
         Vector3 tz = /*startPos +*/ Quaternion.AngleAxis(oscAngZ, Vector3.forward) *
