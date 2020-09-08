@@ -60,18 +60,19 @@ public class WobbleMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // FIXME this appears to not take startPos into account:
-        // no matter where they start, they orbit the same place
-        Vector3 tx = /*startPos +*/ Quaternion.AngleAxis(oscAngX, Vector3.right) *
+        // this lets us scale different axes spds individually
+        Vector3 tx = Quaternion.AngleAxis(oscAngX, Vector3.right) *
                         Vector3.right * oscAmtX * Mathf.Cos(oscPhaseX + TimeKeeper.instance.fakeTime * oscRateX);
-        Vector3 ty = /*startPos +*/ Quaternion.AngleAxis(oscAngY, Vector3.up) *
+        Vector3 ty = Quaternion.AngleAxis(oscAngY, Vector3.up) *
                         Vector3.up * oscAmtY * Mathf.Cos(oscPhaseY + TimeKeeper.instance.fakeTime * oscRateY);
-        Vector3 tz = /*startPos +*/ Quaternion.AngleAxis(oscAngZ, Vector3.forward) *
-                        Vector3.up * oscAmtZ * Mathf.Cos(oscPhaseZ + TimeKeeper.instance.fakeTime * oscRateZ);
+        Vector3 tz = Quaternion.AngleAxis(oscAngZ, Vector3.forward) *
+                        Vector3.forward * oscAmtZ * Mathf.Cos(oscPhaseZ + TimeKeeper.instance.fakeTime * oscRateZ);
 
+        // add this wobble to the start point
         transform.position = new Vector3(startPos.x+tx.x,startPos.y+ty.y,startPos.z+tz.x);
 
-        float spinSpeed = (TimeKeeper.instance.fakeTime/5);
+        float spinSpeed = TimeKeeper.instance.fakeTimePace; // scale by time distortion
+        Debug.Log("spinSpeed:"+spinSpeed);
         transform.Rotate(spinX*spinSpeed,spinY*spinSpeed,spinZ*spinSpeed);
     }
 }
