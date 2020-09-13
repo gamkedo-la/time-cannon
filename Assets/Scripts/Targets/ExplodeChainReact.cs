@@ -8,6 +8,7 @@ public class ExplodeChainReact : MonoBehaviour
     private GameObject blastVFX;
     private GameObject pointPopper;
 
+    public bool isUnderwater = false;
     private readonly int[] exploList = { 5, 10, 50, 100, 300};
 
     private bool isExploded = false;
@@ -36,8 +37,8 @@ public class ExplodeChainReact : MonoBehaviour
         vfx_name = "Explosion" + useSize + "m";
         blastVFX = Resources.Load(vfx_name) as GameObject;
 
-        blastVFX.transform.localScale = Vector3.one * 0.105f * ((float)blastRadius);
-        Debug.Log("explosion scale for "+gameObject.name+": " + blastVFX.transform.localScale.x);
+        blastVFX.transform.localScale = Vector3.one * 0.108f * ((float)blastRadius);
+
         if (blastVFX == null)
         {
             Debug.LogWarning("Blast Radius needs to match an existing Resources/Explosion_m prefab");
@@ -58,6 +59,11 @@ public class ExplodeChainReact : MonoBehaviour
         {
             return;
         }
+        Waypoint[] allWPChildrenToUnparent = GetComponentsInChildren<Waypoint>();
+        for (int i = 0; i < allWPChildrenToUnparent.Length; i++) {
+            allWPChildrenToUnparent[i].transform.SetParent(null);
+        }
+
         isExploded = true;
         StartCoroutine(ChainReact(chainDepth)); // compute chain reaction instantly, no lag
     }
@@ -96,11 +102,6 @@ public class ExplodeChainReact : MonoBehaviour
     {
         Collider[] allNear = Physics.OverlapSphere(transform.position, blastRadius);
 
-        Waypoint[] allWPChildrenToUnparent = GetComponentsInChildren<Waypoint>();
-        for (int i = 0; i < allWPChildrenToUnparent.Length; i++) {
-            allWPChildrenToUnparent[i].transform.SetParent(null);
-        }
-
         for (int i = 0; i < allNear.Length; i++)
         {
             ExplodeChainReact ecrScript = allNear[i].gameObject.GetComponentInParent<ExplodeChainReact>();
@@ -132,7 +133,19 @@ public class ExplodeChainReact : MonoBehaviour
             NumberOfTargetsList.value[NumberOfTargetsList.value.Count - 1] += 1;
         }
 
-        GameObject.Instantiate(blastVFX, transform.position, transform.rotation);
+        GameObject blastGO = GameObject.Instantiate(blastVFX, transform.position, transform.rotation);
+
+        if (isUnderwater) {
+            ParticleSystemRenderer[] allPSR = blastGO.GetComponentsInChildren<ParticleSystemRenderer>();
+            for (var i = 0; i < allPSR.Length; i++) {
+                allPSR[i].material.SetColor("_Color", Color.blue);
+                allPSR[i].material.SetColor("_EmissionColor", Color.cyan);
+                if(allPSR[i].trailMaterial) {
+                    allPSR[i].trailMaterial.SetColor("_Color", Color.blue);
+                    allPSR[i].trailMaterial.SetColor("_EmissionColor", Color.cyan);
+                }
+            }
+        }
 
         Destroy(gameObject);
     }
