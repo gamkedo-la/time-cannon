@@ -5,18 +5,28 @@ using UnityEngine;
 public class WaypointMover : MonoBehaviour
 {
 	public Waypoint target;
-	public float speedScale = 1f; // scales all waypoint speeds
+    private Waypoint firstTarget;
+    public float speedScale = 1f; // scales all waypoint speeds
     public bool driveSharpTurns = false;
+    public bool waypointsMayMove = false;
     public bool isWater = false; // only used if driveSharpTurns, for driftier (but not air drifty) turn
+
+    public GameObject vanishOnNextLapIfThisGORemoved;
+    private bool watchingAnyGOForRemoval;
+
     private float progressAmt = 0.0f;
 
-    void Start()
+    private bool lateStartRunYet = false;
+
+    void LateStart()
 	{
-		transform.position = target.transform.position;
+        firstTarget = target;
+        watchingAnyGOForRemoval = (vanishOnNextLapIfThisGORemoved != null);
+
+        transform.position = target.transform.position;
 		transform.rotation = target.transform.rotation;
 
         if(driveSharpTurns) { // force each point to point directly at the next waypoint
-            Waypoint firstGO = target;
             Waypoint tracePt = target;
 
             if (isWater == false) { // if this is on ground...
@@ -27,19 +37,19 @@ public class WaypointMover : MonoBehaviour
                         tracePt.transform.position = rhInfo.point + Vector3.up * 1.5f;
                     }
                     tracePt = tracePt.next;
-                } while (firstGO != tracePt);
+                } while (firstTarget != tracePt);
             }
 
             float totalPathDist = 0.0f;
             do { // tally total path length, to adjust distance for consistent speed
                 totalPathDist += Vector3.Distance(tracePt.transform.position, tracePt.next.transform.position);
                 tracePt = tracePt.next;
-            } while (firstGO != tracePt);
+            } while (firstTarget != tracePt);
 
             do { // remap proportions of path length for consistent ground speed
                 tracePt.speedMultiplierAfterHere = totalPathDist / Vector3.Distance(tracePt.transform.position, tracePt.next.transform.position);
                 tracePt = tracePt.next;
-            } while (firstGO != tracePt);
+            } while (firstTarget != tracePt);
 
             do { // point each at the next
                 if(isWater) {
@@ -50,7 +60,7 @@ public class WaypointMover : MonoBehaviour
                     tracePt.transform.LookAt(tracePt.next.transform);
                 }
                 tracePt = tracePt.next;
-            } while (firstGO != tracePt);
+            } while (firstTarget != tracePt);
         }
 
         MeshRenderer[] renderers = gameObject.GetComponentsInChildren<MeshRenderer>();
@@ -67,7 +77,12 @@ public class WaypointMover : MonoBehaviour
 
 	void Update()
 	{
-		progressAmt += TimeKeeper.instance.fakeTimeDelta * target.speedMultiplierAfterHere * speedScale;
+        if(lateStartRunYet == false) {
+            LateStart(); // ensures all waypoint prev references set
+            lateStartRunYet = true;
+            return;
+        }
+        progressAmt += TimeKeeper.instance.fakeTimeDelta * target.speedMultiplierAfterHere * speedScale;
 		if (progressAmt <= 0.0f)
 		{
 			progressAmt += 1.0f;
@@ -77,13 +92,21 @@ public class WaypointMover : MonoBehaviour
 		{
 			progressAmt -= 1.0f;
 			target = target.next;
-		}
+            if(watchingAnyGOForRemoval && vanishOnNextLapIfThisGORemoved == null && target == firstTarget) {
+                Debug.Log("Removing " + gameObject.name + " because starting next lap and its vanishOnNextLapIfThisGORemoved is gone");
+                Destroy(gameObject); // silent, uneventful removal
+            }
+        }
         if(isWater) {
             transform.position = target.InterpPt(progressAmt,40.0f);
         } else {
             transform.position = target.InterpPt(progressAmt);
         }
-        transform.rotation = target.InterpRot(driveSharpTurns ?
+        if(waypointsMayMove) {
+            target.transform.LookAt(target.next.transform); // update current wp
+            target.next.transform.LookAt(target.next.next.transform); // and our destination's orientation
+        }
+        transform.rotation = target.InterpRot(driveSharpTurns || waypointsMayMove ?
             progressAmt* progressAmt* (isWater ? 1 : progressAmt * progressAmt * progressAmt * progressAmt) : // heavy, heavy bias towards end
             progressAmt);
 	}
