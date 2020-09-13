@@ -8,6 +8,8 @@ public class ExplodeChainReact : MonoBehaviour
     private GameObject blastVFX;
     private GameObject pointPopper;
 
+    private readonly int[] exploList = { 5, 10, 50, 100, 300};
+
     private bool isExploded = false;
     public int blastRadius = 5;
 
@@ -23,8 +25,20 @@ public class ExplodeChainReact : MonoBehaviour
     [SerializeField] private IntSO TotalNumberOfTargetHits;
     private void Start()
     {
-        blastVFX = Resources.Load("Explosion"+blastRadius+"m") as GameObject;
-        if(blastVFX == null)
+        int useSize = exploList[exploList.Length - 1]; // scale largest if no smaller fit found
+        string vfx_name;
+        for (int i = 0; i < exploList.Length; i++) {
+            if (exploList[i] >= blastRadius) {
+                useSize = exploList[i];
+                break;
+            }
+        }
+        vfx_name = "Explosion" + useSize + "m";
+        blastVFX = Resources.Load(vfx_name) as GameObject;
+
+        blastVFX.transform.localScale = Vector3.one * 0.105f * ((float)blastRadius);
+        Debug.Log("explosion scale for "+gameObject.name+": " + blastVFX.transform.localScale.x);
+        if (blastVFX == null)
         {
             Debug.LogWarning("Blast Radius needs to match an existing Resources/Explosion_m prefab");
             Debug.LogWarning("No Resources/Explosion"+ blastRadius+"m definition found for " +gameObject.name);

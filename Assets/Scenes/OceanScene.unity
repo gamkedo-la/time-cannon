@@ -479,8 +479,8 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 25
-      minScalar: 3
+      scalar: 7
+      minScalar: 0
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -7494,7 +7494,7 @@ PrefabInstance:
     - target: {fileID: 9031680515206372653, guid: 397f476c2c0c84a368e59d0705d45802,
         type: 3}
       propertyPath: blastRadius
-      value: 300
+      value: 500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 397f476c2c0c84a368e59d0705d45802, type: 3}
