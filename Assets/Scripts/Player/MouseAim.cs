@@ -11,7 +11,7 @@ public class MouseAim : MonoBehaviour
     private float tiltLimit = 40.0f;
 
     private float scanFOV = 60.0f;
-    private float zoomFOV = 25.0f;
+    private float zoomFOV = 22.0f;
     private Camera mainCam;
 
     // Start is called before the first frame update
