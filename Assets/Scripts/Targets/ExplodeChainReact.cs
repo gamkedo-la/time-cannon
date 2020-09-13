@@ -82,6 +82,11 @@ public class ExplodeChainReact : MonoBehaviour
     {
         Collider[] allNear = Physics.OverlapSphere(transform.position, blastRadius);
 
+        Waypoint[] allWPChildrenToUnparent = GetComponentsInChildren<Waypoint>();
+        for (int i = 0; i < allWPChildrenToUnparent.Length; i++) {
+            allWPChildrenToUnparent[i].transform.SetParent(null);
+        }
+
         for (int i = 0; i < allNear.Length; i++)
         {
             ExplodeChainReact ecrScript = allNear[i].gameObject.GetComponentInParent<ExplodeChainReact>();
