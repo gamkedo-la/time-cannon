@@ -1215,6 +1215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5876ab83849c04c0fae6c0d921af22f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isUnderwater: 0
   blastRadius: 100
   alreadyCountedInChainForAimThisFrame: 0
   ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
@@ -3726,6 +3727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5876ab83849c04c0fae6c0d921af22f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isUnderwater: 0
   blastRadius: 300
   alreadyCountedInChainForAimThisFrame: 0
   ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
@@ -3779,7 +3781,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &320606742360781077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4014,6 +4016,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5876ab83849c04c0fae6c0d921af22f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isUnderwater: 0
   blastRadius: 50
   alreadyCountedInChainForAimThisFrame: 0
   ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
@@ -4036,6 +4039,9 @@ MonoBehaviour:
   target: {fileID: 1893287400}
   speedScale: 0.08
   driveSharpTurns: 1
+  waypointsMayMove: 0
+  isWater: 0
+  vanishOnNextLapIfThisGORemoved: {fileID: 0}
   drawLingGizmo: 1
   drawMeshGizmo: 1
   drawFauxLocation: 0
