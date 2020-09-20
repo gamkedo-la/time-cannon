@@ -83,21 +83,24 @@ public class WaypointMover : MonoBehaviour
             return;
         }
         progressAmt += TimeKeeper.instance.fakeTimeDelta * target.speedMultiplierAfterHere * speedScale;
+        bool loopRestarted = false; // true if either forward or backward crossing of start
 		if (progressAmt <= 0.0f)
 		{
 			progressAmt += 1.0f;
 			target = target.GetPrev();
+            loopRestarted = true;
 		}
 		if (progressAmt >= 1.0f)
 		{
 			progressAmt -= 1.0f;
 			target = target.next;
-            if(watchingAnyGOForRemoval && vanishOnNextLapIfThisGORemoved == null && target == firstTarget) {
-                Debug.Log("Removing " + gameObject.name + " because starting next lap and its vanishOnNextLapIfThisGORemoved is gone");
-                Destroy(gameObject); // silent, uneventful removal
-            }
+            loopRestarted = true;
         }
-        if(isWater) {
+        if(loopRestarted && watchingAnyGOForRemoval && vanishOnNextLapIfThisGORemoved == null && target == firstTarget) {
+            Debug.Log("Removing " + gameObject.name + " because crossing between lap sand its vanishOnNextLapIfThisGORemoved is gone");
+            Destroy(gameObject); // silent, uneventful removal
+        }
+        if (isWater) {
             transform.position = target.InterpPt(progressAmt,40.0f);
         } else {
             transform.position = target.InterpPt(progressAmt);

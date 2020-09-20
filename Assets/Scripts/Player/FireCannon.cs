@@ -88,7 +88,7 @@ public class FireCannon : MonoBehaviour
                     muzzleFlash.SetActive(true);
                     Invoke(nameof(DisableMuzzleFlash), muzzleFlashDuration);
 
-                    Debug.Log("DIRECT HIT:" + rhInfo.collider.gameObject.name);
+                    // Debug.Log("DIRECT HIT:" + rhInfo.collider.gameObject.name);
                     if (ecrScript)
                     {
                         ecrScript.Explode(1);
