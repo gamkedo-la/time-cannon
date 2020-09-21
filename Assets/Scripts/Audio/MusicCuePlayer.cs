@@ -20,8 +20,8 @@ public class MusicCuePlayer : MonoBehaviour
 		{
 			musicQueue.Enqueue(musicPlaylist[i]);
 		}
-		StartCoroutine(LoopTracks());
-		if (playOnAwake) Play();
+
+		StartCoroutine(LateStart());
 	}
 
 	void OnDestroy()
@@ -85,6 +85,14 @@ public class MusicCuePlayer : MonoBehaviour
 
 			yield return null;
 		}
+	}
+
+	IEnumerator LateStart()
+	{
+		yield return new WaitForEndOfFrame();
+		
+		StartCoroutine(LoopTracks());
+		if (playOnAwake) Play();
 	}
 }
 
