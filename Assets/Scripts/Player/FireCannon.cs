@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class FireCannon : MonoBehaviour
 {
@@ -34,6 +35,17 @@ public class FireCannon : MonoBehaviour
 
     void Update()
     {
+        // debug controls to switch or reload scenes in VR
+        if(Input.GetButtonDown("Fire1")) {
+            SceneManager.LoadScene(0);
+        }
+        if (Input.GetButtonDown("Fire2")) {
+            SceneManager.LoadScene(1);
+        }
+        if (Input.GetButtonDown("Fire3")) {
+            SceneManager.LoadScene(2);
+        }
+
         float thicknessRange = 0.4f;
         RaycastHit[] laserMiddle = Physics.RaycastAll(transform.position, transform.forward);
         RaycastHit[] laserLeft = Physics.RaycastAll(transform.position-transform.right* thicknessRange, transform.forward);

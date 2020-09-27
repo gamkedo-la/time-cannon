@@ -114,6 +114,8 @@ public class ExplodeChainReact : MonoBehaviour
 
         yield return new WaitForSeconds(chainDepth * Random.Range(0.1f, 0.4f)); // lag the explosion
 
+        Destroy(gameObject);
+
         GameObject pointGO = GameObject.Instantiate(pointPopper, transform.position, transform.rotation);
         PointScaleFadeDie psfdScript = pointGO.GetComponent<PointScaleFadeDie>();
         int score = chainDepth * 100;
@@ -147,7 +149,7 @@ public class ExplodeChainReact : MonoBehaviour
             }
         }
 
-        Destroy(gameObject);
+        // Destroy(gameObject); //// wasn't reached here, trying moving it earlier...
     }
 
     // adapted from https://gamedev.stackexchange.com/questions/126427/draw-circle-around-gameobject-to-indicate-radius
