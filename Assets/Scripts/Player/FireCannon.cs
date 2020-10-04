@@ -15,6 +15,7 @@ public class FireCannon : MonoBehaviour
     private float maxAimRange = 500.0f; // avoids dot vanishing
     private float muzzleFlashDuration = 0.3f;
     public GameObject ShootingPoints;
+    private AudioSource cannonShotSound;
 
     private void AddArrayIntoListIfUnique(List<RaycastHit> toList, RaycastHit[] fromArray)
     {
@@ -30,6 +31,7 @@ public class FireCannon : MonoBehaviour
 
     private void Start()
     {
+        cannonShotSound = GetComponent<AudioSource>();
         crosshair.color = Color.cyan;
     }
 
@@ -95,6 +97,7 @@ public class FireCannon : MonoBehaviour
                 }
                 else
                 {
+                    cannonShotSound.Play();
                     emitter.Emit(1000);
                     animator.SetTrigger("Fire");
                     muzzleFlash.SetActive(true);
