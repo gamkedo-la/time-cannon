@@ -135,8 +135,10 @@ public class ExplodeChainReact : MonoBehaviour
             NumberOfTargetsList.value[NumberOfTargetsList.value.Count - 1] += 1;
         }
 
-        GameObject blastGO = GameObject.Instantiate(blastVFX, transform.position, transform.rotation);
-
+        if (isUnderwater == false) {
+            GameObject blastGO = GameObject.Instantiate(blastVFX, transform.position, transform.rotation);
+        }
+        /*
         if (isUnderwater) {
             ParticleSystemRenderer[] allPSR = blastGO.GetComponentsInChildren<ParticleSystemRenderer>();
             for (var i = 0; i < allPSR.Length; i++) {
@@ -147,7 +149,7 @@ public class ExplodeChainReact : MonoBehaviour
                     allPSR[i].trailMaterial.SetColor("_EmissionColor", Color.cyan);
                 }
             }
-        }
+        }*/
 
         // Destroy(gameObject); //// wasn't reached here, trying moving it earlier...
     }
