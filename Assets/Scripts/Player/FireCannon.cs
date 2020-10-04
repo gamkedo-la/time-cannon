@@ -36,13 +36,13 @@ public class FireCannon : MonoBehaviour
     void Update()
     {
         // debug controls to switch or reload scenes in VR
-        if(Input.GetButtonDown("Fire1")) {
+        if(Input.GetButtonDown("Fire2Joy")) {
             SceneManager.LoadScene(0);
         }
-        if (Input.GetButtonDown("Fire2")) {
+        if (Input.GetButtonDown("Fire3Joy")) {
             SceneManager.LoadScene(1);
         }
-        if (Input.GetButtonDown("Fire3")) {
+        if (Input.GetButtonDown("Fire4Joy")) {
             SceneManager.LoadScene(2);
         }
 
