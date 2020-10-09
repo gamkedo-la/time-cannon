@@ -1,26 +1,23 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class ScoreKeeper : MonoBehaviour
 {
     public static ScoreKeeper instance;
 
-    private Text scoreText;
+    private TextMeshProUGUI scoreLabel;
     private int scoreNow = 0;
 
-    // Start is called before the first frame update
     void Start()
     {
         instance = this;
-        scoreText = GameObject.Find("ScoreText").GetComponent<Text>();
+        scoreLabel = GameObject.Find("Score Label").GetComponent<TextMeshProUGUI>();
         AddScore(0);
     }
 
     public void AddScore(int points)
     {
         scoreNow += points;
-        scoreText.text = "Score: "+ scoreNow;
+        scoreLabel.text = "Score: "+ scoreNow;
     }
 }
