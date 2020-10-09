@@ -5503,6 +5503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5876ab83849c04c0fae6c0d921af22f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isUnderwater: 0
   blastRadius: 5
   alreadyCountedInChainForAimThisFrame: 0
   ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
@@ -5945,6 +5946,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5876ab83849c04c0fae6c0d921af22f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isUnderwater: 0
   blastRadius: 5
   alreadyCountedInChainForAimThisFrame: 0
   ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
@@ -6513,6 +6515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5876ab83849c04c0fae6c0d921af22f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isUnderwater: 0
   blastRadius: 5
   alreadyCountedInChainForAimThisFrame: 0
   ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
@@ -11802,6 +11805,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5876ab83849c04c0fae6c0d921af22f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isUnderwater: 0
   blastRadius: 5
   alreadyCountedInChainForAimThisFrame: 0
   ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
@@ -22224,6 +22228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5876ab83849c04c0fae6c0d921af22f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isUnderwater: 0
   blastRadius: 5
   alreadyCountedInChainForAimThisFrame: 0
   ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
@@ -56058,6 +56063,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5876ab83849c04c0fae6c0d921af22f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isUnderwater: 0
   blastRadius: 5
   alreadyCountedInChainForAimThisFrame: 0
   ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
@@ -56374,6 +56380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5876ab83849c04c0fae6c0d921af22f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isUnderwater: 0
   blastRadius: 5
   alreadyCountedInChainForAimThisFrame: 0
   ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
@@ -56690,6 +56697,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5876ab83849c04c0fae6c0d921af22f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isUnderwater: 0
   blastRadius: 5
   alreadyCountedInChainForAimThisFrame: 0
   ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
@@ -61886,6 +61894,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5876ab83849c04c0fae6c0d921af22f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isUnderwater: 0
   blastRadius: 5
   alreadyCountedInChainForAimThisFrame: 0
   ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
@@ -62202,6 +62211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5876ab83849c04c0fae6c0d921af22f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isUnderwater: 0
   blastRadius: 5
   alreadyCountedInChainForAimThisFrame: 0
   ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
@@ -67272,6 +67282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5876ab83849c04c0fae6c0d921af22f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isUnderwater: 0
   blastRadius: 5
   alreadyCountedInChainForAimThisFrame: 0
   ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
@@ -72376,6 +72387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5876ab83849c04c0fae6c0d921af22f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isUnderwater: 0
   blastRadius: 5
   alreadyCountedInChainForAimThisFrame: 0
   ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
@@ -82452,6 +82464,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5876ab83849c04c0fae6c0d921af22f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isUnderwater: 0
   blastRadius: 5
   alreadyCountedInChainForAimThisFrame: 0
   ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
@@ -82894,6 +82907,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5876ab83849c04c0fae6c0d921af22f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isUnderwater: 0
   blastRadius: 5
   alreadyCountedInChainForAimThisFrame: 0
   ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
@@ -88674,6 +88688,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5876ab83849c04c0fae6c0d921af22f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isUnderwater: 0
   blastRadius: 5
   alreadyCountedInChainForAimThisFrame: 0
   ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
@@ -93870,6 +93885,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5876ab83849c04c0fae6c0d921af22f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isUnderwater: 0
   blastRadius: 5
   alreadyCountedInChainForAimThisFrame: 0
   ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
@@ -94438,6 +94454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5876ab83849c04c0fae6c0d921af22f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isUnderwater: 0
   blastRadius: 5
   alreadyCountedInChainForAimThisFrame: 0
   ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
@@ -99649,6 +99666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5876ab83849c04c0fae6c0d921af22f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isUnderwater: 0
   blastRadius: 5
   alreadyCountedInChainForAimThisFrame: 0
   ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
@@ -99922,6 +99940,24 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3678113714219687347, guid: c467154ce9d5a496cb6dd495d0ca2fdd,
+        type: 3}
+      propertyPath: m_Text
+      value: 'Date: 3.14 April 7777
+
+        Location: The Cubist Eternium
+
+
+
+
+        The
+        spectral energy spheres
+
+        are threatening the defense matrix.
+
+        Take
+        them all out!'
+      objectReference: {fileID: 0}
     - target: {fileID: 5214171648771950975, guid: c467154ce9d5a496cb6dd495d0ca2fdd,
         type: 3}
       propertyPath: postProcessingVolume
@@ -104833,6 +104869,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5876ab83849c04c0fae6c0d921af22f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isUnderwater: 0
   blastRadius: 5
   alreadyCountedInChainForAimThisFrame: 0
   ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}
@@ -105149,6 +105186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5876ab83849c04c0fae6c0d921af22f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isUnderwater: 0
   blastRadius: 5
   alreadyCountedInChainForAimThisFrame: 0
   ScoreList: {fileID: 11400000, guid: 2eb5ddab2cab4774f9f957e745eb6759, type: 2}

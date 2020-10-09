@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.87094796, g: 0.73766124, b: 0.6904733, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8799,6 +8799,24 @@ PrefabInstance:
         type: 3}
       propertyPath: far clip plane
       value: 3200
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678113714219687347, guid: c467154ce9d5a496cb6dd495d0ca2fdd,
+        type: 3}
+      propertyPath: m_Text
+      value: 'Date: ?? October 20??
+
+        Location: The Pacific Ocean
+
+
+
+
+        Great
+        sea battles can be decided
+
+        in a single shot. Can you find the
+
+        perfect
+        shot to sink the fleet?'
       objectReference: {fileID: 0}
     - target: {fileID: 4768388129600466266, guid: c467154ce9d5a496cb6dd495d0ca2fdd,
         type: 3}

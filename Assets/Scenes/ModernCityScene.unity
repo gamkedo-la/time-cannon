@@ -16921,6 +16921,24 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3678113714219687347, guid: c467154ce9d5a496cb6dd495d0ca2fdd,
+        type: 3}
+      propertyPath: m_Text
+      value: 'Date: 01 Janury 40XX
+
+        Location: NeoSeattle District 8
+
+
+
+
+        The
+        endless streets of the metropolis
+
+        are the perfect hunting ground
+        for
+
+        a well-timed shot.'
+      objectReference: {fileID: 0}
     - target: {fileID: 4768388129600466266, guid: c467154ce9d5a496cb6dd495d0ca2fdd,
         type: 3}
       propertyPath: m_IsActive
