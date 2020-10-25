@@ -772,7 +772,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 4D
+  m_Text: 2100 AD
 --- !u!222 &188999284
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1191,7 +1191,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 3C
+  m_Text: 1942 AD
 --- !u!222 &307846848
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1925,7 +1925,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1B
+  m_Text: 1400 AD
 --- !u!222 &641439800
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2086,7 +2086,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1E
+  m_Text: 32000 AD
 --- !u!222 &788219353
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2164,7 +2164,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Major City in Australia
+  m_Text: Major City
 --- !u!222 &838539605
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2242,7 +2242,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 4E
+  m_Text: 32000 AD
 --- !u!222 &882309393
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2698,7 +2698,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 2C
+  m_Text: 1942 AD
 --- !u!222 &1013992696
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2776,7 +2776,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 2B
+  m_Text: 1400 AD
 --- !u!222 &1014551934
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2854,7 +2854,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1A
+  m_Text: 450 BC
 --- !u!222 &1030443271
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3408,7 +3408,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Indian Ocean
+  m_Text: Ocean
 --- !u!222 &1202214414
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4141,7 +4141,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 2A
+  m_Text: 450 BC
 --- !u!222 &1336275884
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4219,7 +4219,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 2E
+  m_Text: 32000 AD
 --- !u!222 &1382582032
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4401,7 +4401,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 2D
+  m_Text: 2100 AD
 --- !u!222 &1410307252
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4479,7 +4479,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 4B
+  m_Text: 1400 AD
 --- !u!222 &1423576731
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4557,7 +4557,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 3B
+  m_Text: 1400 AD
 --- !u!222 &1474944081
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5122,7 +5122,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 4C
+  m_Text: 1942 AD
 --- !u!222 &1694532400
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5200,7 +5200,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 4A
+  m_Text: 450 BC
 --- !u!222 &1726974267
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5278,7 +5278,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 3A
+  m_Text: 450 BC
 --- !u!222 &1750956899
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5356,7 +5356,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 3D
+  m_Text: 2100 AD
 --- !u!222 &1765559461
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5672,7 +5672,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1C
+  m_Text: 1942 AD
 --- !u!222 &1967461312
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5750,7 +5750,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 3E
+  m_Text: 32000 AD
 --- !u!222 &1989209004
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5828,7 +5828,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Countryside Eastern EU
+  m_Text: Countryside
 --- !u!222 &2089196187
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6025,7 +6025,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1D
+  m_Text: 2100 AD
 --- !u!222 &2128743385
 CanvasRenderer:
   m_ObjectHideFlags: 0
