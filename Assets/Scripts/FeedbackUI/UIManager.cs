@@ -13,7 +13,7 @@ public class UIManager : MonoBehaviour
     {
         Player = GameObject.FindWithTag("Player");
         setVROrNotScript = Player.GetComponent<SetVROrNot>();
-        Debug.Log(endScreen);
+        // Debug.Log(endScreen);
         // RoundSummaryUIWebGL = Player.GetComponentInChildren<UIManager>().gameObject;
     }
 
