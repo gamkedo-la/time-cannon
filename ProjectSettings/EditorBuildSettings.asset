@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/WW1HillsScene.unity
+    path: Assets/Scenes/ww1-post-processing_WW1HillsScene.unity
     guid: 9641a9eb8e64c48a4a937bf1fbc74e43
   - enabled: 1
     path: Assets/Scenes/ModernCityScene.unity
