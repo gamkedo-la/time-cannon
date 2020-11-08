@@ -18,7 +18,7 @@ public class LevelTransitionController : MonoBehaviour
         foreach (var buttonSceneAndTimePeriodSetter in buttonSceneAndTimePeriodSetters)
         {
             var button = buttonSceneAndTimePeriodSetter.GetComponent<Button>();
-            button.onClick.AddListener(() => TransitionToLevel(buttonSceneAndTimePeriodSetter.scene, buttonSceneAndTimePeriodSetter.timePeriod));
+            button.onClick.AddListener(() => TransitionToLevel(buttonSceneAndTimePeriodSetter.sceneName, buttonSceneAndTimePeriodSetter.timePeriod));
         }
     }
 
@@ -35,12 +35,12 @@ public class LevelTransitionController : MonoBehaviour
         return fullScreenBlackRectangle is Image && fullScreenBlackRectangle.canvasRenderer.GetAlpha() == 1;
     }
 
-    private void TransitionToLevel(SceneAsset sceneAsset, TimePeriod timePeriod)
+    private void TransitionToLevel(string sceneName, TimePeriod timePeriod)
     {
         if (inTransition) return;
 
         inTransition = true;
-        nextSceneName = sceneAsset.name;
+        nextSceneName = sceneName;
         TimeCannonPlayerPrefs.SetTimePeriod(timePeriod);
         FadeToBlack();
     }

@@ -3,6 +3,6 @@ using UnityEngine;
 
 public class ButtonSceneAndTimePeriodSetter : MonoBehaviour
 {
-    public SceneAsset scene;
+    public string sceneName;
     public TimePeriod timePeriod;
 }
