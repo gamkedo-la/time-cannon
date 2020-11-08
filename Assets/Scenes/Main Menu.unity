@@ -429,7 +429,7 @@ PrefabInstance:
         type: 3}
       propertyPath: scene
       value: 
-      objectReference: {fileID: 102900000, guid: f974c403a4559468ebbec368125612fd,
+      objectReference: {fileID: 102900000, guid: fc2a1a91426eca849a5dd7c21148df46,
         type: 3}
     - target: {fileID: 678467456831224512, guid: 682a3edef07635842992f0d744ac3bd4,
         type: 3}
@@ -580,7 +580,7 @@ PrefabInstance:
         type: 3}
       propertyPath: scene
       value: 
-      objectReference: {fileID: 102900000, guid: f974c403a4559468ebbec368125612fd,
+      objectReference: {fileID: 102900000, guid: fc2a1a91426eca849a5dd7c21148df46,
         type: 3}
     - target: {fileID: 1345303640562650964, guid: 682a3edef07635842992f0d744ac3bd4,
         type: 3}
@@ -686,7 +686,7 @@ PrefabInstance:
         type: 3}
       propertyPath: scene
       value: 
-      objectReference: {fileID: 102900000, guid: f974c403a4559468ebbec368125612fd,
+      objectReference: {fileID: 102900000, guid: fc2a1a91426eca849a5dd7c21148df46,
         type: 3}
     - target: {fileID: 3161327316598570753, guid: 682a3edef07635842992f0d744ac3bd4,
         type: 3}
@@ -787,7 +787,7 @@ PrefabInstance:
         type: 3}
       propertyPath: scene
       value: 
-      objectReference: {fileID: 102900000, guid: f974c403a4559468ebbec368125612fd,
+      objectReference: {fileID: 102900000, guid: fc2a1a91426eca849a5dd7c21148df46,
         type: 3}
     - target: {fileID: 6004307175117796293, guid: 682a3edef07635842992f0d744ac3bd4,
         type: 3}
@@ -963,7 +963,7 @@ PrefabInstance:
         type: 3}
       propertyPath: scene
       value: 
-      objectReference: {fileID: 102900000, guid: f974c403a4559468ebbec368125612fd,
+      objectReference: {fileID: 102900000, guid: fc2a1a91426eca849a5dd7c21148df46,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 682a3edef07635842992f0d744ac3bd4, type: 3}
@@ -2026,8 +2026,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19aa804998bf4ed4b98e57aef9015420, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetScene:
-    m_Handle: 14
 --- !u!1 &1403279621
 GameObject:
   m_ObjectHideFlags: 0
