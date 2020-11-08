@@ -26,7 +26,7 @@ public class TimeKeeper : MonoBehaviour
         fakeTimePace = Mathf.Clamp(TimeKeeper.instance.fakeTimePace, -2.0f, 2.0f);
 
         float tempDampen = 1.0f;
-        if(Input.GetKey(KeyCode.Space))
+        if(Input.GetKey(KeyCode.Space) || Input.GetButton("Fire5Joy"))
         {
             tempDampen = 0.1f;
         }

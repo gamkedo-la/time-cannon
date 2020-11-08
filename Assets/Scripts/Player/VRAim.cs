@@ -7,11 +7,15 @@ public class VRAim : MonoBehaviour
     public GameObject gunObject;
     public GameObject zoomHand;
 
+    public Camera zoomCam;
+    public Transform zoomDot;
+
     private Vector3 zoomAimOrigin = Vector3.zero;
     private Quaternion zoomAimRot = Quaternion.identity;
 
     private Vector3 restoreAimOrigin = Vector3.zero;
     private Quaternion restoreAimRot = Quaternion.identity;
+    private Transform restoreParent;
 
     private Vector3 aimHandOrigin = Vector3.zero;
 
@@ -20,25 +24,34 @@ public class VRAim : MonoBehaviour
     {
         restoreAimOrigin = gunObject.transform.localPosition;
         restoreAimRot = gunObject.transform.localRotation;
+        restoreParent = gunObject.transform.parent;
     }
 
-    void Update()
+    void LateUpdate()
     {
-        if (Input.GetButton("Fire3Joy")) {
-            gunObject.transform.localPosition = restoreAimOrigin;
-            gunObject.transform.localRotation = restoreAimRot;
-            Vector3 zoomHandNow = transform.InverseTransformPoint(zoomHand.transform.position);
-            gunObject.transform.rotation *= Quaternion.AngleAxis((aimHandOrigin.x - zoomHandNow.x)*-45.0f, Vector3.up);
-            gunObject.transform.rotation *= Quaternion.AngleAxis((aimHandOrigin.y - zoomHandNow.y) * 30.0f, Vector3.right);
-        }
-
-        if (Input.GetButtonDown("Fire3Joy")) {
+        if (Input.GetButtonDown("Fire5Joy")) {
             aimHandOrigin = transform.InverseTransformPoint(zoomHand.transform.position);
             zoomAimOrigin = gunObject.transform.position;
             zoomAimRot = gunObject.transform.rotation;
-        } else if (Input.GetButtonUp("Fire3Joy")) {
+            gunObject.transform.SetParent(null);
+        }
+
+        if (Input.GetButton("Fire5Joy")) {
+            gunObject.transform.position = zoomAimOrigin;
+            gunObject.transform.rotation= zoomAimRot;
+            Vector3 zoomHandNow = transform.InverseTransformPoint(zoomHand.transform.position);
+            gunObject.transform.rotation *= Quaternion.AngleAxis((aimHandOrigin.x - zoomHandNow.x)*-20.0f, Vector3.up);
+            gunObject.transform.rotation *= Quaternion.AngleAxis((aimHandOrigin.y - zoomHandNow.y) * 15.0f, Vector3.right);
+        }
+
+        if (Input.GetButtonUp("Fire5Joy")) {
+            gunObject.transform.SetParent(restoreParent);
             gunObject.transform.localPosition = restoreAimOrigin;
             gunObject.transform.localRotation = restoreAimRot;
         }
+
+        zoomCam.fieldOfView += Input.GetAxis("ZoomAxis") * Time.deltaTime * -6.0f;
+        zoomCam.fieldOfView = Mathf.Clamp(zoomCam.fieldOfView,0.5f,10.0f);
+        zoomDot.localScale = Vector3.one * zoomCam.fieldOfView / 8000.0f;
     }
 }

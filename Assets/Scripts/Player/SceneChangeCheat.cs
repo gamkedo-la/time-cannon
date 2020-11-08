@@ -23,7 +23,7 @@ public class SceneChangeCheat : MonoBehaviour
         if (Input.GetButtonDown("Fire4Joy")) {
             SceneManager.LoadScene(1); // city
         }
-        if (Input.GetButtonDown("Fire5Joy")) {
+        if (Input.GetButtonDown("Fire3Joy")) {
             SceneManager.LoadScene(2); // ocean
         }
         if (Input.GetButtonDown("Fire6Joy")) {
