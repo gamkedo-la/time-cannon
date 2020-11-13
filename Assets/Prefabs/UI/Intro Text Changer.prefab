@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8824836635239613327
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8824836635239613325}
+  - component: {fileID: 8824836635239613324}
+  m_Layer: 0
+  m_Name: Intro Text Changer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8824836635239613325
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8824836635239613327}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8824836635239613324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8824836635239613327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7340904e45ab9b4d875e0f7b217d6cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  changeThisText: {fileID: 0}
+  Intro_0: 'Year: 450 BC
+
+    Location: The Chaos Dimension
+
+
+
+    Lost in a time
+    tunnel,
+
+    a vortex of temporal crystals
+
+    threatens to trap you in the
+    past!
+
+
+'
+  Intro_1: 'Year: 1400 AD
+
+    Location: The Chaos Dimension
+
+
+
+    Redshifted into
+    a parallel time stream,
+
+    you must escape before the radiation
+
+    becomes
+    too intense!'
+  Intro_2: 'Year: 1942 AD
+
+    Location: The Chaos Dimension
+
+
+
+    This time vortex
+    has frozen,
+
+    locked in an eternal war with
+
+    the endless cold of space.'
+  Intro_3: 'Year: 2100 AD
+
+    Location: The Chaos Dimension
+
+
+
+    Cybernetic spacetime
+    streams
+
+    threaten to shatter reality.
+
+    Block their uplink attacks!'
+  Intro_4: 'Year: 32000 AD
+
+    Location: The Chaos Dimension
+
+
+
+    Launched into
+    the distant future,
+
+    your only route back is through a
+
+    maelstrom of
+    broken time crystals!'

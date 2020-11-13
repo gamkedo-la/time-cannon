@@ -12,6 +12,7 @@ public class TemporalHideOrShow : MonoBehaviour
     bool debugMode = true;
 
     void ShouldntExistHereAndNow(string message) {
+        Debug.Log(message);
         if(debugMode) { // mark and hide
             gameObject.name = "HIDDEN " + gameObject.name;
             gameObject.SetActive(false);
@@ -34,7 +35,7 @@ public class TemporalHideOrShow : MonoBehaviour
                 }
             }
             if (shouldShow == false) {
-                ShouldntExistHereAndNow("removing " + gameObject.name + " - doesn't match timeStepsShownIn");
+                ShouldntExistHereAndNow("removing " + gameObject.name + " - doesn't match timeStepsShownIn. stageNow="+stageNow);
                 return;
             }
         } else {
@@ -48,6 +49,9 @@ public class TemporalHideOrShow : MonoBehaviour
                 break;
             }
         }
+
+        if (reqAnyTrue.Length==0) anyTrue = true; // don't fail check if nothing specified
+
         if (anyTrue == false) {
             ShouldntExistHereAndNow("removing " + gameObject.name + " - no reqAnyTrue matched");
             return;

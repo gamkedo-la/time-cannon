@@ -72,7 +72,7 @@ public class WobbleMovement : MonoBehaviour
         transform.position = new Vector3(startPos.x+tx.x,startPos.y+ty.y,startPos.z+tz.x);
 
         float spinSpeed = TimeKeeper.instance.fakeTimePace; // scale by time distortion
-        Debug.Log("spinSpeed:"+spinSpeed);
+        //Debug.Log("spinSpeed:"+spinSpeed);
         transform.Rotate(spinX*spinSpeed,spinY*spinSpeed,spinZ*spinSpeed);
     }
 }
