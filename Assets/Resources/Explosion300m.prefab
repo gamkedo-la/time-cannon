@@ -9880,6 +9880,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 381e7b9ed8d0d5f41b9a63b75de455bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reversable: 1
 --- !u!114 &232533635443338080
 MonoBehaviour:
   m_ObjectHideFlags: 0
