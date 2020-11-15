@@ -64,6 +64,9 @@ public class ExplodeChainReact : MonoBehaviour
             allWPChildrenToUnparent[i].transform.SetParent(null);
         }
 
+        GameObject testBlastVFX = Resources.Load("Explosion5m") as GameObject;
+        GameObject pointGO = GameObject.Instantiate(testBlastVFX, transform.position, transform.rotation);
+
         isExploded = true;
         StartCoroutine(ChainReact(chainDepth)); // compute chain reaction instantly, no lag
     }

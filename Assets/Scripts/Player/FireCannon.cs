@@ -89,6 +89,11 @@ public class FireCannon : MonoBehaviour
                     emitter.Emit(1000);
                     animator.SetTrigger("Fire");
                     muzzleFlash.SetActive(true);
+
+                    /*GameObject testBlastVFX = Resources.Load("Explosion5m") as GameObject;
+                    GameObject pointGO = GameObject.Instantiate(testBlastVFX, transform.position + transform.forward * 7.0f,
+                        transform.rotation);*/
+
                     Invoke(nameof(DisableMuzzleFlash), muzzleFlashDuration);
 
                     // Debug.Log("DIRECT HIT:" + rhInfo.collider.gameObject.name);
