@@ -40,4 +40,18 @@ public class SceneManagerScript : MonoBehaviour
         numberOfHitsList.value.Clear();
         scoreFromEachShot.value.Clear();
     }
+
+    private void Update() {
+        if(Input.GetButtonDown("Fire3")) {
+            ResetDeadAliens();
+        }
+    }
+
+    private void ResetDeadAliens() {
+        int mostAliensPerScene = 15;
+        Debug.Log("RESETTING ALIENS DEAD IN SCENE, REMINDER WE ASSUME NO MORE THAN " + mostAliensPerScene);
+        for(int i=0;i< mostAliensPerScene; i++) {
+            PlayerPrefs.SetInt(StayDeadAcrossTimeScript.alienNameForID(i), 1);
+        }
+    }
 }

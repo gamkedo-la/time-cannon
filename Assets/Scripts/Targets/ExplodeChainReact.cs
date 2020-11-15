@@ -64,6 +64,11 @@ public class ExplodeChainReact : MonoBehaviour
             allWPChildrenToUnparent[i].transform.SetParent(null);
         }
 
+        StayDeadAcrossTimeScript SDATS = GetComponent<StayDeadAcrossTimeScript>();
+        if(SDATS) {
+            SDATS.WreckForAllTime();
+        }
+
         //GameObject testBlastVFX = Resources.Load("Explosion5m") as GameObject;
         //GameObject boomGO = GameObject.Instantiate(testBlastVFX, transform.position, transform.rotation);
         GameObject blastGO = GameObject.Instantiate(blastVFX, transform.position, transform.rotation);
@@ -138,16 +143,28 @@ public class ExplodeChainReact : MonoBehaviour
         ScoreKeeper.instance.AddScore(score);
 
         // UI Elements Handling
-        TotalNumberOfTargetHits.value += 1;
-        if (chainDepth == 1)
-        {
-            ScoreList.value.Add(score);
-            NumberOfTargetsList.value.Add(chainDepth);
-        }
-        else if (chainDepth > 1)
-        {
-            ScoreList.value[ScoreList.value.Count -1] += score;
-            NumberOfTargetsList.value[NumberOfTargetsList.value.Count - 1] += 1;
+        if(TotalNumberOfTargetHits && ScoreList) {
+            TotalNumberOfTargetHits.value += 1;
+            if (chainDepth == 1) {
+                ScoreList.value.Add(score);
+                NumberOfTargetsList.value.Add(chainDepth);
+            } else if (chainDepth > 1) {
+                int index; 
+                index = ScoreList.value.Count - 1;
+                if(index >=0 && index < ScoreList.value.Count) {
+                    ScoreList.value[ScoreList.value.Count - 1] += score;
+                } else {
+                    Debug.LogWarning("INVALID INDEX attempt blocked");
+                }
+                index = NumberOfTargetsList.value.Count - 1;
+                if (index >= 0 && index < NumberOfTargetsList.value.Count) {
+                    NumberOfTargetsList.value[NumberOfTargetsList.value.Count - 1] += 1;
+                } else {
+                    Debug.LogWarning("INVALID INDEX attempt blocked");
+                }
+            }
+        } else {
+            Debug.LogWarning("NOTE: TotalNumberOfTargetHits AND/OR ScoreList isn't set in this scene");
         }
     }
 
