@@ -11,6 +11,8 @@ public class WaypointMover : MonoBehaviour
     public bool waypointsMayMove = false;
     public bool isWater = false; // only used if driveSharpTurns, for driftier (but not air drifty) turn
 
+	[SerializeField] bool isAir = false;
+
     public GameObject vanishOnNextLapIfThisGORemoved;
     private bool watchingAnyGOForRemoval;
 
@@ -46,17 +48,26 @@ public class WaypointMover : MonoBehaviour
                 tracePt = tracePt.next;
             } while (firstTarget != tracePt);
 
-            do { // remap proportions of path length for consistent ground speed
-                tracePt.speedMultiplierAfterHere = totalPathDist / Vector3.Distance(tracePt.transform.position, tracePt.next.transform.position);
-                tracePt = tracePt.next;
-            } while (firstTarget != tracePt);
+			if(!isAir){
+				do { // remap proportions of path length for consistent ground speed
+					tracePt.speedMultiplierAfterHere = totalPathDist / Vector3.Distance(tracePt.transform.position, tracePt.next.transform.position);
+					tracePt = tracePt.next;
+				} while (firstTarget != tracePt);
+			}
 
             do { // point each at the next
                 if(isWater) {
                     Quaternion outQuat = Quaternion.LookRotation(tracePt.next.transform.position - tracePt.transform.position);
                     Quaternion inQuat = Quaternion.LookRotation(tracePt.transform.position - tracePt.GetPrev().transform.position);
                     tracePt.transform.rotation = Quaternion.Slerp(outQuat,inQuat,0.35f); // % aiming to next pt in water
-                } else {
+                } 
+				else if (isAir)
+				{
+					Quaternion outQuat = tracePt.next.transform.rotation;
+                    Quaternion inQuat = tracePt.transform.rotation;
+                    tracePt.transform.rotation = Quaternion.Slerp(outQuat,inQuat,0.15f); // % aiming to next pt in water
+				}
+				else {
                     tracePt.transform.LookAt(tracePt.next.transform);
                 }
                 tracePt = tracePt.next;
@@ -109,9 +120,10 @@ public class WaypointMover : MonoBehaviour
             target.transform.LookAt(target.next.transform); // update current wp
             target.next.transform.LookAt(target.next.next.transform); // and our destination's orientation
         }
-        transform.rotation = target.InterpRot(driveSharpTurns || waypointsMayMove ?
-            progressAmt* progressAmt* (isWater ? 1 : progressAmt * progressAmt * progressAmt * progressAmt) : // heavy, heavy bias towards end
-            progressAmt);
+
+		transform.rotation = target.InterpRot(driveSharpTurns || waypointsMayMove ?
+			progressAmt* progressAmt* (isWater ? 1 : progressAmt * progressAmt * progressAmt * progressAmt) : // heavy, heavy bias towards end
+			progressAmt);
 	}
 
 	private bool initialized = false;
