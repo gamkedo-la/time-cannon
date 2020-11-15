@@ -64,8 +64,20 @@ public class ExplodeChainReact : MonoBehaviour
             allWPChildrenToUnparent[i].transform.SetParent(null);
         }
 
-        GameObject testBlastVFX = Resources.Load("Explosion5m") as GameObject;
-        GameObject pointGO = GameObject.Instantiate(testBlastVFX, transform.position, transform.rotation);
+        //GameObject testBlastVFX = Resources.Load("Explosion5m") as GameObject;
+        //GameObject boomGO = GameObject.Instantiate(testBlastVFX, transform.position, transform.rotation);
+        GameObject blastGO = GameObject.Instantiate(blastVFX, transform.position, transform.rotation);
+        if (isUnderwater) {
+            ParticleSystemRenderer[] allPSR = blastGO.GetComponentsInChildren<ParticleSystemRenderer>();
+            for (var i = 0; i < allPSR.Length; i++) {
+                allPSR[i].material.SetColor("_Color", Color.blue);
+                allPSR[i].material.SetColor("_EmissionColor", Color.cyan);
+                if (allPSR[i].trailMaterial) {
+                    allPSR[i].trailMaterial.SetColor("_Color", Color.blue);
+                    allPSR[i].trailMaterial.SetColor("_EmissionColor", Color.cyan);
+                }
+            }
+        }
 
         isExploded = true;
         StartCoroutine(ChainReact(chainDepth)); // compute chain reaction instantly, no lag
@@ -137,24 +149,6 @@ public class ExplodeChainReact : MonoBehaviour
             ScoreList.value[ScoreList.value.Count -1] += score;
             NumberOfTargetsList.value[NumberOfTargetsList.value.Count - 1] += 1;
         }
-
-        if (isUnderwater == false) {
-            GameObject blastGO = GameObject.Instantiate(blastVFX, transform.position, transform.rotation);
-        }
-        /*
-        if (isUnderwater) {
-            ParticleSystemRenderer[] allPSR = blastGO.GetComponentsInChildren<ParticleSystemRenderer>();
-            for (var i = 0; i < allPSR.Length; i++) {
-                allPSR[i].material.SetColor("_Color", Color.blue);
-                allPSR[i].material.SetColor("_EmissionColor", Color.cyan);
-                if(allPSR[i].trailMaterial) {
-                    allPSR[i].trailMaterial.SetColor("_Color", Color.blue);
-                    allPSR[i].trailMaterial.SetColor("_EmissionColor", Color.cyan);
-                }
-            }
-        }*/
-
-        // Destroy(gameObject); //// wasn't reached here, trying moving it earlier...
     }
 
     // adapted from https://gamedev.stackexchange.com/questions/126427/draw-circle-around-gameobject-to-indicate-radius
