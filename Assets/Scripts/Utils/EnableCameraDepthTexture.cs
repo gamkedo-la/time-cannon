@@ -10,6 +10,6 @@ public class EnableCameraDepthTexture : MonoBehaviour
 {
 	void Start( )
 	{
-		GetComponent<Camera>().depthTextureMode = DepthTextureMode.Depth;
+		//GetComponent<Camera>().depthTextureMode = DepthTextureMode.Depth;
 	}
 }
