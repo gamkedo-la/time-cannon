@@ -4,6 +4,8 @@ using UnityEngine;
 using TMPro;
 
 public class MenuScoreTextUpdate : MonoBehaviour {
+    public TextMeshProUGUI allScoreLabel;
+
     private readonly string[] sceneNames = { "Desert", "Ocean", "Countryside", "Chaos" };
     public TextMeshProUGUI[] sceneLabels;
 
@@ -23,16 +25,28 @@ public class MenuScoreTextUpdate : MonoBehaviour {
     const int ROW_COUNTRY = 2;
     const int ROW_CHAOS = 3;
 
+    int[] sums = { 0, 0, 0, 0 };
+
+    private void UpdateAllScore() {
+        int totalSum = 0;
+        for (int i = 0; i < sums.Length; i++) {
+            totalSum += sums[i];
+        }
+        allScoreLabel.text = "Goal: 7000\nSum: " + totalSum;
+    }
+
     public void ResetRowScore(int forRow) {
         int[] rowScores = ScorePerPeriod(forRow);
         TextMeshProUGUI[] labelRow = RowToLabelSet(forRow);
-        int sum = 0;
+        sums[forRow] = 0;
         for (int i = 0; i < rowScores.Length; i++) {
             rowScores[i] = Random.Range(0, 10) * 50 + 0;
-            sum += rowScores[i];
+            sums[forRow] += rowScores[i];
             labelRow[i].text = periodTimes[i] + "\nScore: " + rowScores[i];
         }
-        sceneLabels[forRow].text = sceneNames[forRow] + "\nTotal: " + sum;
+        sceneLabels[forRow].text = sceneNames[forRow] + "\nTotal: " + sums[forRow];
+
+        UpdateAllScore();
 
         int mostAliensPerScene = 15;
         Debug.Log("RESETTING ALIENS DEAD IN SCENE, REMINDER WE ASSUME NO MORE THAN " + mostAliensPerScene);
@@ -73,7 +87,10 @@ public class MenuScoreTextUpdate : MonoBehaviour {
     // Start is called before the first frame update
     void Start()
     {
-        int[] sums = {0,0,0,0};
+        for(int i=0; i < sums.Length; i++) {
+            sums[i] = 0;
+        }
+
         for (int i = 0; i < periodTimes.Length; i++) {
             scores_Desert[i] = Random.Range(0, 10) * 50 + 0;
             sums[ROW_DESERT] += scores_Desert[i];
@@ -95,6 +112,8 @@ public class MenuScoreTextUpdate : MonoBehaviour {
         for (int i = 0; i< sceneLabels.Length; i++) {
             sceneLabels[i].text = sceneNames[i]+"\nTotal: "+sums[i];
         }
+
+        UpdateAllScore();
     }
 
     // Update is called once per frame
