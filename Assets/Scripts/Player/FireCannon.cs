@@ -16,6 +16,10 @@ public class FireCannon : MonoBehaviour
     public GameObject ShootingPoints;
     private AudioSource cannonShotSound;
 
+    private int MAX_SHOTS = 4;
+    private int shotsLeft = 4;
+    public GameObject[] ammoDisplayBoxes;
+
     private void AddArrayIntoListIfUnique(List<RaycastHit> toList, RaycastHit[] fromArray)
     {
         for (int i = 0; i < fromArray.Length; i++)
@@ -32,10 +36,23 @@ public class FireCannon : MonoBehaviour
     {
         cannonShotSound = GetComponent<AudioSource>();
         crosshair.color = Color.cyan;
+        UpdateAmmoDisplay();
+    }
+
+    void UpdateAmmoDisplay() {
+        for (int i = 0; i < ammoDisplayBoxes.Length; i++) {
+            ammoDisplayBoxes[i].SetActive(i < shotsLeft);
+        }
     }
 
     void Update()
     {
+        if(shotsLeft <= 0) {
+            crosshair.color = Color.black;
+            cannonReadout.text = "-";
+            return;
+        }
+
         float thicknessRange = 0.4f;
         RaycastHit[] laserMiddle = Physics.RaycastAll(transform.position, transform.forward);
         RaycastHit[] laserLeft = Physics.RaycastAll(transform.position-transform.right* thicknessRange, transform.forward);
@@ -66,6 +83,7 @@ public class FireCannon : MonoBehaviour
         RaycastHit[] allRH = rhListTemp.ToArray(); // Physics.RaycastAll(transform.position, transform.forward);
 
         int hitsInRange = 0;
+        bool didFire = false;
         for(int i=0; i< allRH.Length;i++)
         {
             RaycastHit rhInfo = allRH[i];
@@ -85,11 +103,7 @@ public class FireCannon : MonoBehaviour
                 }
                 else
                 {
-                    cannonShotSound.Play();
-                    emitter.Emit(1000);
-                    animator.SetTrigger("Fire");
-                    muzzleFlash.SetActive(true);
-
+                    didFire = true; // setting only once, to not repeat per sub raycast
                     /*GameObject testBlastVFX = Resources.Load("Explosion5m") as GameObject;
                     GameObject pointGO = GameObject.Instantiate(testBlastVFX, transform.position + transform.forward * 7.0f,
                         transform.rotation);*/
@@ -120,7 +134,16 @@ public class FireCannon : MonoBehaviour
             }
         }
 
-        if(lastAimedRange> maxAimRange)
+        if(didFire) {
+            shotsLeft--;
+            UpdateAmmoDisplay();
+            cannonShotSound.Play();
+            emitter.Emit(1000);
+            animator.SetTrigger("Fire");
+            muzzleFlash.SetActive(true);
+        }
+
+        if (lastAimedRange> maxAimRange)
         {
             lastAimedRange = maxAimRange;
         }
