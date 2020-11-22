@@ -15,9 +15,17 @@ public class StayDeadAcrossTimeScript : MonoBehaviour
     private string uniqueStageNamePlusAlienIDNum;
     Comp comparer = new Comp();
 
+    static string[] sceneNames = { "City", "Ocean", "Countryside", "ChaosDimension" };
+    const string playerPrefPrefix = "Living_TimeAlien_";
+
+    public static string alienForRow(int rowNum, int IDnum) {
+        // scene name involved so player pref is unique across scenes regardless of time period
+        return playerPrefPrefix + sceneNames[rowNum] + IDnum;
+    }
+
     public static string alienNameForID(int IDnum) {
         // scene name involved so player pref is unique across scenes regardless of time period
-        return "Living_TimeAlien_" + SceneManager.GetActiveScene().name + IDnum;
+        return playerPrefPrefix + SceneManager.GetActiveScene().name + IDnum;
     }
 
     // Start is called before the first frame update

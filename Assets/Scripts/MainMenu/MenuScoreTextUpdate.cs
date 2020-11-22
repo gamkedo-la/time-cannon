@@ -33,6 +33,12 @@ public class MenuScoreTextUpdate : MonoBehaviour {
             labelRow[i].text = periodTimes[i] + "\nScore: " + rowScores[i];
         }
         sceneLabels[forRow].text = sceneNames[forRow] + "\nTotal: " + sum;
+
+        int mostAliensPerScene = 15;
+        Debug.Log("RESETTING ALIENS DEAD IN SCENE, REMINDER WE ASSUME NO MORE THAN " + mostAliensPerScene);
+        for (int i = 0; i < mostAliensPerScene; i++) {
+            PlayerPrefs.SetInt(StayDeadAcrossTimeScript.alienForRow(forRow,i), 1);
+        }
     }
 
     TextMeshProUGUI[] RowToLabelSet(int forRow) {
