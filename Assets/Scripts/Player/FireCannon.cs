@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class FireCannon : MonoBehaviour
@@ -18,7 +19,9 @@ public class FireCannon : MonoBehaviour
 
     private int MAX_SHOTS = 4;
     private int shotsLeft = 4;
+    [Range(1, 4)] public int startAmmoCount = 4;
     public GameObject[] ammoDisplayBoxes;
+    public UnityEvent outOfAmmo = null;
 
     private void AddArrayIntoListIfUnique(List<RaycastHit> toList, RaycastHit[] fromArray)
     {
@@ -36,6 +39,8 @@ public class FireCannon : MonoBehaviour
     {
         cannonShotSound = GetComponent<AudioSource>();
         crosshair.color = Color.cyan;
+
+        shotsLeft = startAmmoCount;
         UpdateAmmoDisplay();
     }
 
@@ -50,6 +55,9 @@ public class FireCannon : MonoBehaviour
         if(shotsLeft <= 0) {
             crosshair.color = Color.black;
             cannonReadout.text = "-";
+
+            outOfAmmo?.Invoke();
+
             return;
         }
 
