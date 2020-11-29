@@ -146,7 +146,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 22449803}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 403, y: 0, z: -338}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 168920981}
@@ -191,7 +191,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 33449899}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 469.51984, y: 428.6153, z: 197.11597}
+  m_LocalPosition: {x: 872.51984, y: 428.6153, z: -140.88403}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 770382312}
@@ -11989,6 +11989,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3215147734940949703, guid: c116b7497ab8ca34c9188965d4295e27,
+        type: 3}
+      propertyPath: m_UseRelativeTransform
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5113664386210071967, guid: c116b7497ab8ca34c9188965d4295e27,
         type: 3}
       propertyPath: m_Name
@@ -12788,7 +12793,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 1814536366}
+  m_Camera: {fileID: 2008270408}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -15052,7 +15057,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2008270407}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4dc50738122bf46d19b3101ef6ada69e, type: 3}
   m_Name: 
@@ -15289,7 +15294,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2054427844}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -148.7774, y: -167.0084, z: 482.57465}
+  m_LocalPosition: {x: 254.2226, y: -167.0084, z: 144.57465}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1273647047}

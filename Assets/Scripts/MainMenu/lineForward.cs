@@ -15,5 +15,11 @@ public class lineForward : MonoBehaviour
     {
         lr.SetPosition(0, transform.position);
         lr.SetPosition(1, transform.position+transform.forward*300.0f);
+
+        RaycastHit rhInfo;
+
+        if (Physics.Raycast(transform.position, transform.forward, out rhInfo)) {
+            Debug.Log(rhInfo.collider.name);
+        }
     }
 }
