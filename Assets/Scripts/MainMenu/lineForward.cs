@@ -19,7 +19,7 @@ public class lineForward : MonoBehaviour
         RaycastHit rhInfo;
 
         if (Physics.Raycast(transform.position, transform.forward, out rhInfo)) {
-            Debug.Log(rhInfo.collider.name);
+            // Debug.Log("raycast detected: " + rhInfo.collider.name);
         }
     }
 }
