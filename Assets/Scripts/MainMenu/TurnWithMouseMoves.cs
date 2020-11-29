@@ -13,5 +13,11 @@ public class TurnWithMouseMoves : MonoBehaviour
         transform.rotation = Quaternion.identity *
             Quaternion.AngleAxis(offX, Vector3.up) *
             Quaternion.AngleAxis(offY, Vector3.right);
+
+        RaycastHit rhInfo;
+
+        if(Physics.Raycast(transform.position,transform.forward, out rhInfo)) {
+            Debug.Log(rhInfo.collider.name);
+        }
     }
 }

@@ -10,12 +10,25 @@ public class SetVROrNot : MonoBehaviour {
     public GameObject postProcessingVolume;
     public bool disablePostProcessinginVR = false;
 
+    public Canvas eventCamToChange;
+    public Camera eventCamNonVR;
+    public Camera eventCamIfVR;
+
     void Awake() {
         if (Application.platform == RuntimePlatform.WebGLPlayer) {
             forceVR = false;
         } else if (Application.platform == RuntimePlatform.Android) {
             forceVR = true;
         }
+
+        if(eventCamToChange != null) {
+            if(forceVR) {
+                eventCamToChange.worldCamera = eventCamIfVR;
+            } else {
+                eventCamToChange.worldCamera = eventCamNonVR;
+            }
+        }
+
         vrController.SetActive(forceVR);
         webController.SetActive(!forceVR);
 

@@ -14,6 +14,6 @@ public class lineForward : MonoBehaviour
     void Update()
     {
         lr.SetPosition(0, transform.position);
-        lr.SetPosition(1, transform.position+transform.forward*10.0f);
+        lr.SetPosition(1, transform.position+transform.forward*300.0f);
     }
 }
