@@ -15333,7 +15333,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1814536359
 Transform:
   m_ObjectHideFlags: 0
@@ -15905,7 +15905,7 @@ MonoBehaviour:
   postProcessingVolume: {fileID: 50057588}
   disablePostProcessinginVR: 0
   eventCamToChange: {fileID: 672913550}
-  eventCamNonVR: {fileID: 1814536366}
+  eventCamNonVR: {fileID: 770382311}
   eventCamIfVR: {fileID: 2008270408}
 --- !u!4 &1947871651
 Transform:
