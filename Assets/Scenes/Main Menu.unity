@@ -11187,7 +11187,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 1814536366}
+  m_Camera: {fileID: 2008270408}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -15904,6 +15904,9 @@ MonoBehaviour:
   vrController: {fileID: 1019479982}
   postProcessingVolume: {fileID: 50057588}
   disablePostProcessinginVR: 0
+  eventCamToChange: {fileID: 672913550}
+  eventCamNonVR: {fileID: 1814536366}
+  eventCamIfVR: {fileID: 2008270408}
 --- !u!4 &1947871651
 Transform:
   m_ObjectHideFlags: 0

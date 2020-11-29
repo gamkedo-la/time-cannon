@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class CanvasVRLaserDetect : MonoBehaviour
@@ -9,6 +10,7 @@ public class CanvasVRLaserDetect : MonoBehaviour
     Canvas siblingCanv;
     Camera usingCam;
     Button lastSeen;
+    bool pressLock = false;
 
     private void Start() {
         siblingCanv = GetComponent<Canvas>();
@@ -17,7 +19,9 @@ public class CanvasVRLaserDetect : MonoBehaviour
     }
     void Update()
     {
+        // adapted from an approach found at https://answers.unity.com/questions/1202359/raycast-against-ui-in-world-space.html
         bool IsFocused = false;
+        Button wasLast = lastSeen;
         lastSeen = null;
         Vector2 center = usingCam.ViewportToScreenPoint(Vector2.one / 2);
         var graphics = GraphicRegistry.GetGraphicsForCanvas(siblingCanv);
@@ -38,10 +42,24 @@ public class CanvasVRLaserDetect : MonoBehaviour
             IsFocused |= contains;
         }
         if(lastSeen == null) {
+            if(wasLast) {
+                EventSystem.current.SetSelectedGameObject(null);
+            }
             debugOut.text = "none";
-        } else if(Input.GetButton("Fire1")) {
+        } else {
             lastSeen.Select();
-            debugOut.text = "pressing";
+            debugOut.text = "go?";
+        }
+
+        if (Input.GetButton("Fire1") || Input.GetAxis("TriggerAxis") > 0.2f) {
+            if (pressLock == false) {
+                if(lastSeen) {
+                    lastSeen.onClick.Invoke();
+                }
+                pressLock = true;
+            }
+        } else {
+            pressLock = false;
         }
     }
 }
