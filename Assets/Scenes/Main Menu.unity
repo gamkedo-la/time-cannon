@@ -11100,7 +11100,7 @@ GameObject:
   - component: {fileID: 672913546}
   - component: {fileID: 672913552}
   m_Layer: 5
-  m_Name: Main Menu (1)
+  m_Name: Main Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11118,7 +11118,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d09e87bf976b6f46bdee0c5a07b1a83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TransitionTimeInSeconds: 2
+  FinalParticleSimulationSpeed: 5
+  FinalParticleXScale: 15
+  FinalParticleYScale: 15
+  FinalTitleXScale: 0.5
+  FinalTitleYScale: 0.0001
+  TransitionTimeInSeconds: 3
+  TimeParticles: {fileID: 476125864}
+  Title: {fileID: 2128366495}
 --- !u!95 &672913547
 Animator:
   serializedVersion: 3
