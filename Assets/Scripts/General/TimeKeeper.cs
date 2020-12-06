@@ -30,7 +30,8 @@ public class TimeKeeper : MonoBehaviour
         var isZoomedIn = Input.GetKey(KeyCode.Space) || Input.GetButton("Fire5Joy");
         fakeTimePace += GetTimeForce(isZoomedIn) * Time.deltaTime;
         fakeTimePace = Mathf.Clamp(TimeKeeper.instance.fakeTimePace, -2.0f, 2.0f);
-        fakeTimeDelta = fakeTimePace * Time.deltaTime * (isZoomedIn ? 0.1f : 1f);
+        fakeTimeDelta = fakeTimePace * Time.deltaTime * (isZoomedIn ? 0.1f : 
+            (Mathf.Abs(1.0f-Input.GetAxis("LeftTriggerAxis")) * 1f));
         fakeTime += fakeTimeDelta;
         RoundTime.value += Time.deltaTime;
     }

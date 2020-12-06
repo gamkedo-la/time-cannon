@@ -14,23 +14,13 @@ public class SceneChangeCheat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        // debug controls to switch or reload scenes in VR
-        if (Input.GetButtonDown("Fire3Joy")) {
-            //SceneManager.LoadScene(0); // menu - no use loading in VR until working in VR
-            // SceneManager.LoadScene(4); // chaos - error loading in VR? black screen
-        }
+        // Fire5Joy lock slow mode from left middle finger controller
+        // Fire6Joy was secondary middle finger of right controller
         if (Input.GetButtonDown("Fire4Joy")) {
-            SceneManager.LoadScene(1); // city
+            SceneManager.LoadScene(0); // menu
         }
-        if (Input.GetButtonDown("Fire3Joy")) {
-            SceneManager.LoadScene(2); // ocean
-        }
-        if (Input.GetButtonDown("Fire6Joy")) {
-            SceneManager.LoadScene(3); // countryside
-        }
-        if (Input.GetButtonDown("Fire7Joy")) {
+        /*if (Input.GetButtonDown("Fire7Joy")) {
             // no action? button 7 might not be reachable by defualt Unity input mapping
-        }
+        }*/
     }
 }
