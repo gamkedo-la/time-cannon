@@ -612,6 +612,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 260880253}
+  - component: {fileID: 260880254}
   m_Layer: 8
   m_Name: Plane1 Waypoints
   m_TagString: Untagged
@@ -640,9 +641,24 @@ Transform:
   - {fileID: 1947426512}
   - {fileID: 1781875902}
   - {fileID: 5006512734998202568}
-  m_Father: {fileID: 1633221836}
+  m_Father: {fileID: 679371910}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &260880254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260880252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 488e1cc11573f404aa84c31080aaccf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeStepsShownIn: 02000000
+  reqAnyTrue: []
+  reqAllFalse: []
 --- !u!1001 &272374462
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1648,6 +1664,42 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 603490766}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &679371909
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 679371910}
+  m_Layer: 0
+  m_Name: Targets 1942
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &679371910
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679371909}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 260880253}
+  - {fileID: 1743675455}
+  - {fileID: 843532931}
+  - {fileID: 1615108142}
+  - {fileID: 1236777545}
+  - {fileID: 693003403342450871}
+  m_Father: {fileID: 1633221836}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &691963319 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2352420417439160873, guid: 0046fed9c8f2e4a30b4211415de1eaa6,
@@ -2372,6 +2424,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 843532931}
+  - component: {fileID: 843532932}
   m_Layer: 8
   m_Name: Plane1 Waypoints (2)
   m_TagString: Untagged
@@ -2399,9 +2452,24 @@ Transform:
   - {fileID: 1537092806}
   - {fileID: 2003675569}
   - {fileID: 1321194985}
-  m_Father: {fileID: 1633221836}
+  m_Father: {fileID: 679371910}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &843532932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843532930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 488e1cc11573f404aa84c31080aaccf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeStepsShownIn: 02000000
+  reqAnyTrue: []
+  reqAllFalse: []
 --- !u!1 &886189264 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5829070254461910031, guid: f70d03fec9d165c40976e5c2634af881,
@@ -3776,7 +3844,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1633221836}
+    m_TransformParent: {fileID: 679371910}
     m_Modifications:
     - target: {fileID: 2472897323709687260, guid: d4ef0820769804a5bbb849f590c8571a,
         type: 3}
@@ -3918,7 +3986,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 488e1cc11573f404aa84c31080aaccf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeStepsShownIn: 0200000003000000
+  timeStepsShownIn: 02000000
   reqAnyTrue: []
   reqAllFalse: []
 --- !u!4 &1236777545 stripped
@@ -4927,6 +4995,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1615108142}
+  - component: {fileID: 1615108143}
   m_Layer: 8
   m_Name: CarrierA Waypoints
   m_TagString: Untagged
@@ -4954,9 +5023,24 @@ Transform:
   - {fileID: 715397769}
   - {fileID: 1878761562}
   - {fileID: 886189265}
-  m_Father: {fileID: 1633221836}
+  m_Father: {fileID: 679371910}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0.29500002, y: 61.041004, z: 0.62200004}
+--- !u!114 &1615108143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615108141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 488e1cc11573f404aa84c31080aaccf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeStepsShownIn: 02000000
+  reqAnyTrue: []
+  reqAllFalse: []
 --- !u!1 &1626357956 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8714156174528534206, guid: 5f6d058022fa6354bace0a259ee24356,
@@ -5004,12 +5088,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 260880253}
-  - {fileID: 1743675455}
-  - {fileID: 843532931}
-  - {fileID: 1615108142}
-  - {fileID: 1236777545}
-  - {fileID: 693003403342450871}
+  - {fileID: 679371910}
   m_Father: {fileID: 841563209}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5283,6 +5362,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1743675455}
+  - component: {fileID: 1743675456}
   m_Layer: 8
   m_Name: Plane1 Waypoints (1)
   m_TagString: Untagged
@@ -5311,9 +5391,24 @@ Transform:
   - {fileID: 2043167761}
   - {fileID: 145194821}
   - {fileID: 1051274456}
-  m_Father: {fileID: 1633221836}
+  m_Father: {fileID: 679371910}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1743675456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743675454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 488e1cc11573f404aa84c31080aaccf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeStepsShownIn: 02000000
+  reqAnyTrue: []
+  reqAllFalse: []
 --- !u!4 &1781875902 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4047695226974147008, guid: 397f476c2c0c84a368e59d0705d45802,
@@ -7153,7 +7248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 488e1cc11573f404aa84c31080aaccf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeStepsShownIn: 0200000003000000
+  timeStepsShownIn: 02000000
   reqAnyTrue: []
   reqAllFalse: []
 --- !u!4 &693003403342450871
@@ -7173,7 +7268,7 @@ Transform:
   - {fileID: 693003403251477689}
   - {fileID: 693003402545161678}
   - {fileID: 1892173116}
-  m_Father: {fileID: 1633221836}
+  m_Father: {fileID: 679371910}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 64.048004, z: 0}
 --- !u!1001 &1964013835924762435
