@@ -47,6 +47,7 @@ public class FireCannon : MonoBehaviour
     void UpdateAmmoDisplay() {
         for (int i = 0; i < ammoDisplayBoxes.Length; i++) {
             ammoDisplayBoxes[i].SetActive(i < shotsLeft);
+            ammoDisplayBoxes[i].GetComponent<Animator>().SetTrigger("Blink");
         }
     }
 

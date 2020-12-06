@@ -22485,6 +22485,7 @@ GameObject:
   - component: {fileID: 7957524644426975050}
   - component: {fileID: 2309023384953688088}
   - component: {fileID: 8520486765185095371}
+  - component: {fileID: 1742920358286657934}
   m_Layer: 0
   m_Name: Ammo Display Cube 2
   m_TagString: Untagged
@@ -22566,6 +22567,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &1742920358286657934
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2213485231765310181}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 85ecf374d6495154789473afef9b7a80, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2232198831119826196
 GameObject:
   m_ObjectHideFlags: 0
@@ -22578,6 +22598,7 @@ GameObject:
   - component: {fileID: 76349782993992273}
   - component: {fileID: 6673545735725693755}
   - component: {fileID: 7118710231697791303}
+  - component: {fileID: 5718217460356086911}
   m_Layer: 0
   m_Name: Ammo Display Cube 3
   m_TagString: Untagged
@@ -22659,6 +22680,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &5718217460356086911
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2232198831119826196}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 85ecf374d6495154789473afef9b7a80, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2336884033596632950
 GameObject:
   m_ObjectHideFlags: 0
@@ -23516,6 +23556,7 @@ GameObject:
   - component: {fileID: 6212906211387930668}
   - component: {fileID: 7092590983970443404}
   - component: {fileID: 7742796339913800805}
+  - component: {fileID: 6314926567155653704}
   m_Layer: 0
   m_Name: Ammo Display Cube 4
   m_TagString: Untagged
@@ -23597,6 +23638,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &6314926567155653704
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6323217806709166498}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 85ecf374d6495154789473afef9b7a80, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &1882000743287961828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28419,6 +28479,7 @@ GameObject:
   - component: {fileID: 5634384469288092034}
   - component: {fileID: 8594078399593284935}
   - component: {fileID: 2827878127545112664}
+  - component: {fileID: 8308344113125624485}
   m_Layer: 0
   m_Name: Ammo Display Cube
   m_TagString: Untagged
@@ -28500,6 +28561,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &8308344113125624485
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8606284161404314461}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 85ecf374d6495154789473afef9b7a80, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &9070453732679293402
 GameObject:
   m_ObjectHideFlags: 0
@@ -28717,6 +28797,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c116b7497ab8ca34c9188965d4295e27, type: 3}
+--- !u!1 &4618277891165330453 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5113664386210071967, guid: c116b7497ab8ca34c9188965d4295e27,
+    type: 3}
+  m_PrefabInstance: {fileID: 495406883267221898}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6338900297451821041 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5843497292548984443, guid: c116b7497ab8ca34c9188965d4295e27,
@@ -28726,12 +28812,6 @@ GameObject:
 --- !u!4 &1528799900352962032 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1429728536131650682, guid: c116b7497ab8ca34c9188965d4295e27,
-    type: 3}
-  m_PrefabInstance: {fileID: 495406883267221898}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &4618277891165330453 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5113664386210071967, guid: c116b7497ab8ca34c9188965d4295e27,
     type: 3}
   m_PrefabInstance: {fileID: 495406883267221898}
   m_PrefabAsset: {fileID: 0}
