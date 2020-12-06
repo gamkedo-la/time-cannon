@@ -248,6 +248,24 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3128470450824279558, guid: bc4f48e812a1248de8809047f43f5d52,
+        type: 3}
+      propertyPath: m_text
+      value: 'A/D or Arrows to Tune Time Rate
+
+        Hold Space to Zoom and Dilate
+        Time
+
+        Click to fire (target required)
+
+        Chain reactions earn
+        more points
+
+        Time Aliens killed die in every era
+
+        Maximimize
+        score per zone'
+      objectReference: {fileID: 0}
     - target: {fileID: 6338900297451821041, guid: bc4f48e812a1248de8809047f43f5d52,
         type: 3}
       propertyPath: m_IsActive
