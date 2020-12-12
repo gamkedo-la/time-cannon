@@ -55,6 +55,7 @@ MonoBehaviour:
   VRTimeInputModifier: -0.8
   NonVRTimeInputModifier: 1.3
   NonVRTimeInputModifierOnHold: 8
+  TimeSmoke: {fileID: 3047540402241121665}
 --- !u!114 &5673546600644104671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -305,6 +306,12 @@ GameObject:
 --- !u!1 &526796445986345998 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5698174956610682893, guid: bc4f48e812a1248de8809047f43f5d52,
+    type: 3}
+  m_PrefabInstance: {fileID: 5214171649850135555}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &3047540402241121665 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 7068255184819943810, guid: bc4f48e812a1248de8809047f43f5d52,
     type: 3}
   m_PrefabInstance: {fileID: 5214171649850135555}
   m_PrefabAsset: {fileID: 0}

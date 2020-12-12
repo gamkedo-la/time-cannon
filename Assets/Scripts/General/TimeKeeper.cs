@@ -19,6 +19,8 @@ public class TimeKeeper : MonoBehaviour
     public float NonVRTimeInputModifier = 1.3f;
     public float NonVRTimeInputModifierOnHold = 8f;
 
+    public ParticleSystem TimeSmoke;
+
     void Start()
     {
         instance = this;
@@ -28,17 +30,32 @@ public class TimeKeeper : MonoBehaviour
     void Update()
     {
         var isZoomedIn = Input.GetKey(KeyCode.Space) || Input.GetButton("Fire5Joy");
-        fakeTimePace += GetTimeForce(isZoomedIn) * Time.deltaTime;
+        var timeForce = GetTimeForce(isZoomedIn);
+        fakeTimePace += timeForce * Time.deltaTime;
         fakeTimePace = Mathf.Clamp(TimeKeeper.instance.fakeTimePace, -2.0f, 2.0f);
         fakeTimeDelta = fakeTimePace * Time.deltaTime * (isZoomedIn ? 0.1f : 
             (Mathf.Abs(1.0f-Input.GetAxis("LeftTriggerAxis")) * 1f));
         fakeTime += fakeTimeDelta;
         RoundTime.value += Time.deltaTime;
+
+        RegulateTimeSmoke(timeForce != 0);
     }
 
     private void OnDrawGizmos() {
 		if (instance == null) instance = this;
 	}
+
+    private void RegulateTimeSmoke(bool isTimeForceApplied)
+    {
+        if (isTimeForceApplied && TimeSmoke.isStopped)
+        {
+            TimeSmoke.Play();
+        }
+        else if (!isTimeForceApplied && TimeSmoke.isPlaying)
+        {
+            TimeSmoke.Stop();
+        }
+    }
 
     private float GetTimeForce(bool isZoomedIn)
     {
