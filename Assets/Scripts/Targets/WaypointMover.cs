@@ -63,9 +63,12 @@ public class WaypointMover : MonoBehaviour
                 } 
 				else if (isAir)
 				{
-					Quaternion outQuat = tracePt.next.transform.rotation;
-                    Quaternion inQuat = tracePt.transform.rotation;
-                    tracePt.transform.rotation = Quaternion.Slerp(outQuat,inQuat,0.15f); // % aiming to next pt in water
+                    //Quaternion outQuat = tracePt.next.transform.rotation;
+                    //Quaternion inQuat = tracePt.transform.rotation;
+                    Quaternion outQuat = Quaternion.LookRotation(tracePt.next.transform.position - tracePt.transform.position);
+                    Quaternion inQuat = Quaternion.LookRotation(tracePt.transform.position - tracePt.GetPrev().transform.position);
+
+                    tracePt.transform.rotation = Quaternion.Slerp(outQuat,inQuat,0.5f); // % aiming to next pt
 				}
 				else {
                     tracePt.transform.LookAt(tracePt.next.transform);
@@ -111,7 +114,9 @@ public class WaypointMover : MonoBehaviour
             Debug.Log("Removing " + gameObject.name + " because crossing between lap sand its vanishOnNextLapIfThisGORemoved is gone");
             Destroy(gameObject); // silent, uneventful removal
         }
-        if (isWater) {
+        if (isAir) {
+            transform.position = target.InterpPt(progressAmt, 70.0f);
+        } else if (isWater) {
             transform.position = target.InterpPt(progressAmt,40.0f);
         } else {
             transform.position = target.InterpPt(progressAmt);
