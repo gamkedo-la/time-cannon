@@ -36,7 +36,9 @@ public class MenuScoreTextUpdate : MonoBehaviour {
         }
         int goalScore = 5000;
         allScoreLabel.text = "Goal: "+ goalScore + "\nSum: " + totalSum;
-        winLabel.enabled = goalScore <= totalSum;
+        winLabel.text = (goalScore <= totalSum ?
+        "You stopped the time aliens! Turns out you're the you in a timeline where the time aliens have always been stopped. Congratulations!" :
+        "Control time to line up chain reactions for maximum score. Ammo limit varies 1-4 per stage. Time alien eyes explode once per row.");
     }
 
     public void ResetRowScore(int forRow) {
@@ -44,7 +46,7 @@ public class MenuScoreTextUpdate : MonoBehaviour {
         TextMeshProUGUI[] labelRow = RowToLabelSet(forRow);
         sums[forRow] = 0;
         for (int i = 0; i < rowScores.Length; i++) {
-            rowScores[i] = Random.Range(0, 10) * 50 + 0;
+            rowScores[i] = 0; //Random.Range(0, 10) * 50 + 0;
             sums[forRow] += rowScores[i];
             labelRow[i].text = periodTimes[i] + "\nScore: " + rowScores[i];
         }
@@ -96,19 +98,19 @@ public class MenuScoreTextUpdate : MonoBehaviour {
         }
 
         for (int i = 0; i < periodTimes.Length; i++) {
-            scores_Desert[i] = Random.Range(0, 10) * 50 + 0;
+            scores_Desert[i] = 0; //Random.Range(0, 10) * 50 + 0;
             sums[ROW_DESERT] += scores_Desert[i];
             periodLabels_Desert[i].text = periodTimes[i] + "\nScore: "+ scores_Desert[i];
 
-            scores_Ocean[i] = Random.Range(0, 10) * 50 + 0;
+            scores_Ocean[i] = 0; //Random.Range(0, 10) * 50 + 0;
             sums[ROW_OCEAN] += scores_Ocean[i];
             periodLabels_Ocean[i].text = periodTimes[i] + "\nScore: "+ scores_Ocean[i];
 
-            scores_Country[i] = Random.Range(0, 10) * 50 + 0;
+            scores_Country[i] = 0; //Random.Range(0, 10) * 50 + 0;
             sums[ROW_COUNTRY] += scores_Country[i];
             periodLabels_Countryside[i].text = periodTimes[i] + "\nScore: "+ scores_Country[i];
 
-            scores_Chaos[i] = Random.Range(0, 10) * 50 + 0;
+            scores_Chaos[i] = 0; //Random.Range(0, 10) * 50 + 0;
             sums[ROW_CHAOS] += scores_Chaos[i];
             periodLabels_Chaos[i].text = periodTimes[i] + "\nScore: "+ scores_Chaos[i];
         }
