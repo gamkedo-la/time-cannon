@@ -15,7 +15,7 @@ public class CanvasVRLaserDetect : MonoBehaviour
     private void Start() {
         siblingCanv = GetComponent<Canvas>();
         usingCam = siblingCanv.worldCamera;
-        debugOut.text = "none";
+        // debugOut.text = "none";
     }
     void Update()
     {
@@ -45,10 +45,10 @@ public class CanvasVRLaserDetect : MonoBehaviour
             if(wasLast) {
                 EventSystem.current.SetSelectedGameObject(null);
             }
-            debugOut.text = "none";
+            // debugOut.text = "none";
         } else {
             lastSeen.Select();
-            debugOut.text = "go?";
+            // debugOut.text = "go?";
         }
 
         if (Input.GetButton("Fire1") || Input.GetAxis("TriggerAxis") > 0.2f) {

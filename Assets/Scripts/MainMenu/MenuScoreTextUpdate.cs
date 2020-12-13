@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class MenuScoreTextUpdate : MonoBehaviour {
     public TextMeshProUGUI allScoreLabel;
+    public Text winLabel;
 
     private readonly string[] sceneNames = { "Desert", "Ocean", "Countryside", "Chaos" };
     public TextMeshProUGUI[] sceneLabels;
@@ -32,7 +34,9 @@ public class MenuScoreTextUpdate : MonoBehaviour {
         for (int i = 0; i < sums.Length; i++) {
             totalSum += sums[i];
         }
-        allScoreLabel.text = "Goal: 7000\nSum: " + totalSum;
+        int goalScore = 5000;
+        allScoreLabel.text = "Goal: "+ goalScore + "\nSum: " + totalSum;
+        winLabel.enabled = goalScore <= totalSum;
     }
 
     public void ResetRowScore(int forRow) {
