@@ -45,6 +45,11 @@ public class TimeKeeper : MonoBehaviour
 		if (instance == null) instance = this;
 	}
 
+    public void RandomJoltTimeOffset()
+    {
+        fakeTime += Random.Range(-5.0f, 5.0f);
+    }
+
     private void RegulateTimeSmoke(bool isTimeForceApplied)
     {
         if (isTimeForceApplied && TimeSmoke.isStopped)

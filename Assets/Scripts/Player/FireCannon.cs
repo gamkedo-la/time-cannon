@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class FireCannon : MonoBehaviour
 {
@@ -150,6 +151,11 @@ public class FireCannon : MonoBehaviour
             emitter.Emit(1000);
             animator.SetTrigger("Fire");
             muzzleFlash.SetActive(true);
+            if (SceneManager.GetActiveScene().name == "ChaosDimension")
+            {
+                Debug.Log("shot fired in Chaos Dimension");
+                TimeKeeper.instance.RandomJoltTimeOffset();
+            }
         }
 
         if (lastAimedRange> maxAimRange)
