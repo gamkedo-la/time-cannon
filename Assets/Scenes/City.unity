@@ -15341,11 +15341,21 @@ PrefabInstance:
       propertyPath: ShootingPoints
       value: 
       objectReference: {fileID: 1733959948}
+    - target: {fileID: 5214171649136834559, guid: c467154ce9d5a496cb6dd495d0ca2fdd,
+        type: 3}
+      propertyPath: startAmmoCount
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5214171649326870339, guid: c467154ce9d5a496cb6dd495d0ca2fdd,
         type: 3}
       propertyPath: ShootingPoints
       value: 
       objectReference: {fileID: 1733959948}
+    - target: {fileID: 5214171649326870339, guid: c467154ce9d5a496cb6dd495d0ca2fdd,
+        type: 3}
+      propertyPath: startAmmoCount
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5673546600593658957, guid: c467154ce9d5a496cb6dd495d0ca2fdd,
         type: 3}
       propertyPath: m_LocalPosition.z

@@ -311,7 +311,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1634703790}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &19784812
+--- !u!65 &19784815
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6487,7 +6487,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1634703790}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1295104460
+--- !u!65 &1295104463
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8145,7 +8145,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1634703790}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1629725458
+--- !u!65 &1629725461
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8259,6 +8259,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -81
+      objectReference: {fileID: 0}
+    - target: {fileID: 4117589726224212631, guid: d992a6aa2d1dc40388239a9eb52504b5,
+        type: 3}
+      propertyPath: m_Name
+      value: TestPlane (7.5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4117589727033035589, guid: d992a6aa2d1dc40388239a9eb52504b5,
+        type: 3}
+      propertyPath: m_Name
+      value: TestPlane (7.3)
       objectReference: {fileID: 0}
     - target: {fileID: 5333795898209316121, guid: d992a6aa2d1dc40388239a9eb52504b5,
         type: 3}
@@ -10058,7 +10068,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1634703790}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1936130817
+--- !u!65 &1936130820
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10365,7 +10375,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1634703790}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1979390808
+--- !u!65 &1979390811
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10833,7 +10843,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1634703790}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &2072166539
+--- !u!65 &2072166542
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11839,6 +11849,16 @@ PrefabInstance:
       propertyPath: postProcessingVolume
       value: 
       objectReference: {fileID: 320606742360781076}
+    - target: {fileID: 5214171649136834559, guid: c467154ce9d5a496cb6dd495d0ca2fdd,
+        type: 3}
+      propertyPath: startAmmoCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5214171649326870339, guid: c467154ce9d5a496cb6dd495d0ca2fdd,
+        type: 3}
+      propertyPath: startAmmoCount
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5673546600460329000, guid: c467154ce9d5a496cb6dd495d0ca2fdd,
         type: 3}
       propertyPath: m_LocalPosition.y
