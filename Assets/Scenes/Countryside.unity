@@ -4836,109 +4836,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 981ed484ea5ec429d9cbc6b5235543ba, type: 3}
---- !u!1 &1183637347
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1183637348}
-  - component: {fileID: 1183637349}
-  m_Layer: 0
-  m_Name: Intro Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1183637348
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1183637347}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1183637349
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1183637347}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7340904e45ab9b4d875e0f7b217d6cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  changeThisText: {fileID: 408960093}
-  Intro_0: 'Year: 450 BC
-
-    Location: Countryside
-
-
-
-
-    Something is not right
-    in this prehistoric
-
-    village. Investigate the anomaly,
-
-    and report back
-    for new intel.'
-  Intro_1: 'Year: 1400 AD
-
-    Location: Countryside
-
-
-
-
-    This quaint medieval
-    hamlet has been overrun
-
-    with forces from the future. Stop the menace
-
-    at
-    all costs and restore the timeline!'
-  Intro_2: 'Year: 1942 AD
-
-    Location: Countryside
-
-
-
-
-    Tanks have overrun a
-    quaint little village
-
-    in wine country. Take them all out!
-
-    you have
-    the power to change the future.'
-  Intro_3: "Year: 2100 AD\nLocation: Countryside\n\n\n\nAt the dawn of a spacefaring
-    humanity, \nthe perils of time manipulation are clear:\ntemporal abberations!
-    Halt them, if you can!"
-  Intro_4: 'Year: 32000 AD
-
-    Location: Countryside
-
-
-
-
-    The Galactic Imperium
-    has annexed this sector.
-
-    The time has come to stop the alien time squids
-
-    once
-    and for all, to save the galaxy!'
 --- !u!1 &1216755994 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7029948723529949830, guid: dca7f9026f022804ab2444273b01db59,
@@ -9881,6 +9778,80 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c467154ce9d5a496cb6dd495d0ca2fdd, type: 3}
+--- !u!1001 &6328709668489782869
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6328709669521275184, guid: 7969efe196406994caf59dd6f0faa4ba,
+        type: 3}
+      propertyPath: changeThisText
+      value: 
+      objectReference: {fileID: 408960093}
+    - target: {fileID: 6328709669521275185, guid: 7969efe196406994caf59dd6f0faa4ba,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328709669521275185, guid: 7969efe196406994caf59dd6f0faa4ba,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328709669521275185, guid: 7969efe196406994caf59dd6f0faa4ba,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328709669521275185, guid: 7969efe196406994caf59dd6f0faa4ba,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328709669521275185, guid: 7969efe196406994caf59dd6f0faa4ba,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328709669521275185, guid: 7969efe196406994caf59dd6f0faa4ba,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328709669521275185, guid: 7969efe196406994caf59dd6f0faa4ba,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328709669521275185, guid: 7969efe196406994caf59dd6f0faa4ba,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328709669521275185, guid: 7969efe196406994caf59dd6f0faa4ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328709669521275185, guid: 7969efe196406994caf59dd6f0faa4ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328709669521275185, guid: 7969efe196406994caf59dd6f0faa4ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328709669521275190, guid: 7969efe196406994caf59dd6f0faa4ba,
+        type: 3}
+      propertyPath: m_Name
+      value: Intro Text
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7969efe196406994caf59dd6f0faa4ba, type: 3}
 --- !u!23 &6816356502817039906
 MeshRenderer:
   m_ObjectHideFlags: 0

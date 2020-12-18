@@ -10,13 +10,27 @@ public class GUI_Typewriter : MonoBehaviour {
     private float age = 0.0f;
     private string fullText;
    
+    private int frameCount = 0;
+
     public void Start() {
-        fullText = animateText.text;
-        // Debug.Log("TYPEWRITER will type out: "+fullText);
+        frameCount = 0;
     }
 
     public void Update()
     {
+        if (!animateText) return;
+
+        // allow the intro text changer at least 
+        // one frame to update string to the right time-period
+        frameCount++;
+        if (frameCount<5) return; 
+        if (frameCount==5) {
+            // init typewriter effect
+            age = 0f;
+            fullText = animateText.text;
+            Debug.Log("TYPEWRITER will type out: "+fullText);
+        }
+        
         if (age>holdTime+fadeTime) {
             // Debug.Log("Typewriter complete!");
             gameObject.active = false; // go away forever

@@ -42,6 +42,9 @@ public class IntroTextChanger : MonoBehaviour
         if (stageNow==3) changeThisText.text = Intro_3;
         if (stageNow==4) changeThisText.text = Intro_4;
 
+        Debug.Log("Intro Text will be: " + changeThisText.text);
+
+
     }
 
     // Update is called once per frame
