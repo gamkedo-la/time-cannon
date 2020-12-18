@@ -52,14 +52,21 @@ public class FireCannon : MonoBehaviour
         }
     }
 
+    void FixedUpdate() {
+        if (shotsLeft <= 0) {
+            transform.rotation = Quaternion.Slerp(transform.rotation,
+                       transform.parent.rotation * Quaternion.AngleAxis(-55.0f, Vector3.right),
+                0.07f);
+        }
+    }
+
     void Update()
     {
-        if(shotsLeft <= 0) {
+        if (shotsLeft <= 0) {
             crosshair.color = Color.black;
             cannonReadout.text = "-";
 
             outOfAmmo?.Invoke();
-
             return;
         }
 
