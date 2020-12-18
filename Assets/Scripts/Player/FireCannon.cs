@@ -24,6 +24,8 @@ public class FireCannon : MonoBehaviour
     public GameObject[] ammoDisplayBoxes;
     public UnityEvent outOfAmmo = null;
 
+    public Transform VRCamLens;
+
     private void AddArrayIntoListIfUnique(List<RaycastHit> toList, RaycastHit[] fromArray)
     {
         for (int i = 0; i < fromArray.Length; i++)
@@ -54,9 +56,17 @@ public class FireCannon : MonoBehaviour
 
     void FixedUpdate() {
         if (shotsLeft <= 0) {
-            transform.rotation = Quaternion.Slerp(transform.rotation,
-                       transform.parent.rotation * Quaternion.AngleAxis(-55.0f, Vector3.right),
-                0.07f);
+            if (VRCamLens != null) {
+                VRCamLens.transform.localScale =
+                    VRCamLens.transform.localScale.x > 0.005f ?
+                    new Vector3(VRCamLens.transform.localScale.x * 0.97f,
+                        VRCamLens.transform.localScale.y,
+                        VRCamLens.transform.localScale.z) : Vector3.zero;
+            } else {
+                transform.rotation = Quaternion.Slerp(transform.rotation,
+                           transform.parent.rotation * Quaternion.AngleAxis(-55.0f, Vector3.right),
+                    0.07f);
+            }
         }
     }
 
