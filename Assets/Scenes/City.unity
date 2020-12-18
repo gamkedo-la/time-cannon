@@ -2047,6 +2047,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 359868349}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &365920128 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3678113714219687347, guid: c467154ce9d5a496cb6dd495d0ca2fdd,
+    type: 3}
+  m_PrefabInstance: {fileID: 5673546600851501042}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &373850150
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10901,6 +10913,170 @@ MonoBehaviour:
   oscAmt: 3
   oscRate: 0.3
   oscAng: 0
+--- !u!1001 &1447725765
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6328709669521275184, guid: 7969efe196406994caf59dd6f0faa4ba,
+        type: 3}
+      propertyPath: changeThisText
+      value: 
+      objectReference: {fileID: 365920128}
+    - target: {fileID: 6328709669521275184, guid: 7969efe196406994caf59dd6f0faa4ba,
+        type: 3}
+      propertyPath: Intro_0
+      value: 'Year: 450 BC
+
+        Location: City
+
+
+
+
+        At the dawn of recorded
+        history, human settlement
+
+        was preceeded by ominous visitors. Seek
+        them out
+
+        and correct the timeline!'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328709669521275184, guid: 7969efe196406994caf59dd6f0faa4ba,
+        type: 3}
+      propertyPath: Intro_1
+      value: 'Year: 1400 AD
+
+        Location: City
+
+
+
+
+        Behind the castle
+        walls, the bustling
+
+        market of a medieval hamlet is
+
+        under
+        attack! Help save the village!'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328709669521275184, guid: 7969efe196406994caf59dd6f0faa4ba,
+        type: 3}
+      propertyPath: Intro_2
+      value: 'Year: 1942 AD
+
+        Location: City
+
+
+
+
+        War-torn cities and
+        carpet-bombed fields
+
+        are the landscape of a world war where
+
+        your
+        one perfect shot awaits.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328709669521275184, guid: 7969efe196406994caf59dd6f0faa4ba,
+        type: 3}
+      propertyPath: Intro_4
+      value: 'Year: 32000 AD
+
+        Location: City
+
+
+
+
+        Neo-Seattle District
+        42 is more than
+
+        merely a cyber den of theives. Restore the
+
+        space-time
+        continuum with your epic skills!'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328709669521275184, guid: 7969efe196406994caf59dd6f0faa4ba,
+        type: 3}
+      propertyPath: Intro_3
+      value: 'Year: 2100 AD
+
+        Location: Countryside
+
+
+
+
+        The endless
+        streets of the metropolis
+
+        are the perfect hunting ground for
+
+        a
+        well-timed shot.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328709669521275185, guid: 7969efe196406994caf59dd6f0faa4ba,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328709669521275185, guid: 7969efe196406994caf59dd6f0faa4ba,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328709669521275185, guid: 7969efe196406994caf59dd6f0faa4ba,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328709669521275185, guid: 7969efe196406994caf59dd6f0faa4ba,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328709669521275185, guid: 7969efe196406994caf59dd6f0faa4ba,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328709669521275185, guid: 7969efe196406994caf59dd6f0faa4ba,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328709669521275185, guid: 7969efe196406994caf59dd6f0faa4ba,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328709669521275185, guid: 7969efe196406994caf59dd6f0faa4ba,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328709669521275185, guid: 7969efe196406994caf59dd6f0faa4ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328709669521275185, guid: 7969efe196406994caf59dd6f0faa4ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328709669521275185, guid: 7969efe196406994caf59dd6f0faa4ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328709669521275190, guid: 7969efe196406994caf59dd6f0faa4ba,
+        type: 3}
+      propertyPath: m_Name
+      value: Intro Text (CITY)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7969efe196406994caf59dd6f0faa4ba, type: 3}
 --- !u!1001 &1474138804
 PrefabInstance:
   m_ObjectHideFlags: 0
