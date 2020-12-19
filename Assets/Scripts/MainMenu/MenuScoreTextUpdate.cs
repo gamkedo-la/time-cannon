@@ -90,7 +90,6 @@ public class MenuScoreTextUpdate : MonoBehaviour {
         return null; // error
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         for(int i=0; i < sums.Length; i++) {
@@ -98,19 +97,19 @@ public class MenuScoreTextUpdate : MonoBehaviour {
         }
 
         for (int i = 0; i < periodTimes.Length; i++) {
-            scores_Desert[i] = 0; //Random.Range(0, 10) * 50 + 0;
+            scores_Desert[i] = HighScores.GetHighScore(LevelName.City, (TimePeriod)i);
             sums[ROW_DESERT] += scores_Desert[i];
             periodLabels_Desert[i].text = periodTimes[i] + "\nScore: "+ scores_Desert[i];
 
-            scores_Ocean[i] = 0; //Random.Range(0, 10) * 50 + 0;
+            scores_Ocean[i] = HighScores.GetHighScore(LevelName.Ocean, (TimePeriod)i);
             sums[ROW_OCEAN] += scores_Ocean[i];
             periodLabels_Ocean[i].text = periodTimes[i] + "\nScore: "+ scores_Ocean[i];
 
-            scores_Country[i] = 0; //Random.Range(0, 10) * 50 + 0;
+            scores_Country[i] = HighScores.GetHighScore(LevelName.Countryside, (TimePeriod)i);
             sums[ROW_COUNTRY] += scores_Country[i];
             periodLabels_Countryside[i].text = periodTimes[i] + "\nScore: "+ scores_Country[i];
 
-            scores_Chaos[i] = 0; //Random.Range(0, 10) * 50 + 0;
+            scores_Chaos[i] = HighScores.GetHighScore(LevelName.ChaosDimension, (TimePeriod)i);
             sums[ROW_CHAOS] += scores_Chaos[i];
             periodLabels_Chaos[i].text = periodTimes[i] + "\nScore: "+ scores_Chaos[i];
         }
@@ -120,11 +119,5 @@ public class MenuScoreTextUpdate : MonoBehaviour {
         }
 
         UpdateAllScore();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

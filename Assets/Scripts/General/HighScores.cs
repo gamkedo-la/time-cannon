@@ -14,23 +14,17 @@ public enum LevelName
     Ocean
 }
 
-public enum LevelMode
-{
-    TrackLocked,
-    FreePosition
-}
-
 public static class HighScores
 {
     /// <summary>
     /// Gets high scores.
     /// </summary>
     /// <param name="levelName">Name of the level.</param>
-    /// <param name="mode">Name of game mode.</param>
+    /// <param name="time">Name of game mode.</param>
     /// <returns></returns>
-    public static int GetHighScore(LevelName levelName, LevelMode mode)
+    public static int GetHighScore(LevelName levelName, TimePeriod time)
     {
-        return PlayerPrefs.GetInt(string.Concat(levelName.ToString(), mode.ToString()), 0);
+        return PlayerPrefs.GetInt(string.Concat(levelName.ToString(), time.ToString()), 0);
     }
 
     /// <summary>
@@ -48,21 +42,21 @@ public static class HighScores
     /// Saves high score.
     /// </summary>
     /// <param name="levelName">Name of the level.</param>
-    /// <param name="mode">Name of game mode.</param>
+    /// <param name="time">Name of game mode.</param>
     /// <param name="score">Score amount.</param>
-    public static void SaveHighScore(LevelName levelName, LevelMode mode, int score)
+    public static void SaveHighScore(LevelName levelName, TimePeriod time, int score)
     {
-        PlayerPrefs.SetInt(string.Concat(levelName.ToString(), mode.ToString()), score);
+        PlayerPrefs.SetInt(string.Concat(levelName.ToString(), time.ToString()), score);
     }
 
     /// <summary>
     /// Saves high score.
     /// </summary>
     /// <param name="levelName">Name of the level.</param>
-    /// <param name="mode">Name of game mode.</param>
+    /// <param name="time">Name of game mode.</param>
     /// <param name="score">Score amount.</param>
-    public static void SaveHighScore(string levelName, string mode, int score)
+    public static void SaveHighScore(string levelName, string time, int score)
     {
-        PlayerPrefs.SetInt(string.Concat(levelName, mode), score);
+        PlayerPrefs.SetInt(string.Concat(levelName, time), score);
     }
 }

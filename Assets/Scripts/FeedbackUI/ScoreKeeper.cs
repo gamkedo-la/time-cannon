@@ -27,8 +27,10 @@ public class ScoreKeeper : MonoBehaviour
         AddScore(0);
 
         string levelName = SceneManager.GetActiveScene().name;
-        string mode = LevelMode.FreePosition.ToString();
-        highScoreLabel.text = "High Score: " + HighScores.GetHighScore(levelName, mode);
+        int stage = PlayerPrefs.GetInt("stageNow", 0);
+        stage = Mathf.Clamp(stage, 0, 4);
+        TimePeriod time = (TimePeriod)stage;
+        highScoreLabel.text = "High Score: " + HighScores.GetHighScore(levelName, time.ToString());
     }
 
     void Update()
@@ -40,16 +42,18 @@ public class ScoreKeeper : MonoBehaviour
     {
         scaleFactor += points * scaleIncreasePerPoint;
         scoreNow += points;
-        scoreLabel.text = "Score: "+ scoreNow;
+        scoreLabel.text = "Score: " + scoreNow;
 
         string levelName = SceneManager.GetActiveScene().name;
-        string mode = LevelMode.FreePosition.ToString();
-        int savedHighScores = HighScores.GetHighScore(levelName, mode);
+        int stage = PlayerPrefs.GetInt("stageNow", 0);
+        stage = Mathf.Clamp(stage, 0, 4);
+        TimePeriod time = (TimePeriod)stage;
+        int savedHighScores = HighScores.GetHighScore(levelName, time.ToString());
 
         if (savedHighScores < scoreNow)
         {
-            HighScores.SaveHighScore(levelName, mode, scoreNow);
-            highScoreLabel.text = "High Score: " + HighScores.GetHighScore(levelName, mode);
+            HighScores.SaveHighScore(levelName, time.ToString(), scoreNow);
+            highScoreLabel.text = "High Score: " + HighScores.GetHighScore(levelName, time.ToString());
         }
     }
 
