@@ -12,6 +12,7 @@ public class LevelTransitionController : MonoBehaviour
     public int TransitionTimeInSeconds = 1;
     public ParticleSystem TimeParticles;
     public Transform Title;
+    public float cameraShakeMagnitudeAcceleration = 0.05f;
 
     private float initialParticleSimulationSpeed;
     private float initialParticleXScale;
@@ -21,6 +22,10 @@ public class LevelTransitionController : MonoBehaviour
     private bool inTransition = false;
     private string nextSceneName;
     private Image fullScreenRectangle;
+
+    private Vector3 originalCameraPosition;
+    private bool nextCameraShakeActionIsDisplacement = true;
+    private float cameraShakeMagnitude = 0f;
 
     private void Start()
     {
@@ -61,6 +66,26 @@ public class LevelTransitionController : MonoBehaviour
         titleLocalScale.x += CalculateTransitionEffectValueDelta(FinalTitleXScale, initialTitleXScale);
         titleLocalScale.y += CalculateTransitionEffectValueDelta(FinalTitleYScale, initialTitleYScale);
         Title.localScale = titleLocalScale;
+
+        ShakeCamera();
+    }
+
+    private void ShakeCamera()
+    {
+        if (nextCameraShakeActionIsDisplacement)
+        {
+            var localPosition = Camera.main.transform.localPosition;
+            localPosition.x += Random.Range(-cameraShakeMagnitude, cameraShakeMagnitude);
+            localPosition.y += Random.Range(-cameraShakeMagnitude, cameraShakeMagnitude);
+            Camera.main.transform.localPosition = localPosition;
+            cameraShakeMagnitude += cameraShakeMagnitudeAcceleration;
+        }
+        else
+        {
+            Camera.main.transform.localPosition = originalCameraPosition;
+        }
+
+        nextCameraShakeActionIsDisplacement = !nextCameraShakeActionIsDisplacement;
     }
 
     private float CalculateTransitionEffectValueDelta(float final, float initial)
@@ -93,6 +118,8 @@ public class LevelTransitionController : MonoBehaviour
         initialTitleYScale = Title.localScale.y;
         var colorOverLifeTime = TimeParticles.colorOverLifetime;
         colorOverLifeTime.enabled = false;
+
+        originalCameraPosition = Camera.main.transform.localPosition;
     }
 
     private void FadeOut()
