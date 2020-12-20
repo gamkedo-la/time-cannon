@@ -17,6 +17,13 @@ public class TemporalHideOrShow : MonoBehaviour
 
     static int editorTestEra = -1; // set to -1 to show no era show/hide bubbles
 
+    private void Awake() {
+        if(editorTestEra != -1) {
+            Debug.LogWarning("TemporalHideOrShow.editorTestEra is not -1, forcing era to " + editorTestEra);
+        }
+        PlayerPrefs.SetInt("stageNow", editorTestEra);
+    }
+
     void ShouldntExistHereAndNow(string message) {
         if(debugMode) { // mark and hide
             gameObject.name = "HIDDEN " + gameObject.name;
