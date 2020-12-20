@@ -15,7 +15,7 @@ public class TemporalHideOrShow : MonoBehaviour
 
     bool debugMode = true;
 
-    static int editorTestEra = 2; // set to -1 to show no era show/hide bubbles
+    static int editorTestEra = -1; // set to -1 to show no era show/hide bubbles
 
     private void Awake() {
         if(editorTestEra != -1) {
