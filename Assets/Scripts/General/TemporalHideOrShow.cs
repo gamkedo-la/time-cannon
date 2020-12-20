@@ -15,7 +15,7 @@ public class TemporalHideOrShow : MonoBehaviour
 
     bool debugMode = true;
 
-    static int editorTestEra = -1; // set to -1 to show no era show/hide bubbles
+    static int editorTestEra = 2; // set to -1 to show no era show/hide bubbles
 
     private void Awake() {
         if(editorTestEra != -1) {
@@ -46,10 +46,11 @@ public class TemporalHideOrShow : MonoBehaviour
         }
         Renderer[] rendChildren = GetComponentsInChildren<Renderer>();
         Gizmos.color = (shouldShow ? showColor : hideColor);
-        for (int i = 0; i < rendChildren.Length; i++) {
-            if(rendChildren[i].enabled) {
+        for (int i = 0; i < rendChildren.Length; i++) { // pin where it is
+            if(rendChildren[i].enabled) { // to not draw for waypoints etc.
                 Gizmos.DrawSphere(rendChildren[i].transform.position+Vector3.up*90.0f, (shouldShow ? 10 : 5));
                 Gizmos.DrawLine(rendChildren[i].transform.position + Vector3.up * 90.0f, rendChildren[i].transform.position);
+                break; // only draw for one enabled renderer under children
             }
         }
     }
