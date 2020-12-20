@@ -6,18 +6,44 @@ public class TemporalHideOrShow : MonoBehaviour
 {
     public int[] timeStepsShownIn;
 
-    public string[] reqAnyTrue;
-    public string[] reqAllFalse;
+    private Color32 showColor = new Color32(0, 255, 0, 255);
+    private Color32 hideColor = new Color32(255,0,0, 150);
+
+    // didn't end up using, were prototyped for cause-effect changes between eras
+    //public string[] reqAnyTrue;
+    //public string[] reqAllFalse;
 
     bool debugMode = true;
 
+    static int editorTestEra = -1; // set to -1 to show no era show/hide bubbles
+
     void ShouldntExistHereAndNow(string message) {
-        Debug.Log(message);
         if(debugMode) { // mark and hide
             gameObject.name = "HIDDEN " + gameObject.name;
             gameObject.SetActive(false);
         } else { // fully destroy it
             Destroy(gameObject);
+        }
+    }
+
+    void OnDrawGizmos() {
+        if(editorTestEra == -1) {
+            return;
+        }
+        bool shouldShow = false;
+        for (int i = 0; i < timeStepsShownIn.Length; i++) {
+            if (timeStepsShownIn[i] == editorTestEra) {
+                shouldShow = true;
+                break;
+            }
+        }
+        Renderer[] rendChildren = GetComponentsInChildren<Renderer>();
+        Gizmos.color = (shouldShow ? showColor : hideColor);
+        for (int i = 0; i < rendChildren.Length; i++) {
+            if(rendChildren[i].enabled) {
+                Gizmos.DrawSphere(rendChildren[i].transform.position+Vector3.up*90.0f, (shouldShow ? 10 : 5));
+                Gizmos.DrawLine(rendChildren[i].transform.position + Vector3.up * 90.0f, rendChildren[i].transform.position);
+            }
         }
     }
 
@@ -42,7 +68,7 @@ public class TemporalHideOrShow : MonoBehaviour
             Debug.Log("time stage check bypass for " + gameObject.name + "(-1 value or unset)");
         }
 
-        bool anyTrue = false;
+        /*bool anyTrue = false;
         for (int i = 0; i < reqAnyTrue.Length; i++) {
             if (PlayerPrefs.GetInt(reqAnyTrue[i],0) == 1) {
                 anyTrue = true;
@@ -67,7 +93,7 @@ public class TemporalHideOrShow : MonoBehaviour
         if (anyTrue) {
             ShouldntExistHereAndNow("removing " + gameObject.name + " - any reqAllFalse matched");
             return;
-        }
+        }*/
         if(debugMode) {
             gameObject.name = "EXISTS " + gameObject.name;
         }
