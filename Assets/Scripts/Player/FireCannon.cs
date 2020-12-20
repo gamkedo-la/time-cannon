@@ -26,6 +26,8 @@ public class FireCannon : MonoBehaviour
 
     public Transform VRCamLens;
 
+	public List<AudioClip> cannonSoundClips;
+
     private void AddArrayIntoListIfUnique(List<RaycastHit> toList, RaycastHit[] fromArray)
     {
         for (int i = 0; i < fromArray.Length; i++)
@@ -164,6 +166,7 @@ public class FireCannon : MonoBehaviour
         if(didFire) {
             shotsLeft--;
             UpdateAmmoDisplay();
+			cannonShotSound.clip = cannonSoundClips[Random.Range(0, cannonSoundClips.Count)];
             cannonShotSound.Play();
             emitter.Emit(1000);
             animator.SetTrigger("Fire");

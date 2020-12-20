@@ -20941,6 +20941,14 @@ MonoBehaviour:
   outOfAmmo:
     m_PersistentCalls:
       m_Calls: []
+  VRCamLens: {fileID: 0}
+  cannonSoundClips:
+  - {fileID: 8300000, guid: 1c1ab3a7c4ffe4aefa4feb3cad848846, type: 3}
+  - {fileID: 8300000, guid: 82bcf9d48e47f41caa356147446f5671, type: 3}
+  - {fileID: 8300000, guid: 6975878207ce044089a1406c32e6ba10, type: 3}
+  - {fileID: 8300000, guid: b6df305764e23404dbc306aa1c4ea826, type: 3}
+  - {fileID: 8300000, guid: 014693e0006f34fd394c4a88d94c5492, type: 3}
+  - {fileID: 8300000, guid: d2d2f788d4ca84b77b31653adf47ede9, type: 3}
 --- !u!95 &1731246911
 Animator:
   serializedVersion: 3
@@ -21222,6 +21230,8 @@ MonoBehaviour:
   outOfAmmo:
     m_PersistentCalls:
       m_Calls: []
+  VRCamLens: {fileID: 0}
+  cannonSoundClips: []
 --- !u!95 &1804362747
 Animator:
   serializedVersion: 3
