@@ -267,6 +267,26 @@ PrefabInstance:
         Maximimize
         score per zone'
       objectReference: {fileID: 0}
+    - target: {fileID: 3128470450824279558, guid: bc4f48e812a1248de8809047f43f5d52,
+        type: 3}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: 168
+      objectReference: {fileID: 0}
+    - target: {fileID: 3128470450824279558, guid: bc4f48e812a1248de8809047f43f5d52,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 193
+      objectReference: {fileID: 0}
+    - target: {fileID: 3128470450824279558, guid: bc4f48e812a1248de8809047f43f5d52,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 3128470450824279558, guid: bc4f48e812a1248de8809047f43f5d52,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 36
+      objectReference: {fileID: 0}
     - target: {fileID: 6338900297451821041, guid: bc4f48e812a1248de8809047f43f5d52,
         type: 3}
       propertyPath: m_IsActive
@@ -277,7 +297,12 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7925546947347745230, guid: bc4f48e812a1248de8809047f43f5d52, type: 3}
+    - {fileID: 7925546948316083503, guid: bc4f48e812a1248de8809047f43f5d52, type: 3}
+    - {fileID: 495406884642218683, guid: bc4f48e812a1248de8809047f43f5d52, type: 3}
+    - {fileID: 4522101788232665558, guid: bc4f48e812a1248de8809047f43f5d52, type: 3}
+    - {fileID: 4522101789269685559, guid: bc4f48e812a1248de8809047f43f5d52, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bc4f48e812a1248de8809047f43f5d52, type: 3}
 --- !u!4 &5673546600460329000 stripped
 Transform:
