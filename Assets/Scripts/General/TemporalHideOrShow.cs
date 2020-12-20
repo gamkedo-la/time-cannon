@@ -21,7 +21,7 @@ public class TemporalHideOrShow : MonoBehaviour
     // 2: 1942 AD
     // 3: 2100 AD
     // 4: 32000 AD
-    static int editorTestEra = 1; // set to -1 to show no era show/hide bubbles
+    static int editorTestEra = 4; // set to -1 to show no era show/hide bubbles
 
     private void Awake() {
         if(editorTestEra != -1) {
