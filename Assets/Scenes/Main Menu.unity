@@ -11347,7 +11347,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 600958332}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
   m_Name: 
@@ -11424,6 +11424,7 @@ MonoBehaviour:
   TransitionTimeInSeconds: 3
   TimeParticles: {fileID: 476125864}
   Title: {fileID: 2128366495}
+  cameraShakeMagnitudeAcceleration: 0.05
 --- !u!95 &672913547
 Animator:
   serializedVersion: 3
@@ -16461,7 +16462,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1893098165
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16912,37 +16913,37 @@ MonoBehaviour:
     reaction functionality, Quest VR support, time reversability and related locomotion,
     assorted bug fixes, additional level design, menu score tally/reset, ship wake
     effect, water and ground based movement variants, additional voxel buildings\n\u2022
-    <b>Christer \"McFunkypants\" Kaitila</b>: Cinematic text intro feature, chaos
-    dimension concept and foundation (including original temporal variations), rainbow
-    worms, voxel model material optimization, horizon textures (city skyline, hills),
-    trails on certain plane designs, Countryside level main layout, main menu particles
-    cyclone, Countryside story text\n\u2022 <b>Kornel</b>: Title logo, menu animations,
-    explosion effects, damage/score text pop outs, post-processing variants per stage,
-    UI scaling, score display, laser effect tuning, particles fixes, skyscraper window
-    lights experiment, optimizations, support for variable ammo limit per zone, high
-    score save/load \n\u2022 <b>Ian Cherabier</b>: Ocean level design, improved waypoint
-    aircraft support, initialization bug fixes, Ocean story text\n\u2022 <b>Michael
-    \"Misha\" Fewkes</b>: Audio programming for time dialiation distortion (including
-    reversal), target alignment editor extension for level design, city ambient background
-    noise, audio integration\n\u2022 <b>Jeremiah Franczyk</b>: Chaos Dimension level
-    design, pinata model, elephant shading\n\u2022 <b>Tyler Funk</b>: Modern skyscaper
-    model, non-Quest VR support, VR cannon scope, trench landscape, blimp model,
-    tree model (original and optimized)\n\u2022 <b>Marcel van Dijk</b>: Cartoonish
-    UFO model, WW1 plane models (Spad and Fokker), time-adjustable propellor script,
-    damaged countryside building\n\u2022 <b>I-wei Chen</b>: Mdoels (frigate, F-16,
-    aircraft carrier), textured main cannon\n\u2022 <b>Rikard \xC5kesson</b>: Menu
-    to level fade transitions, time rate adjustment tuning, cannon exhaust smoke\n\u2022
-    <b>Alan Zaring</b>: Desert level battle music\n\u2022 <b>Gabriel Cornish</b>:
-    Submarine model, building models for modern city, assorted spacecraft models\n\u2022
-    <b>H Trayford</b>: Modular spaceship and texture, standalone skyscraper model,
-    British tank and texture\n\u2022 <b>Muhammed \"EyeForcz\" Durmusoglu</b>: Models
-    (Brandenburgertor, flying cow)\n\u2022 <b>Simon J Hoffiz</b>: Level music\n\u2022
-    <b>Bar\u0131\u015F K\xF6kl\xFC</b>: Teleport points feature, scene reset, round
-    summary screen\n\u2022 <b>Trenton Pegeas</b>: Time cannon weapon model\n\u2022
-    <b>Ygor Dimas</b>: World War 2 plane model\n\u2022 <b>Jeff \"Axphin\" Hanlon</b>:
-    Cannon and explosion sounds\n\u2022 <b>Brian Nielsen</b>: Ammo cubes blink when
-    turning off\n\u2022 <b>Bjorn The Fire, Carson Sanders</b>: Additional story Input\n\nJoin
-    at HomeTeamGameDev.com to make games with us!"
+    <b>Kornel</b>: Title logo, menu animations, explosion effects, damage/score text
+    pop outs, post-processing variants per stage, UI scaling, score display, laser
+    effect tuning, particles fixes, skyscraper window lights experiment, optimizations,
+    support for variable ammo limit per zone, high score save/load \n\u2022 <b>Ian
+    Cherabier</b>: Ocean level design, improved waypoint aircraft support, initialization
+    bug fixes, Ocean story text\n\u2022 <b>Michael \"Misha\" Fewkes</b>: Audio programming
+    for time dialiation distortion (including reversal), target alignment editor
+    extension for level design, city ambient background noise, audio integration\n\u2022
+    <b>Jeremiah Franczyk</b>: Chaos Dimension and City level design, pinata model,
+    elephant shading\n\u2022 <b>Tyler Funk</b>: Modern skyscaper model, non-Quest
+    VR support, VR cannon scope, trench landscape, blimp model, tree model (original
+    and optimized)\n\u2022 <b>Marcel van Dijk</b>: Cartoonish UFO model, WW1 plane
+    models (Spad and Fokker), time-adjustable propellor script, damaged countryside
+    building\n\u2022 <b>Christer \"McFunkypants\" Kaitila</b>: Cinematic text intro
+    feature, chaos dimension concept and foundation (including original temporal
+    variations), rainbow worms, voxel model material optimization, horizon textures
+    (city skyline, hills), trails on certain plane designs, Countryside level main
+    layout, main menu particles cyclone, all story text authoring\n\u2022 <b>I-wei
+    Chen</b>: Models (frigate, F-16, aircraft carrier), textured main cannon\n\u2022
+    <b>Rikard \xC5kesson</b>: Menu to level fade transitions, time rate adjustment
+    tuning, cannon exhaust smoke\n\u2022 <b>Alan Zaring</b>: Desert level battle
+    music\n\u2022 <b>Gabriel Cornish</b>: Submarine model, building models for modern
+    city, assorted spacecraft models\n\u2022 <b>H Trayford</b>: Modular spaceship
+    and texture, standalone skyscraper model, British tank and texture\n\u2022 <b>Muhammed
+    \"EyeForcz\" Durmusoglu</b>: Models (Brandenburgertor, flying cow)\n\u2022 <b>Simon
+    J Hoffiz</b>: Level music\n\u2022 <b>Bar\u0131\u015F K\xF6kl\xFC</b>: Teleport
+    points feature, scene reset, round summary screen\n\u2022 <b>Trenton Pegeas</b>:
+    Time cannon weapon model\n\u2022 <b>Ygor Dimas</b>: World War 2 plane model\n\u2022
+    <b>Jeff \"Axphin\" Hanlon</b>: Cannon and explosion sounds\n\u2022 <b>Brian Nielsen</b>:
+    Ammo cubes blink when turning off\n\u2022 <b>Bjorn The Fire, Carson Sanders</b>:
+    Additional story Input\n\nJoin at HomeTeamGameDev.com to make games with us!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -17011,10 +17012,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 2051349030}
-    characterCount: 2520
+    characterCount: 2531
     spriteCount: 0
-    spaceCount: 352
-    wordCount: 334
+    spaceCount: 355
+    wordCount: 337
     linkCount: 0
     lineCount: 28
     pageCount: 1
