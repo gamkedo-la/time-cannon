@@ -89,7 +89,10 @@ public class FireCannon : MonoBehaviour
 
     void Update()
     {
-        if(lastAimedRange < 25.0f) {
+        if(Input.GetKeyDown(KeyCode.Escape)) {
+            SceneManager.LoadScene(0); // back to menu
+        }
+        if (lastAimedRange < 25.0f) {
             lastAimedRange = 25.0f;
         }
         crosshair.rectTransform.position = Camera.main.WorldToScreenPoint(transform.position + transform.forward * lastAimedRange);
