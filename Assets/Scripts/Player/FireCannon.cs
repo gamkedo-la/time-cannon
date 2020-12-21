@@ -199,6 +199,7 @@ public class FireCannon : MonoBehaviour
                 Debug.Log("shot fired in Chaos Dimension");
                 TimeKeeper.instance.RandomJoltTimeOffset();
             }
+            TimeKeeper.instance.fakeTimePace = 1.0f;
         }
 
         if (lastAimedRange> maxAimRange)
