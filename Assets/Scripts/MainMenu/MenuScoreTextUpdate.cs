@@ -49,6 +49,7 @@ public class MenuScoreTextUpdate : MonoBehaviour {
             rowScores[i] = 0; //Random.Range(0, 10) * 50 + 0;
             sums[forRow] += rowScores[i];
             labelRow[i].text = periodTimes[i] + "\nScore: " + rowScores[i];
+            HighScores.SaveHighScore((LevelName)forRow, (TimePeriod)i, 0);
         }
         sceneLabels[forRow].text = sceneNames[forRow] + "\nTotal: " + sums[forRow];
 

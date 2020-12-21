@@ -8,10 +8,10 @@ using UnityEngine;
 
 public enum LevelName
 {
-    ChaosDimension,
     City,
+    Ocean,
     Countryside,
-    Ocean
+    ChaosDimension
 }
 
 public static class HighScores
