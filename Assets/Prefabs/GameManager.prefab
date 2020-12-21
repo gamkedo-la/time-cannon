@@ -244,6 +244,21 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 495406884278780598, guid: bc4f48e812a1248de8809047f43f5d52,
+        type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 495406884278780598, guid: bc4f48e812a1248de8809047f43f5d52,
+        type: 3}
+      propertyPath: m_FontData.m_VerticalOverflow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 495406884278780598, guid: bc4f48e812a1248de8809047f43f5d52,
+        type: 3}
+      propertyPath: m_FontData.m_HorizontalOverflow
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 752315268519999833, guid: bc4f48e812a1248de8809047f43f5d52,
         type: 3}
       propertyPath: m_IsActive

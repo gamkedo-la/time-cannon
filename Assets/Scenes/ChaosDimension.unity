@@ -10312,6 +10312,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 0000000001000000
+  ignoreTimeLess: 0
 --- !u!114 &215072161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10683,6 +10684,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 03000000
+  ignoreTimeLess: 0
 --- !u!4 &250119096
 Transform:
   m_ObjectHideFlags: 0
@@ -10965,6 +10967,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 0200000004000000
+  ignoreTimeLess: 0
 --- !u!114 &388754943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16302,6 +16305,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 0000000004000000
+  ignoreTimeLess: 0
 --- !u!114 &443440415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21751,6 +21755,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 000000000100000003000000
+  ignoreTimeLess: 0
 --- !u!114 &558233739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22083,6 +22088,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 0100000002000000
+  ignoreTimeLess: 0
 --- !u!114 &568345079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32486,6 +32492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 03000000
+  ignoreTimeLess: 0
 --- !u!114 &651438791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32851,6 +32858,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 03000000
+  ignoreTimeLess: 0
 --- !u!114 &667908589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33183,6 +33191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 0200000004000000
+  ignoreTimeLess: 0
 --- !u!114 &701338525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47996,6 +48005,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 02000000
+  ignoreTimeLess: 0
 --- !u!114 &764230950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62773,6 +62783,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 03000000
+  ignoreTimeLess: 0
 --- !u!114 &837320208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67914,6 +67925,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 0200000004000000
+  ignoreTimeLess: 0
 --- !u!114 &892700318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68285,6 +68297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 02000000
+  ignoreTimeLess: 0
 --- !u!4 &905913804
 Transform:
   m_ObjectHideFlags: 0
@@ -73106,6 +73119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 0200000004000000
+  ignoreTimeLess: 0
 --- !u!114 &948679820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92743,6 +92757,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 03000000
+  ignoreTimeLess: 0
 --- !u!114 &1036672562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93075,6 +93090,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 02000000
+  ignoreTimeLess: 0
 --- !u!114 &1049695257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93545,6 +93561,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 000000000100000003000000
+  ignoreTimeLess: 0
 --- !u!114 &1083017797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93876,6 +93893,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 0000000001000000
+  ignoreTimeLess: 0
 --- !u!114 &1106325327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103992,6 +104010,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 0000000001000000
+  ignoreTimeLess: 0
 --- !u!114 &1187085446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104537,6 +104556,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 00000000010000000200000004000000
+  ignoreTimeLess: 0
 --- !u!114 &1268390476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104868,6 +104888,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 0300000004000000
+  ignoreTimeLess: 0
 --- !u!114 &1282101742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119495,6 +119516,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 0000000001000000
+  ignoreTimeLess: 0
 --- !u!114 &1379514479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129587,6 +129609,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 02000000
+  ignoreTimeLess: 0
 --- !u!114 &1487748997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134798,6 +134821,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 0300000004000000
+  ignoreTimeLess: 0
 --- !u!114 &1508339226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140883,6 +140907,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 0000000001000000
+  ignoreTimeLess: 0
 --- !u!114 &1707983593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141254,6 +141279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 01000000
+  ignoreTimeLess: 0
 --- !u!4 &1710626131
 Transform:
   m_ObjectHideFlags: 0
@@ -141520,6 +141546,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 04000000
+  ignoreTimeLess: 0
 --- !u!4 &1763461489
 Transform:
   m_ObjectHideFlags: 0
@@ -146340,6 +146367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 03000000
+  ignoreTimeLess: 0
 --- !u!114 &1777750932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146745,6 +146773,80 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1778244144}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1848838057
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4577187034018823194, guid: 1d36632f55cad4a5ca2329b8fae16268,
+        type: 3}
+      propertyPath: m_Name
+      value: Music
+      objectReference: {fileID: 0}
+    - target: {fileID: 4577187034018823197, guid: 1d36632f55cad4a5ca2329b8fae16268,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4577187034018823197, guid: 1d36632f55cad4a5ca2329b8fae16268,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4577187034018823197, guid: 1d36632f55cad4a5ca2329b8fae16268,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4577187034018823197, guid: 1d36632f55cad4a5ca2329b8fae16268,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4577187034018823197, guid: 1d36632f55cad4a5ca2329b8fae16268,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4577187034018823197, guid: 1d36632f55cad4a5ca2329b8fae16268,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4577187034018823197, guid: 1d36632f55cad4a5ca2329b8fae16268,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4577187034018823197, guid: 1d36632f55cad4a5ca2329b8fae16268,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4577187034018823197, guid: 1d36632f55cad4a5ca2329b8fae16268,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4577187034018823197, guid: 1d36632f55cad4a5ca2329b8fae16268,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4577187034018823197, guid: 1d36632f55cad4a5ca2329b8fae16268,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4577187034018823198, guid: 1d36632f55cad4a5ca2329b8fae16268,
+        type: 3}
+      propertyPath: musicPlaylist.Array.data[0].track
+      value: 
+      objectReference: {fileID: 8300000, guid: de7007be968cd094f954f82e5c902d2a, type: 3}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1d36632f55cad4a5ca2329b8fae16268, type: 3}
 --- !u!1 &1850231761
 GameObject:
   m_ObjectHideFlags: 0
@@ -151856,6 +151958,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 0200000004000000
+  ignoreTimeLess: 0
 --- !u!114 &1888935823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152329,6 +152432,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 000000000100000003000000
+  ignoreTimeLess: 0
 --- !u!114 &1939312651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152820,6 +152924,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 0200000004000000
+  ignoreTimeLess: 0
 --- !u!114 &1995181888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157905,6 +158010,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 0000000001000000
+  ignoreTimeLess: 0
 --- !u!114 &2007296598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158236,6 +158342,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 0000000001000000
+  ignoreTimeLess: 0
 --- !u!114 &2017524150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158610,6 +158717,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 00000000
+  ignoreTimeLess: 0
 --- !u!108 &2043444879
 Light:
   m_ObjectHideFlags: 0
@@ -158724,6 +158832,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 04000000
+  ignoreTimeLess: 0
 --- !u!114 &2066530905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159542,6 +159651,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 00000000010000000200000003000000
+  ignoreTimeLess: 0
 --- !u!1 &8164078558311268349
 GameObject:
   m_ObjectHideFlags: 0
@@ -159589,6 +159699,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 010000000200000003000000
+  ignoreTimeLess: 0
 --- !u!1 &8164078559934835331
 GameObject:
   m_ObjectHideFlags: 0
@@ -159636,6 +159747,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 0200000003000000
+  ignoreTimeLess: 0
 --- !u!1 &8164078559936980977
 GameObject:
   m_ObjectHideFlags: 0
@@ -159683,6 +159795,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 0200000003000000
+  ignoreTimeLess: 0
 --- !u!1001 &8824836633556133898
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -17567,6 +17567,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1947871651}
   - component: {fileID: 1947871650}
+  - component: {fileID: 1947871652}
   m_Layer: 0
   m_Name: VR_or_WebGLCamera
   m_TagString: Untagged
@@ -17610,6 +17611,102 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1947871652
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1947871649}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 247b576e0d0514d78921a698b8a3e83f, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!224 &1991249397 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7737848066126775689, guid: 27cf04e51222d3f42ad01753378e1066,
@@ -17965,20 +18062,20 @@ MonoBehaviour:
     and foundation (including original temporal variations), rainbow worms, voxel
     model material optimization, horizon textures (city skyline, hills), trails on
     certain plane designs, Countryside level main layout, main menu particles cyclone,
-    all story text authoring\n\u2022 <b>I-wei Chen</b>: Models (frigate, F-16, aircraft
-    carrier), textured main cannon\n\u2022 <b>Rikard \xC5kesson</b>: Menu to level
-    fade transitions, time rate adjustment tuning, cannon exhaust smoke\n\u2022 <b>Alan
-    Zaring</b>: Desert level battle music\n\u2022 <b>Gabriel Cornish</b>: Submarine
-    model, building models for modern city, assorted spacecraft models\n\u2022 <b>H
-    Trayford</b>: Modular spaceship and texture, standalone skyscraper model, British
-    tank and texture\n\u2022 <b>Muhammed \"EyeForcz\" Durmusoglu</b>: Models (Brandenburgertor,
-    flying cow)\n\u2022 <b>Simon J Hoffiz</b>: Level music\n\u2022 <b>Bar\u0131\u015F
-    K\xF6kl\xFC</b>: Teleport points feature, scene reset, round summary screen\n\u2022
-    <b>Trenton Pegeas</b>: Time cannon weapon model\n\u2022 <b>Ygor Dimas</b>: World
-    War 2 plane model\n\u2022 <b>Jeff \"Axphin\" Hanlon</b>: Cannon and explosion
-    sounds\n\u2022 <b>Brian Nielsen</b>: Ammo cubes blink when turning off\n\u2022
-    <b>Bjorn The Fire, Carson Sanders</b>: Additional story Input\n\nJoin at HomeTeamGameDev.com
-    to make games with us!"
+    all story text authoring\n\u2022 <b>Alan Zaring</b>: Menu, Ocean and Countryside
+    music\n\u2022 <b>Simon J Hoffiz</b>: Desert/City and Ocean level music\n\u2022
+    <b>I-wei Chen</b>: Models (frigate, F-16, aircraft carrier), textured main cannon\n\u2022
+    <b>Rikard \xC5kesson</b>: Menu to level fade transitions, time rate adjustment
+    tuning, cannon exhaust smoke\n\u2022 <b>Gabriel Cornish</b>: Submarine model,
+    building models for modern city, assorted spacecraft models\n\u2022 <b>H Trayford</b>:
+    Modular spaceship and texture, standalone skyscraper model, British tank and
+    texture\n\u2022 <b>Muhammed \"EyeForcz\" Durmusoglu</b>: Models (Brandenburgertor,
+    flying cow)\n\u2022 <b>Bar\u0131\u015F K\xF6kl\xFC</b>: Teleport points feature,
+    scene reset, round summary screen\n\u2022 <b>Trenton Pegeas</b>: Time cannon
+    weapon model\n\u2022 <b>Ygor Dimas</b>: World War 2 plane model\n\u2022 <b>Jeff
+    \"Axphin\" Hanlon</b>: Cannon and explosion sounds\n\u2022 <b>Brian Nielsen</b>:
+    Ammo cubes blink when turning off\n\u2022 <b>Bjorn The Fire, Carson Sanders</b>:
+    Additional story Input\n\nJoin at HomeTeamGameDev.com to make games with us!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
