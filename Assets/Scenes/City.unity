@@ -11639,7 +11639,7 @@ PrefabInstance:
       propertyPath: Intro_0
       value: 'Year: 450 BC
 
-        Location: City
+        Location: Desert
 
 
 
@@ -11657,7 +11657,7 @@ PrefabInstance:
       propertyPath: Intro_1
       value: 'Year: 1400 AD
 
-        Location: City
+        Location: Desert
 
 
 
@@ -11675,13 +11675,13 @@ PrefabInstance:
       propertyPath: Intro_2
       value: 'Year: 1942 AD
 
-        Location: City
+        Location: Desert City
 
 
 
 
-        War-torn cities and
-        carpet-bombed fields
+        War-torn cities
+        and carpet-bombed fields
 
         are the landscape of a world war where
 
@@ -11711,13 +11711,13 @@ PrefabInstance:
       propertyPath: Intro_3
       value: 'Year: 2100 AD
 
-        Location: Countryside
+        Location: City
 
 
 
 
-        The endless
-        streets of the metropolis
+        The endless streets
+        of the metropolis
 
         are the perfect hunting ground for
 

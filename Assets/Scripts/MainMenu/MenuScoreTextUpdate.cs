@@ -8,7 +8,7 @@ public class MenuScoreTextUpdate : MonoBehaviour {
     public TextMeshProUGUI allScoreLabel;
     public Text winLabel;
 
-    private readonly string[] sceneNames = { "Desert", "Ocean", "Countryside", "Chaos" };
+    private readonly string[] sceneNames = { "Desert/City", "Ocean", "Countryside", "Chaos" };
     public TextMeshProUGUI[] sceneLabels;
 
     private readonly string[] periodTimes = { "450 BC", "1400 AD", "1942 AD", "2100 AD", "TIMELESS" };
