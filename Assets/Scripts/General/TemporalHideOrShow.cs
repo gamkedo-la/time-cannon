@@ -13,7 +13,9 @@ public class TemporalHideOrShow : MonoBehaviour
     //public string[] reqAnyTrue;
     //public string[] reqAllFalse;
 
-    bool debugMode = true;
+    bool debugMode = false;
+
+    public bool ignoreTimeLess = false;
 
     // -1: don't force/change/preview time
     // 0: 450 BC
@@ -67,7 +69,10 @@ public class TemporalHideOrShow : MonoBehaviour
 
         int stageNow = PlayerPrefs.GetInt("stageNow",-1); // -1 accepts any
 
-        if (stageNow != -1 && stageNow != 4) {
+        if (stageNow == 4 && ignoreTimeLess) {
+            shouldShow = false;
+            ShouldntExistHereAndNow("removing " + gameObject.name + " - ignoreTimeLess");
+        } else if (stageNow != -1 && stageNow != 4) {
             for (int i = 0; i < timeStepsShownIn.Length; i++) {
                 if (timeStepsShownIn[i] == stageNow) {
                     shouldShow = true;

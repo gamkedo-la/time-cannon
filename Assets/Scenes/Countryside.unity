@@ -337,6 +337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 0000000001000000
+  ignoreTimeLess: 0
 --- !u!4 &22576970 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8713bb91d08d13144aa4e5b39e3fc9e8,
@@ -743,6 +744,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 00000000
+  ignoreTimeLess: 0
 --- !u!65 &24704553
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -769,6 +771,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 0000000001000000
+  ignoreTimeLess: 0
 --- !u!65 &24704555
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -795,6 +798,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 00000000
+  ignoreTimeLess: 0
 --- !u!65 &24704557
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -821,6 +825,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 0000000001000000
+  ignoreTimeLess: 0
 --- !u!65 &24704559
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -847,6 +852,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 00000000
+  ignoreTimeLess: 0
 --- !u!65 &24704561
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -873,6 +879,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 0000000001000000
+  ignoreTimeLess: 0
 --- !u!65 &24704563
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6648,6 +6655,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 04000000
+  ignoreTimeLess: 0
 --- !u!65 &100407640
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12053,6 +12061,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 02000000
+  ignoreTimeLess: 0
 --- !u!4 &145602533 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1964013837263140615, guid: fe291a404a25b3343a164dca2c20e7a9,
@@ -17264,6 +17273,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 010000000200000003000000
+  ignoreTimeLess: 0
 --- !u!4 &186190467 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5f6d058022fa6354bace0a259ee24356,
@@ -17424,6 +17434,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 0200000003000000
+  ignoreTimeLess: 0
 --- !u!1 &224130815
 GameObject:
   m_ObjectHideFlags: 0
@@ -23894,6 +23905,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 03000000
+  ignoreTimeLess: 0
 --- !u!1 &357473534
 GameObject:
   m_ObjectHideFlags: 0
@@ -34646,6 +34658,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 04000000
+  ignoreTimeLess: 0
 --- !u!65 &467440615
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34981,6 +34994,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 0200000003000000
+  ignoreTimeLess: 0
 --- !u!1 &498229405
 GameObject:
   m_ObjectHideFlags: 0
@@ -35035,6 +35049,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 04000000
+  ignoreTimeLess: 0
 --- !u!65 &498229408
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35285,6 +35300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 010000000200000003000000
+  ignoreTimeLess: 0
 --- !u!1 &503138821
 GameObject:
   m_ObjectHideFlags: 0
@@ -35629,6 +35645,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 04000000
+  ignoreTimeLess: 0
 --- !u!65 &518231224
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36003,6 +36020,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 04000000
+  ignoreTimeLess: 0
 --- !u!65 &525160940
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36288,6 +36306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 04000000
+  ignoreTimeLess: 0
 --- !u!65 &526254232
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36878,6 +36897,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 0200000003000000
+  ignoreTimeLess: 0
 --- !u!1001 &604036938
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47462,6 +47482,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 0200000003000000
+  ignoreTimeLess: 0
 --- !u!1 &775126480
 GameObject:
   m_ObjectHideFlags: 0
@@ -48224,6 +48245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 010000000200000003000000
+  ignoreTimeLess: 0
 --- !u!1 &841563208
 GameObject:
   m_ObjectHideFlags: 0
@@ -53172,6 +53194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 04000000
+  ignoreTimeLess: 0
 --- !u!65 &846469350
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -53828,6 +53851,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 04000000
+  ignoreTimeLess: 0
 --- !u!65 &903196257
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -54683,6 +54707,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 00000000
+  ignoreTimeLess: 0
 --- !u!65 &971752232
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -54709,6 +54734,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 0000000001000000
+  ignoreTimeLess: 0
 --- !u!65 &971752234
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -54735,6 +54761,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 00000000
+  ignoreTimeLess: 0
 --- !u!65 &971752236
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -54761,6 +54788,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 0000000001000000
+  ignoreTimeLess: 0
 --- !u!65 &971752238
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -54787,6 +54815,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 00000000
+  ignoreTimeLess: 0
 --- !u!65 &971752240
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -54813,6 +54842,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 0000000001000000
+  ignoreTimeLess: 0
 --- !u!65 &971752242
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -59599,6 +59629,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 0200000003000000
+  ignoreTimeLess: 0
 --- !u!1 &994126705 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 981ed484ea5ec429d9cbc6b5235543ba,
@@ -59618,6 +59649,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 0200000003000000
+  ignoreTimeLess: 0
 --- !u!1 &1011346240
 GameObject:
   m_ObjectHideFlags: 0
@@ -60217,6 +60249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 03000000
+  ignoreTimeLess: 0
 --- !u!65 &1057344603
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -60705,6 +60738,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 0200000003000000
+  ignoreTimeLess: 0
 --- !u!1001 &1072199860
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -65689,6 +65723,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 02000000
+  ignoreTimeLess: 0
 --- !u!1 &1126431599
 GameObject:
   m_ObjectHideFlags: 0
@@ -66447,6 +66482,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 0200000003000000
+  ignoreTimeLess: 0
 --- !u!1001 &1154020798
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -66847,6 +66883,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 0100000002000000
+  ignoreTimeLess: 0
 --- !u!65 &1154020807
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -66873,6 +66910,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 0100000002000000
+  ignoreTimeLess: 0
 --- !u!65 &1154020809
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -66899,6 +66937,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 0100000002000000
+  ignoreTimeLess: 0
 --- !u!65 &1154020811
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -66925,6 +66964,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 0100000002000000
+  ignoreTimeLess: 0
 --- !u!65 &1154020813
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -66951,6 +66991,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 0100000002000000
+  ignoreTimeLess: 0
 --- !u!65 &1154020815
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -66977,6 +67018,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 0100000002000000
+  ignoreTimeLess: 0
 --- !u!65 &1154020817
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -67009,7 +67051,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1164908250
 Transform:
   m_ObjectHideFlags: 0
@@ -67098,6 +67140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 0000000001000000
+  ignoreTimeLess: 1
 --- !u!1001 &1180906585
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -67915,6 +67958,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 00000000
+  ignoreTimeLess: 0
 --- !u!65 &1228268227
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -67941,6 +67985,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 0000000001000000
+  ignoreTimeLess: 0
 --- !u!65 &1228268229
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -67967,6 +68012,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 00000000
+  ignoreTimeLess: 0
 --- !u!65 &1228268231
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -67993,6 +68039,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 0000000001000000
+  ignoreTimeLess: 0
 --- !u!65 &1228268233
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -68019,6 +68066,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 00000000
+  ignoreTimeLess: 0
 --- !u!65 &1228268235
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -68045,6 +68093,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 0000000001000000
+  ignoreTimeLess: 0
 --- !u!65 &1228268237
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -68269,6 +68318,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 010000000200000003000000
+  ignoreTimeLess: 0
 --- !u!1 &1258222081
 GameObject:
   m_ObjectHideFlags: 0
@@ -68824,6 +68874,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 04000000
+  ignoreTimeLess: 0
 --- !u!65 &1281263689
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -69189,6 +69240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 00000000
+  ignoreTimeLess: 0
 --- !u!1 &1302257917
 GameObject:
   m_ObjectHideFlags: 0
@@ -69687,6 +69739,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 04000000
+  ignoreTimeLess: 0
 --- !u!65 &1387606854
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -69976,6 +70029,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 0200000003000000
+  ignoreTimeLess: 0
 --- !u!1 &1398547672
 GameObject:
   m_ObjectHideFlags: 0
@@ -70050,6 +70104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 0200000003000000
+  ignoreTimeLess: 0
 --- !u!1 &1410804868
 GameObject:
   m_ObjectHideFlags: 0
@@ -70235,6 +70290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 04000000
+  ignoreTimeLess: 0
 --- !u!65 &1414776360
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -75551,6 +75607,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 04000000
+  ignoreTimeLess: 0
 --- !u!65 &1444993926
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -75801,6 +75858,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 0200000003000000
+  ignoreTimeLess: 0
 --- !u!1001 &1457590527
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -86205,6 +86263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 04000000
+  ignoreTimeLess: 0
 --- !u!1 &1569573870
 GameObject:
   m_ObjectHideFlags: 0
@@ -86734,6 +86793,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 0200000003000000
+  ignoreTimeLess: 0
 --- !u!1 &1629725457 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4117589726598086283, guid: d992a6aa2d1dc40388239a9eb52504b5,
@@ -86766,6 +86826,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 00000000
+  ignoreTimeLess: 0
 --- !u!1 &1630175987
 GameObject:
   m_ObjectHideFlags: 0
@@ -91987,6 +92048,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 020000000300000004000000
+  ignoreTimeLess: 0
 --- !u!1001 &1653044769
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -97717,6 +97779,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 02000000
+  ignoreTimeLess: 0
 --- !u!1001 &1744358065
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -108160,6 +108223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 0200000003000000
+  ignoreTimeLess: 0
 --- !u!1 &1803727102
 GameObject:
   m_ObjectHideFlags: 0
@@ -113395,6 +113459,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 0300000004000000
+  ignoreTimeLess: 0
 --- !u!4 &1877172825 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8713bb91d08d13144aa4e5b39e3fc9e8,
@@ -113455,6 +113520,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 04000000
+  ignoreTimeLess: 0
 --- !u!65 &1878490451
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -113806,6 +113872,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 010000000200000003000000
+  ignoreTimeLess: 0
 --- !u!1 &1884754690
 GameObject:
   m_ObjectHideFlags: 0
@@ -113860,6 +113927,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 04000000
+  ignoreTimeLess: 0
 --- !u!65 &1884754693
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -115312,6 +115380,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 00000000
+  ignoreTimeLess: 0
 --- !u!1 &1945637606
 GameObject:
   m_ObjectHideFlags: 0
@@ -115366,6 +115435,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 04000000
+  ignoreTimeLess: 0
 --- !u!65 &1945637609
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -116233,6 +116303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 03000000
+  ignoreTimeLess: 0
 --- !u!65 &1978109783
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -116592,6 +116663,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 0000000001000000
+  ignoreTimeLess: 0
 --- !u!1 &1979652141
 GameObject:
   m_ObjectHideFlags: 0
@@ -116645,6 +116717,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 0200000003000000
+  ignoreTimeLess: 0
 --- !u!1 &1983977043
 GameObject:
   m_ObjectHideFlags: 0
@@ -121507,6 +121580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 010000000200000003000000
+  ignoreTimeLess: 0
 --- !u!1 &2008273121
 GameObject:
   m_ObjectHideFlags: 0
@@ -121561,6 +121635,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 04000000
+  ignoreTimeLess: 0
 --- !u!65 &2008273124
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -122289,6 +122364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 0000000001000000
+  ignoreTimeLess: 0
 --- !u!1 &2073453097
 GameObject:
   m_ObjectHideFlags: 0
@@ -137259,6 +137335,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 03000000
+  ignoreTimeLess: 0
 --- !u!65 &2129732983
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -137654,6 +137731,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 010000000200000003000000
+  ignoreTimeLess: 0
 --- !u!4 &320606742360781074
 Transform:
   m_ObjectHideFlags: 0
@@ -138106,6 +138184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 02000000
+  ignoreTimeLess: 0
 --- !u!1001 &2352420416724886566
 PrefabInstance:
   m_ObjectHideFlags: 0
