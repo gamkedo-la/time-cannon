@@ -2409,17 +2409,17 @@ PrefabInstance:
     - target: {fileID: 2352420417439160873, guid: 0046fed9c8f2e4a30b4211415de1eaa6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.2
+      value: 27.8
       objectReference: {fileID: 0}
     - target: {fileID: 2352420417439160873, guid: 0046fed9c8f2e4a30b4211415de1eaa6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -21.7
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2352420417439160873, guid: 0046fed9c8f2e4a30b4211415de1eaa6,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 15.2
+      value: 24.8
       objectReference: {fileID: 0}
     - target: {fileID: 2352420417439160873, guid: 0046fed9c8f2e4a30b4211415de1eaa6,
         type: 3}
@@ -11662,13 +11662,13 @@ PrefabInstance:
 
 
 
-        Behind the castle
-        walls, the bustling
+        People have still
+        not settled this area. The region
 
-        market of a medieval hamlet is
+        is nearly uninhabitable. This
+        has made it a perfect
 
-        under
-        attack! Help save the village!'
+        battleground for aliens avoiding detection.'
       objectReference: {fileID: 0}
     - target: {fileID: 6328709669521275184, guid: 7969efe196406994caf59dd6f0faa4ba,
         type: 3}
@@ -17546,7 +17546,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 103.86301
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5333795898440422365, guid: d992a6aa2d1dc40388239a9eb52504b5, type: 3}
+    - {fileID: 5333795898531724179, guid: d992a6aa2d1dc40388239a9eb52504b5, type: 3}
+    - {fileID: 5333795898703112071, guid: d992a6aa2d1dc40388239a9eb52504b5, type: 3}
+    - {fileID: 5333795898266047041, guid: d992a6aa2d1dc40388239a9eb52504b5, type: 3}
+    - {fileID: 5333795899716669964, guid: d992a6aa2d1dc40388239a9eb52504b5, type: 3}
+    - {fileID: 5333795898209316122, guid: d992a6aa2d1dc40388239a9eb52504b5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d992a6aa2d1dc40388239a9eb52504b5, type: 3}
 --- !u!1 &5333795899732712377 stripped
 GameObject:
@@ -17776,6 +17782,84 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStepsShownIn: 0100000003000000
+--- !u!65 &5333795899732712401
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5333795899732712377}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.055, y: 0.01, z: 0.05}
+  m_Center: {x: 0, y: 0.005, z: 0.01}
+--- !u!65 &5333795899732712402
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5333795899732712384}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.055, y: 0.01, z: 0.05}
+  m_Center: {x: 0, y: 0.005, z: 0.01}
+--- !u!65 &5333795899732712403
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5333795899732712385}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.055, y: 0.01, z: 0.05}
+  m_Center: {x: 0, y: 0.005, z: 0.01}
+--- !u!65 &5333795899732712404
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5333795899732712386}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.055, y: 0.01, z: 0.05}
+  m_Center: {x: 0, y: 0.005, z: 0.01}
+--- !u!65 &5333795899732712405
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5333795899732712387}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.055, y: 0.01, z: 0.05}
+  m_Center: {x: 0, y: 0.005, z: 0.01}
+--- !u!65 &5333795899732712406
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5333795899732712388}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.055, y: 0.01, z: 0.05}
+  m_Center: {x: 0, y: 0.005, z: 0.01}
 --- !u!1001 &5673546600851501042
 PrefabInstance:
   m_ObjectHideFlags: 0
