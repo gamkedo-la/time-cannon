@@ -252,40 +252,45 @@ PrefabInstance:
     - target: {fileID: 3128470450824279558, guid: bc4f48e812a1248de8809047f43f5d52,
         type: 3}
       propertyPath: m_text
-      value: 'A/D or Arrows to Tune Time Rate
+      value: 'A/D or Arrows: Reverse or Slow Time
 
-        Hold Space to Zoom and Dilate
+        Hold Space: Zoom and Compress
         Time
 
-        Click to fire (target required)
+        Mouse Click: Fire (1+ target required)
 
-        Chain reactions earn
-        more points
+        Chain reactions
+        cause bonus disruption
 
-        Time Aliens killed die in every era
+        Time Aliens explode in every time at once
 
-        Maximimize
-        score per zone'
+        Maximize
+        score per area to win the war'
       objectReference: {fileID: 0}
     - target: {fileID: 3128470450824279558, guid: bc4f48e812a1248de8809047f43f5d52,
         type: 3}
       propertyPath: m_firstOverflowCharacterIndex
-      value: 168
+      value: 191
       objectReference: {fileID: 0}
     - target: {fileID: 3128470450824279558, guid: bc4f48e812a1248de8809047f43f5d52,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 193
+      value: 229
       objectReference: {fileID: 0}
     - target: {fileID: 3128470450824279558, guid: bc4f48e812a1248de8809047f43f5d52,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 34
+      value: 39
       objectReference: {fileID: 0}
     - target: {fileID: 3128470450824279558, guid: bc4f48e812a1248de8809047f43f5d52,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 36
+      value: 41
+      objectReference: {fileID: 0}
+    - target: {fileID: 3128470450824279558, guid: bc4f48e812a1248de8809047f43f5d52,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6338900297451821041, guid: bc4f48e812a1248de8809047f43f5d52,
         type: 3}
