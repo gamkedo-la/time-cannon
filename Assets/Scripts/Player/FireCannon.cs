@@ -113,13 +113,13 @@ public class FireCannon : MonoBehaviour
 
         int hitsInRange = 0;
         bool didFire = false;
-        for(int i=0; i< allRH.Length;i++)
+        crosshair.color = Color.red;
+        for (int i=0; i< allRH.Length;i++)
         {
             RaycastHit rhInfo = allRH[i];
 
             // crosshair.rectTransform.position = Camera.main.WorldToScreenPoint(rhInfo.point);
             lastAimedRange = Vector3.Distance(transform.position, rhInfo.point);
-            crosshair.color = Color.red;
 
             ExplodeChainReact ecrScript = rhInfo.collider.gameObject.GetComponentInParent<ExplodeChainReact>();
             bool isItShootingPoint = (ShootingPoints ? rhInfo.collider.gameObject.transform.IsChildOf(ShootingPoints.transform) : false);
@@ -129,6 +129,7 @@ public class FireCannon : MonoBehaviour
                 {
                     transform.root.position = rhInfo.collider.transform.position;
                     transform.root.rotation = rhInfo.collider.transform.rotation;
+                    break; // shooting point, bail out
                 }
                 else
                 {
@@ -151,8 +152,7 @@ public class FireCannon : MonoBehaviour
                 if (ecrScript)
                 {
                     hitsInRange += ecrScript.HitsInRange();
-                }
-                else if (isItShootingPoint)
+                } else if (isItShootingPoint)
                 {
                     crosshair.color = Color.green;
                 }
@@ -186,15 +186,17 @@ public class FireCannon : MonoBehaviour
 
         if (allRH.Length==0) // essentially, else / nothing under gun
         {
-            crosshair.color = Color.cyan;
+            crosshair.color = Color.red;
 
             cannonReadout.text = "0";
         } else if(hitsInRange != 0)
         {
+            crosshair.color = Color.cyan;
             cannonReadout.text = "" + hitsInRange;
         }
         else
         {
+            crosshair.color = Color.black;
             cannonReadout.text = "X";
         }
     }
