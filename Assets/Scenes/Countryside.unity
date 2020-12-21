@@ -898,9 +898,9 @@ GameObject:
   - component: {fileID: 33986891}
   - component: {fileID: 33986890}
   - component: {fileID: 33986889}
-  - component: {fileID: 33986888}
   - component: {fileID: 33986887}
   - component: {fileID: 33986886}
+  - component: {fileID: 33986888}
   m_Layer: 0
   m_Name: TankTest WW1
   m_TagString: Untagged
@@ -969,8 +969,8 @@ MonoBehaviour:
     type: 2}
   TotalNumberOfTargetHits: {fileID: 11400000, guid: ea33fceecb8fae6458630a3df5d05b5a,
     type: 2}
---- !u!64 &33986888
-MeshCollider:
+--- !u!65 &33986888
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -979,10 +979,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 3613567641014311022, guid: 93a66560dc31043d994a370d7b170cba, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.09, y: 0.04, z: 0.11}
+  m_Center: {x: 0, y: 0.00468795, z: -0.01}
 --- !u!54 &33986889
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -35394,9 +35393,9 @@ GameObject:
   - component: {fileID: 514641698}
   - component: {fileID: 514641697}
   - component: {fileID: 514641696}
-  - component: {fileID: 514641695}
   - component: {fileID: 514641694}
   - component: {fileID: 514641693}
+  - component: {fileID: 514641695}
   m_Layer: 0
   m_Name: TankTest WW1
   m_TagString: Untagged
@@ -35465,8 +35464,8 @@ MonoBehaviour:
     type: 2}
   TotalNumberOfTargetHits: {fileID: 11400000, guid: ea33fceecb8fae6458630a3df5d05b5a,
     type: 2}
---- !u!64 &514641695
-MeshCollider:
+--- !u!65 &514641695
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -35475,10 +35474,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 3613567641014311022, guid: 93a66560dc31043d994a370d7b170cba, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.09, y: 0.04, z: 0.11}
+  m_Center: {x: 0, y: 0.00468795, z: -0.01}
 --- !u!54 &514641696
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -102574,9 +102572,9 @@ GameObject:
   - component: {fileID: 1751345261}
   - component: {fileID: 1751345260}
   - component: {fileID: 1751345259}
-  - component: {fileID: 1751345258}
   - component: {fileID: 1751345257}
   - component: {fileID: 1751345256}
+  - component: {fileID: 1751345258}
   m_Layer: 0
   m_Name: TankTest WW1
   m_TagString: Untagged
@@ -102645,8 +102643,8 @@ MonoBehaviour:
     type: 2}
   TotalNumberOfTargetHits: {fileID: 11400000, guid: ea33fceecb8fae6458630a3df5d05b5a,
     type: 2}
---- !u!64 &1751345258
-MeshCollider:
+--- !u!65 &1751345258
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -102655,10 +102653,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 3613567641014311022, guid: 93a66560dc31043d994a370d7b170cba, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.09, y: 0.04, z: 0.11}
+  m_Center: {x: 0, y: 0.00468795, z: -0.01}
 --- !u!54 &1751345259
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -138246,20 +138243,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &3856676694240160783
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5090270527751672574}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 3613567641014311022, guid: 93a66560dc31043d994a370d7b170cba, type: 3}
 --- !u!1 &4630890975933534076
 GameObject:
   m_ObjectHideFlags: 0
@@ -138290,9 +138273,9 @@ GameObject:
   - component: {fileID: 982938607366871771}
   - component: {fileID: 6816356502817039906}
   - component: {fileID: 3856676694240160780}
-  - component: {fileID: 3856676694240160783}
   - component: {fileID: 3856676694240160768}
   - component: {fileID: 3856676694240160769}
+  - component: {fileID: 5090270527751672575}
   m_Layer: 0
   m_Name: TankTest WW1
   m_TagString: Untagged
@@ -138300,6 +138283,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &5090270527751672575
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5090270527751672574}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.09, y: 0.04, z: 0.11}
+  m_Center: {x: 0, y: 0.00468795, z: -0.01}
 --- !u!4 &5408799384200861126
 Transform:
   m_ObjectHideFlags: 0
