@@ -11,7 +11,7 @@ public class MenuScoreTextUpdate : MonoBehaviour {
     private readonly string[] sceneNames = { "Desert", "Ocean", "Countryside", "Chaos" };
     public TextMeshProUGUI[] sceneLabels;
 
-    private readonly string[] periodTimes = { "450 BC", "1400 AD", "1942 AD", "2100 AD", "32000 AD" };
+    private readonly string[] periodTimes = { "450 BC", "1400 AD", "1942 AD", "2100 AD", "TIMELESS" };
     public TextMeshProUGUI[] periodLabels_Desert;
     public TextMeshProUGUI[] periodLabels_Ocean;
     public TextMeshProUGUI[] periodLabels_Countryside;

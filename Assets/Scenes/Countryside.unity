@@ -136651,6 +136651,24 @@ PrefabInstance:
       propertyPath: changeThisText
       value: 
       objectReference: {fileID: 408960093}
+    - target: {fileID: 6328709669521275184, guid: 7969efe196406994caf59dd6f0faa4ba,
+        type: 3}
+      propertyPath: Intro_4
+      value: 'Year: TIMELESS
+
+        Location: Countryside
+
+
+
+
+        The Galactic
+        Imperium has annexed this sector.
+
+        The time has come to stop the
+        alien time squids
+
+        once and for all, to save the galaxy!'
+      objectReference: {fileID: 0}
     - target: {fileID: 6328709669521275185, guid: 7969efe196406994caf59dd6f0faa4ba,
         type: 3}
       propertyPath: m_LocalPosition.x

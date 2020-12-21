@@ -16,7 +16,7 @@ public class IntroTextChanger : MonoBehaviour
     [TextArea(3,10)]
     public string Intro_3 = "Year: 2100 AD";
     [TextArea(3,10)]
-    public string Intro_4 = "Year: 32000 AD";
+    public string Intro_4 = "Year: TIMELESS";
     
     // Start is called before the first frame update
     void Start()

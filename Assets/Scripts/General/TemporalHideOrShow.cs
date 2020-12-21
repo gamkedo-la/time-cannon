@@ -67,7 +67,7 @@ public class TemporalHideOrShow : MonoBehaviour
 
         int stageNow = PlayerPrefs.GetInt("stageNow",-1); // -1 accepts any
 
-        if (stageNow != -1) {
+        if (stageNow != -1 && stageNow != 4) {
             for (int i = 0; i < timeStepsShownIn.Length; i++) {
                 if (timeStepsShownIn[i] == stageNow) {
                     shouldShow = true;
@@ -79,7 +79,7 @@ public class TemporalHideOrShow : MonoBehaviour
                 return;
             }
         } else {
-            Debug.Log("time stage check bypass for " + gameObject.name + "(-1 value or unset)");
+            Debug.Log("time stage check bypass for " + gameObject.name + "(-1 value or TIMELESS stage)");
         }
 
         /*bool anyTrue = false;
