@@ -8,7 +8,7 @@ public class MenuScoreTextUpdate : MonoBehaviour {
     public TextMeshProUGUI allScoreLabel;
     public Text winLabel;
 
-    private readonly string[] sceneNames = { "Desert/City", "Ocean", "Countryside", "Chaos" };
+    private readonly string[] sceneNames = { "Desert/City", "Ocean", "Countryside", "Chaos/Nospace" };
     public TextMeshProUGUI[] sceneLabels;
 
     private readonly string[] periodTimes = { "450 BC", "1400 AD", "1942 AD", "2100 AD", "TIMELESS" };
@@ -34,7 +34,7 @@ public class MenuScoreTextUpdate : MonoBehaviour {
         for (int i = 0; i < sums.Length; i++) {
             totalSum += sums[i];
         }
-        int goalScore = 5000;
+        int goalScore = 105000;
         allScoreLabel.text = "Goal: "+ goalScore + "\nSum: " + totalSum;
         winLabel.text = (goalScore <= totalSum ?
         "You stopped the time aliens! Turns out you're the you in a timeline where the time aliens have always been stopped. Congratulations!" :

@@ -14877,7 +14877,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Goal: 5000
+  m_text: 'Goal: 110000
 
     Sum: 3042'
   m_isRightToLeft: 0
@@ -14949,7 +14949,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1662401975}
-    characterCount: 20
+    characterCount: 22
     spriteCount: 0
     spaceCount: 3
     wordCount: 4
