@@ -41,6 +41,9 @@ public class ScoreKeeper : MonoBehaviour
     public void AddScore(int points)
     {
         scaleFactor += points * scaleIncreasePerPoint;
+        if(scaleFactor > 5.0f) {
+            scaleFactor = 5.0f;
+        }
         scoreNow += points;
         scoreLabel.text = "Score: " + scoreNow;
 

@@ -16,6 +16,9 @@ public class CanvasVRLaserDetect : MonoBehaviour
         siblingCanv = GetComponent<Canvas>();
         usingCam = siblingCanv.worldCamera;
         // debugOut.text = "none";
+
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
     }
     void Update()
     {

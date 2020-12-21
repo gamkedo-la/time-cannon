@@ -57,23 +57,41 @@ public class FireCannon : MonoBehaviour
     }
 
     void FixedUpdate() {
+        if(startedQuitTimerYet) {
+            return; // avoid restarting coroutine timer
+        }
         if (shotsLeft <= 0) {
             if (VRCamLens != null) {
+                startedQuitTimerYet = VRCamLens.transform.localScale.x < 0.005f;
                 VRCamLens.transform.localScale =
-                    VRCamLens.transform.localScale.x > 0.005f ?
+                    startedQuitTimerYet ? Vector3.zero :
                     new Vector3(VRCamLens.transform.localScale.x * 0.97f,
                         VRCamLens.transform.localScale.y,
-                        VRCamLens.transform.localScale.z) : Vector3.zero;
+                        VRCamLens.transform.localScale.z);
             } else {
+                Quaternion targetTiltRot = transform.parent.rotation * Quaternion.AngleAxis(-55.0f, Vector3.right);
                 transform.rotation = Quaternion.Slerp(transform.rotation,
-                           transform.parent.rotation * Quaternion.AngleAxis(-55.0f, Vector3.right),
-                    0.07f);
+                           targetTiltRot, 0.07f);
+                startedQuitTimerYet = Quaternion.Angle(transform.rotation, targetTiltRot) < 1.0f;
+            }
+            if(startedQuitTimerYet) {
+                StartCoroutine(EndSoon());
             }
         }
     }
 
+    bool startedQuitTimerYet = false;
+
+    IEnumerator EndSoon() {
+        yield return new WaitForSeconds(5.5f);
+        SceneManager.LoadScene(0); // back to menu
+    }
+
     void Update()
     {
+        if(lastAimedRange < 25.0f) {
+            lastAimedRange = 25.0f;
+        }
         crosshair.rectTransform.position = Camera.main.WorldToScreenPoint(transform.position + transform.forward * lastAimedRange);
 
         if (shotsLeft <= 0) {

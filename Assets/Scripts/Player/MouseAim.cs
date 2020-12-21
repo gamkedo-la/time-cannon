@@ -18,6 +18,7 @@ public class MouseAim : MonoBehaviour
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         mainCam = Camera.main;
     }
 
