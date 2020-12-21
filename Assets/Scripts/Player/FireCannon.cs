@@ -74,6 +74,8 @@ public class FireCannon : MonoBehaviour
 
     void Update()
     {
+        crosshair.rectTransform.position = Camera.main.WorldToScreenPoint(transform.position + transform.forward * lastAimedRange);
+
         if (shotsLeft <= 0) {
             crosshair.color = Color.black;
             cannonReadout.text = "-";
@@ -118,7 +120,7 @@ public class FireCannon : MonoBehaviour
         {
             RaycastHit rhInfo = allRH[i];
 
-            // crosshair.rectTransform.position = Camera.main.WorldToScreenPoint(rhInfo.point);
+            crosshair.rectTransform.position = Camera.main.WorldToScreenPoint(rhInfo.point);
             lastAimedRange = Vector3.Distance(transform.position, rhInfo.point);
 
             ExplodeChainReact ecrScript = rhInfo.collider.gameObject.GetComponentInParent<ExplodeChainReact>();
@@ -182,7 +184,6 @@ public class FireCannon : MonoBehaviour
         {
             lastAimedRange = maxAimRange;
         }
-        crosshair.rectTransform.position = Camera.main.WorldToScreenPoint(transform.position + transform.forward * lastAimedRange);
 
         if (allRH.Length==0) // essentially, else / nothing under gun
         {
