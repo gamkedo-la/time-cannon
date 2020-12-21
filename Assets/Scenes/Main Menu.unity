@@ -15516,38 +15516,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Chris DeLeon: Project lead, core gameplay, railgun and chain reaction
-    functionality, Quest VR support, time reversability and related locomotion, assorted
-    bug fixes, additional level design, menu score tally/reset, ship wake effect,
-    water and ground based movement variants, additional voxel buildings\n\nMcFunkypants:
-    Cinematic text intro feature, chaos dimension concept and foundation (including
-    original temporal variations), rainbow worms, voxel model material optimization,
-    horizon textures (city skyline, hills), trails on certain plane designs, Countryside
-    level main layout, main menu particles cyclone, Countryside story text\n\nKornel:
-    Title logo, menu animations, explosion effects, damage/score text pop outs, post-processing
-    variants per stage, UI scaling, score display, laser effect tuning, particles
-    fixes, skyscraper window lights experiment, optimizations, support for variable
-    ammo limit per zone, high score save/load \n\nIan Cherabier: Ocean level design,
-    improved waypoint aircraft support, initialization bug fixes, Ocean story text\n\nMichael
-    \"Misha\" Fewkes: Audio programming for time dialiation distortion (including
-    reversal), target alignment editor extension for level design, city ambient background
-    noise, audio integration\n\nJeremiah Franczyk: Chaos Dimension level design,
-    pinata model, elephant shading\n\nTyler Funk: Modern skyscaper model, non-Quest
-    VR support, VR cannon scope, trench landscape, blimp model, tree model (original
-    and optimized)\n\nMarcel van Dijk: Cartoonish UFO model, WW1 plane models (Spad
-    and Fokker), time-adjustable propellor script, damaged countryside building\n\nI-wei
-    Chen: Mdoels (frigate, F-16, aircraft carrier), textured main cannon\n\nRikard
-    \xC5kesson: Menu to level fade transitions, time rate adjustment tuning, cannon
-    exhaust smoke\n\nAlan Zaring: Desert level battle music\n\nGabriel Cornish: Submarine
-    model, building models for modern city, assorted spacecraft models\n\nH Trayford:
-    Modular spaceship and texture, standalone skyscraper model, British tank and
-    texture\n\nMuhammed \"EyeForcz\" Durmusoglu: Models (Brandenburgertor, flying
-    cow)\n\nSimon J Hoffiz: Level music\n\nBar\u0131\u015F K\xF6kl\xFC: Teleport
-    points feature, scene reset, round summary screen\n\nTrenton Pegeas: Time cannon
-    weapon model\n\nYgor Dimas: World War 2 plane model\n\nJeff \"Axphin\" Hanlon:
-    Cannon and explosion sounds\n\nBrian Nielsen: Ammo cubes blink when turning off\n\nBjorn
-    The Fire, Carson Sanders: Additional story Input\n\nJoin at HomeTeamGameDev.com
-    to make games with us!"
+  m_Text: outdated, use TMP instead
 --- !u!222 &1597190695
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17976,7 +17945,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "\u2022 <b>Chris DeLeon</b>: Project lead, core gameplay, railgun and chain
-    reaction functionality, Quest VR support, time reversability and related locomotion,
+    reaction functionality, Quest VR support, time reversibility and related locomotion,
     assorted bug fixes, additional level design, menu score tally/reset, ship wake
     effect, water and ground based movement variants, additional voxel buildings\n\u2022
     <b>Kornel</b>: Title logo, menu animations, explosion effects, damage/score text
@@ -17985,31 +17954,31 @@ MonoBehaviour:
     support for variable ammo limit per zone, high score save/load \n\u2022 <b>Ian
     Cherabier</b>: Ocean level design, improved waypoint aircraft support, initialization
     bug fixes, Ocean story text\n\u2022 <b>Michael \"Misha\" Fewkes</b>: Audio programming
-    for time dialiation distortion (including reversal), target alignment editor
-    extension for level design, city ambient background noise, audio integration\n\u2022
-    <b>Jeremiah Franczyk</b>: Chaos Dimension and City level design, pinata model,
-    elephant shading\n\u2022 <b>Tyler Funk</b>: Modern skyscaper model, non-Quest
-    VR support, VR cannon scope, trench landscape, blimp model, tree model (original
-    and optimized)\n\u2022 <b>Marcel van Dijk</b>: Cartoonish UFO model, WW1 plane
-    models (Spad and Fokker), time-adjustable propellor script, damaged countryside
-    building\n\u2022 <b>Christer \"McFunkypants\" Kaitila</b>: Cinematic text intro
-    feature, chaos dimension concept and foundation (including original temporal
-    variations), rainbow worms, voxel model material optimization, horizon textures
-    (city skyline, hills), trails on certain plane designs, Countryside level main
-    layout, main menu particles cyclone, all story text authoring\n\u2022 <b>I-wei
-    Chen</b>: Models (frigate, F-16, aircraft carrier), textured main cannon\n\u2022
-    <b>Rikard \xC5kesson</b>: Menu to level fade transitions, time rate adjustment
-    tuning, cannon exhaust smoke\n\u2022 <b>Alan Zaring</b>: Desert level battle
-    music\n\u2022 <b>Gabriel Cornish</b>: Submarine model, building models for modern
-    city, assorted spacecraft models\n\u2022 <b>H Trayford</b>: Modular spaceship
-    and texture, standalone skyscraper model, British tank and texture\n\u2022 <b>Muhammed
-    \"EyeForcz\" Durmusoglu</b>: Models (Brandenburgertor, flying cow)\n\u2022 <b>Simon
-    J Hoffiz</b>: Level music\n\u2022 <b>Bar\u0131\u015F K\xF6kl\xFC</b>: Teleport
-    points feature, scene reset, round summary screen\n\u2022 <b>Trenton Pegeas</b>:
-    Time cannon weapon model\n\u2022 <b>Ygor Dimas</b>: World War 2 plane model\n\u2022
-    <b>Jeff \"Axphin\" Hanlon</b>: Cannon and explosion sounds\n\u2022 <b>Brian Nielsen</b>:
-    Ammo cubes blink when turning off\n\u2022 <b>Bjorn The Fire, Carson Sanders</b>:
-    Additional story Input\n\nJoin at HomeTeamGameDev.com to make games with us!"
+    for time dilation distortion (including reversal), target alignment editor extension
+    for level design, city ambient background noise, audio integration\n\u2022 <b>Jeremiah
+    Franczyk</b>: Chaos Dimension and City level design, pi\xF1ata model, elephant
+    shading\n\u2022 <b>Tyler Funk</b>: Modern skyscraper model, non-Quest VR support,
+    VR cannon scope, trench landscape, blimp model, tree model (original and optimized)\n\u2022
+    <b>Marcel van Dijk</b>: Cartoonish UFO model, WW1 plane models (Spad and Fokker),
+    time-adjustable propellor script, damaged countryside building\n\u2022 <b>Christer
+    \"McFunkypants\" Kaitila</b>: Cinematic text intro feature, chaos dimension concept
+    and foundation (including original temporal variations), rainbow worms, voxel
+    model material optimization, horizon textures (city skyline, hills), trails on
+    certain plane designs, Countryside level main layout, main menu particles cyclone,
+    all story text authoring\n\u2022 <b>I-wei Chen</b>: Models (frigate, F-16, aircraft
+    carrier), textured main cannon\n\u2022 <b>Rikard \xC5kesson</b>: Menu to level
+    fade transitions, time rate adjustment tuning, cannon exhaust smoke\n\u2022 <b>Alan
+    Zaring</b>: Desert level battle music\n\u2022 <b>Gabriel Cornish</b>: Submarine
+    model, building models for modern city, assorted spacecraft models\n\u2022 <b>H
+    Trayford</b>: Modular spaceship and texture, standalone skyscraper model, British
+    tank and texture\n\u2022 <b>Muhammed \"EyeForcz\" Durmusoglu</b>: Models (Brandenburgertor,
+    flying cow)\n\u2022 <b>Simon J Hoffiz</b>: Level music\n\u2022 <b>Bar\u0131\u015F
+    K\xF6kl\xFC</b>: Teleport points feature, scene reset, round summary screen\n\u2022
+    <b>Trenton Pegeas</b>: Time cannon weapon model\n\u2022 <b>Ygor Dimas</b>: World
+    War 2 plane model\n\u2022 <b>Jeff \"Axphin\" Hanlon</b>: Cannon and explosion
+    sounds\n\u2022 <b>Brian Nielsen</b>: Ammo cubes blink when turning off\n\u2022
+    <b>Bjorn The Fire, Carson Sanders</b>: Additional story Input\n\nJoin at HomeTeamGameDev.com
+    to make games with us!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
