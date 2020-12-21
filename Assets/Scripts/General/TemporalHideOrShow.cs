@@ -26,8 +26,8 @@ public class TemporalHideOrShow : MonoBehaviour
     private void Awake() {
         if(editorTestEra != -1) {
             Debug.LogWarning("TemporalHideOrShow.editorTestEra is not -1, forcing era to " + editorTestEra);
+            PlayerPrefs.SetInt("stageNow", editorTestEra);
         }
-        PlayerPrefs.SetInt("stageNow", editorTestEra);
     }
 
     void ShouldntExistHereAndNow(string message) {
