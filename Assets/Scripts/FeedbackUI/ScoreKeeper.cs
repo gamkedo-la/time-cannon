@@ -14,11 +14,13 @@ public class ScoreKeeper : MonoBehaviour
     private Transform scoreLabelParent;
     private float scaleFactor = 1;
     private int scoreNow = 0;
+    private bool VRMode = false;
 
     private const int MinScale = 1;
 
     void Start()
     {
+        VRMode = (GameObject.Find("XRRig") != null);
         instance = this;
         scoreLabel = GameObject.Find("Score Label").GetComponent<TextMeshProUGUI>();
         highScoreLabel = GameObject.Find("High Score Label").GetComponent<TextMeshProUGUI>();
@@ -41,8 +43,14 @@ public class ScoreKeeper : MonoBehaviour
     public void AddScore(int points)
     {
         scaleFactor += points * scaleIncreasePerPoint;
-        if(scaleFactor > 5.0f) {
-            scaleFactor = 5.0f;
+        if (VRMode) { // smaller scale limit for VR tablet screen
+            if (scaleFactor > 1.1f) {
+                scaleFactor = 1.1f;
+            }
+        } else {
+            if (scaleFactor > 5.0f) {
+                scaleFactor = 5.0f;
+            }
         }
         scoreNow += points;
         scoreLabel.text = "Score: " + scoreNow;

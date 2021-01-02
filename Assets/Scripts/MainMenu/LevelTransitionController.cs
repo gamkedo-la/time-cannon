@@ -126,7 +126,14 @@ public class LevelTransitionController : MonoBehaviour
     {
         GameObject blackRectangleContainer = new GameObject();
         this.fullScreenRectangle = blackRectangleContainer.AddComponent<Image>();
-        blackRectangleContainer.transform.SetParent(this.transform);
+        GameObject VRModeCam = GameObject.Find("FadeMenuCanvas");
+        if (VRModeCam != null) {
+            blackRectangleContainer.transform.SetParent(VRModeCam.transform);
+            blackRectangleContainer.transform.position = VRModeCam.transform.position;
+            blackRectangleContainer.transform.rotation = VRModeCam.transform.rotation;
+        } else {
+            blackRectangleContainer.transform.SetParent(this.transform);
+        }
         this.fullScreenRectangle.color = new Color32(255, 255, 255, 255);
         this.fullScreenRectangle.canvasRenderer.SetAlpha(0);
 
