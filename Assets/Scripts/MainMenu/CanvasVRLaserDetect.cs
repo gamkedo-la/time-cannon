@@ -35,9 +35,9 @@ public class CanvasVRLaserDetect : MonoBehaviour
                 Button button = graphics[i].GetComponent<Button>();
                 Image img = graphics[i].GetComponent<Image>();
                 if (button != null && (img == null || img.raycastTarget)) {
-                    Debug.Log($"name: {t.name}");
+                    // Debug.Log($"name: {t.name}");
                     lastSeen = button;
-                    debugOut.text = t.name;
+                    // debugOut.text = t.name;
                 } else {
                     contains = false;
                 }
