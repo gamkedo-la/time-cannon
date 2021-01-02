@@ -195,10 +195,10 @@ public class FireCannon : MonoBehaviour
         if(didFire) {
             shotsLeft--;
             UpdateAmmoDisplay();
-			cannonShotSound.clip = cannonSoundClips[Random.Range(0, cannonSoundClips.Count)];
-            cannonShotSound.Play();
             emitter.Emit(1000);
             animator.SetTrigger("Fire");
+            cannonShotSound.clip = cannonSoundClips[Random.Range(0, cannonSoundClips.Count)];
+            cannonShotSound.Play();
             muzzleFlash.SetActive(true);
             if (SceneManager.GetActiveScene().name == "ChaosDimension")
             {
