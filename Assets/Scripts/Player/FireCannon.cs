@@ -87,9 +87,15 @@ public class FireCannon : MonoBehaviour
         SceneManager.LoadScene(0); // back to menu
     }
 
+    bool fireHoldLock = false;
+
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape)) {
+        bool fireTriggerSqueezingNow = Input.GetAxis("TriggerAxis") > 0.2f;
+        bool fireTriggerSqueezedFrame = (fireTriggerSqueezingNow && fireHoldLock==false);
+        fireHoldLock = fireTriggerSqueezingNow;
+
+        if (Input.GetKeyDown(KeyCode.Escape)) {
             SceneManager.LoadScene(0); // back to menu
         }
         if (lastAimedRange < 25.0f) {
@@ -146,7 +152,7 @@ public class FireCannon : MonoBehaviour
 
             ExplodeChainReact ecrScript = rhInfo.collider.gameObject.GetComponentInParent<ExplodeChainReact>();
             bool isItShootingPoint = (ShootingPoints ? rhInfo.collider.gameObject.transform.IsChildOf(ShootingPoints.transform) : false);
-            if (Input.GetMouseButtonDown(0) || Input.GetAxis("TriggerAxis") > 0.2f)
+            if (Input.GetMouseButtonDown(0) || fireTriggerSqueezedFrame)
             {
                 if (isItShootingPoint)
                 {

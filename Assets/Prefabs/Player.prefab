@@ -21230,7 +21230,7 @@ MonoBehaviour:
   outOfAmmo:
     m_PersistentCalls:
       m_Calls: []
-  VRCamLens: {fileID: 0}
+  VRCamLens: {fileID: 5681720604571365723}
   cannonSoundClips: []
 --- !u!95 &1804362747
 Animator:
@@ -23090,6 +23090,7 @@ GameObject:
   - component: {fileID: 531873376675702283}
   - component: {fileID: 2017993185382177345}
   - component: {fileID: 3924610300668179197}
+  - component: {fileID: 8841481664727667916}
   m_Layer: 0
   m_Name: Ammo Display Cube 3 (VR)
   m_TagString: Untagged
@@ -23171,6 +23172,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &8841481664727667916
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3573703088690658471}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 85ecf374d6495154789473afef9b7a80, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4253412305069485360
 GameObject:
   m_ObjectHideFlags: 0
@@ -23428,6 +23448,7 @@ GameObject:
   - component: {fileID: 5233059787758620796}
   - component: {fileID: 6907881262127596613}
   - component: {fileID: 4583516211770618890}
+  - component: {fileID: 4077204099349378166}
   m_Layer: 0
   m_Name: Ammo Display Cube 2 (VR)
   m_TagString: Untagged
@@ -23509,6 +23530,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &4077204099349378166
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5301338968928269397}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 85ecf374d6495154789473afef9b7a80, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5466600931857770184
 GameObject:
   m_ObjectHideFlags: 0
@@ -28369,6 +28409,7 @@ GameObject:
   - component: {fileID: 2238706990944049442}
   - component: {fileID: 7895049684810393314}
   - component: {fileID: 6866401697262581620}
+  - component: {fileID: 5449449140387731416}
   m_Layer: 0
   m_Name: Ammo Display Cube 4 (VR)
   m_TagString: Untagged
@@ -28450,6 +28491,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &5449449140387731416
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5698174956610682893}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 85ecf374d6495154789473afef9b7a80, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5715166006097438716
 GameObject:
   m_ObjectHideFlags: 0
@@ -33595,6 +33655,7 @@ GameObject:
   - component: {fileID: 8877151066169218729}
   - component: {fileID: 378740821147003948}
   - component: {fileID: 6837536963270889615}
+  - component: {fileID: 8406421535131119760}
   m_Layer: 0
   m_Name: Ammo Display Cube (VR)
   m_TagString: Untagged
@@ -33676,6 +33737,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &8406421535131119760
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9070453732679293402}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 85ecf374d6495154789473afef9b7a80, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &495406883267221898
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33806,15 +33886,15 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 495406883267221898}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1528799900352962032 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1429728536131650682, guid: c116b7497ab8ca34c9188965d4295e27,
-    type: 3}
-  m_PrefabInstance: {fileID: 495406883267221898}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4618277891165330453 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5113664386210071967, guid: c116b7497ab8ca34c9188965d4295e27,
+    type: 3}
+  m_PrefabInstance: {fileID: 495406883267221898}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1528799900352962032 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1429728536131650682, guid: c116b7497ab8ca34c9188965d4295e27,
     type: 3}
   m_PrefabInstance: {fileID: 495406883267221898}
   m_PrefabAsset: {fileID: 0}
@@ -34028,15 +34108,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ebb50d824a394470b299310137de3af, type: 3}
---- !u!1 &8485314935278895603 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 9ebb50d824a394470b299310137de3af,
-    type: 3}
-  m_PrefabInstance: {fileID: 495406883571685626}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4871413896705700832 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 9ebb50d824a394470b299310137de3af,
+    type: 3}
+  m_PrefabInstance: {fileID: 495406883571685626}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8485314935278895603 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 9ebb50d824a394470b299310137de3af,
     type: 3}
   m_PrefabInstance: {fileID: 495406883571685626}
   m_PrefabAsset: {fileID: 0}
