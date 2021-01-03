@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class IntroTextChanger : MonoBehaviour
 {
     public Text changeThisText;
-    
+
     [TextArea(3,10)]
     public string Intro_0 = "Year: 450 BC";
     [TextArea(3,10)]
@@ -22,8 +22,14 @@ public class IntroTextChanger : MonoBehaviour
     void Start()
     {
 
+        GameObject IntroTextVR = GameObject.Find("IntroTextVR");
+
+        if(IntroTextVR) {
+            changeThisText = IntroTextVR.GetComponent<Text>();
+        }
+
         if (!changeThisText) {
-            Debug.Log("ERROR: Intro Text Changer does not have a reference to the GUI Text we need to change.");
+            Debug.Log("ERROR: Intro Text Changer does not have a reference to GUI Text we need to change.");
             return;
         }
 
@@ -42,7 +48,7 @@ public class IntroTextChanger : MonoBehaviour
         if (stageNow==3) changeThisText.text = Intro_3;
         if (stageNow==4) changeThisText.text = Intro_4;
 
-        Debug.Log("Intro Text will be: " + changeThisText.text);
+        // Debug.Log("Intro Text will be: " + changeThisText.text);
 
 
     }

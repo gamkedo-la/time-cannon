@@ -34813,6 +34813,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 926212464786271462, guid: b4ddcebcd3d42d243af4df52a5540de5,
+        type: 3}
+      propertyPath: m_Name
+      value: IntroTextVR
+      objectReference: {fileID: 0}
     - target: {fileID: 926212464786271463, guid: b4ddcebcd3d42d243af4df52a5540de5,
         type: 3}
       propertyPath: m_LocalScale.x
